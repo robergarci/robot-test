@@ -5,7 +5,7 @@ Library     Collections
 
 
 *** Variables ***
-${COUNRTY}		DE
+${COUNRTY}		IT
 ${URL}			http://api.integration.packitos.com
 ${API_KEY}      202f7e24338b4cfa2413a4e0439e99e2bc5bbb3e2313c12852e8814efa55cd0b
 
