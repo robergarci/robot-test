@@ -1,0 +1,39 @@
+*** Settings ***
+Library    Selenium2Library
+Test Setup    Open browser    ${HOMEPAGE}    ${BROWSER}
+Test Teardown    Close All Browsers
+
+*** Variables ***
+${HOMEPAGE}    http://www.google.com
+${BROWSER}    chrome
+
+*** Test Cases ***
+
+
+Google searches and verifying results
+    [Tags]    templated-test
+    [Template]    Google and check results
+    cine    www.todocine.com
+    noticias    www.20minutos.es
+    musica    www.musica.com
+
+Google packlink and find packlink.es
+    [Tags]    Spain    Sanity
+    Google and check results    packlink    packlink.es
+
+Google packlink and find packlink.de
+    [Tags]    Germany    Sanity
+    Google and check results    packlink.de    packlink.de
+
+*** Keywords ***
+Google and check results
+    [Arguments]    ${searchkey}    ${result}
+    Input Text    id=gbqfq    ${searchkey}
+    Click Button    name=btnG
+    Wait Until Page Contains    ${result}
+
+
+
+
+ 
+ 

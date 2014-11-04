@@ -1,0 +1,34 @@
+*** Settings ***
+Library		RequestsLibrary
+Library     GetServiceLibrary
+Library     Collections
+
+
+*** Variables ***
+${COUNRTY}		DE
+${URL}			http://api.integration.packitos.com
+${API_KEY}      202f7e24338b4cfa2413a4e0439e99e2bc5bbb3e2313c12852e8814efa55cd0b
+
+*** Test Cases ***
+Get services and check results for Germany
+    [Tags]    templated-test
+    [Template]    Get service and check results
+    /v1/services?from[country]=DE&from[zip]=24103&to[country]=DE&to[zip]=24103&packages[0][width]=15&packages[0][height]=15&packages[0][length]=15&packages[0][weight]=2    5302,5308,5501,5502,5407,5411,5412,5001,5000,5003,5018,5019,5020,5009,5025,5026,5027,5029,5031,5032
+    /v1/services?from[country]=DE&from[zip]=10115&to[country]=FR&to[zip]=75001&packages[0][width]=12&packages[0][height]=12&packages[0][length]=12&packages[0][weight]=1    5301,5307,5411,5501,5502,5012,5002,5000,5003,5017,5005,5010
+    /v1/services?from[country]=FR&from[zip]=75001&to[country]=DE&to[zip]=10115&packages[0][width]=12&packages[0][height]=12&packages[0][length]=12&packages[0][weight]=1    5014,5016,5017,5021,5023
+	/v1/services?from[country]=DE&from[zip]=10115&to[country]=AR&to[zip]=A4400&packages[0][width]=12&packages[0][height]=12&packages[0][length]=12&packages[0][weight]=1    5012,5003,5006,5011
+    /v1/services?from[country]=DE&from[zip]=10115&to[country]=DE&to[zip]=10115&packages[0][width]=60&packages[0][height]=60&packages[0][length]=60&packages[0][weight]=17   5306,5501,5502,5410,5000,5003,5018,5019,5020,5009,5025,5026,5027,5029,5031,5032,5401
+    /v1/services?from[country]=DE&from[zip]=10115&to[country]=DE&to[zip]=10115&packages[0][width]=30&packages[0][height]=30&packages[0][length]=30&packages[0][weight]=31.5      5310,5001,5000,5003,5018,5019,5020,5009,5025,5026,5027,5029,5031,5032,5404
+
+
+
+*** Keywords ***
+Get service and check results
+	[Arguments]    ${queryString}    ${expected_response}
+	Create Session    getService    ${URL}    
+	${HEADERS}=     Create Dictionary    Authorization    202f7e24338b4cfa2413a4e0439e99e2bc5bbb3e2313c12852e8814efa55cd0b
+	Log    ${HEADERS}
+	${RESPONSE}    Get    getService  ${queryString}    ${HEADERS}    
+	Should Be Equal As Strings    ${RESPONSE.status_code}    200
+	Compare Response    ${expected_response}    ${RESPONSE.text}
+	
