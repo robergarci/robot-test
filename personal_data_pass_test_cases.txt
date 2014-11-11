@@ -1,0 +1,20 @@
+*** Settings *** 
+Library          Selenium2Library
+Suite Setup		 Go To Personal Data Page
+Test Template    Personal Data Should Pass When
+Suite Teardown    Close All Browsers
+Resource         SearchKeywords.txt
+Resource         PersonalDataPageKeywords.txt
+Resource         ResultPageKeywords.txt
+
+*** Variables ***
+${COUNTRY}       ES
+${BROWSER}       chrome
+${HOMEPAGE}      http://francia:corcega@it.frontend.packitos.com/
+${PERSONALDATAPAGE}    https://francia:corcega@it.frontend.packitos.com/dati-personali
+
+*** Test Cases ***    Name       Surname         Email           Description    Value
+Valid Personal Data   Test  	 Test            test@test.com   test           50
+
+
+*** Keywords ***

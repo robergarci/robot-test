@@ -1,0 +1,56 @@
+*** Variables ***
+${PRIORITYRADIOBUTTONYES}    id=PriorityForm_check_0
+${PRIORITYRADIOBUTTONNO}     id=PriorityForm_check_1
+${PAYBUTTON}                 xpath=//*[@data-js=\"pay-button\"]     
+${CETAFORM}                  id=cestaForm
+
+${GLOBALCOLLECT}             xpath=//*[@data-name=\"gclcredit\"]
+${GCREDITCARDNUMBERFIELD}    name=CREDITCARDNUMBER
+${GCEXPMONTHFIELD}           name=EXPIRYDATE_MM
+${GCEXPYEARFIELD}            name=EXPIRYDATE_YY
+${GCCVVFIELD}                name=CVV
+${GCSUBMITBUTTON}            id=btnSubmit
+
+${PAYPAL}                    xpath=//*[@data-name=\"paypal\"]
+
+
+*** Keywords ***
+Click Priority Yes
+	Click Element    ${PRIORITYRADIOBUTTONYES}
+
+Click Priority No
+	Click Element    ${PRIORITYRADIOBUTTONNO}
+
+Decline Priority Offer
+	Click Priority No
+
+Accept Priority Offer
+	Click Priority Yes
+
+Click Global Collect Payment Method
+	Click Element    ${GLOBALCOLLECT}
+
+Click Paypal Payment Method
+	Click Element    ${PAYPAL}
+
+Click Pay Button 
+	Click Element    ${PAYBUTTON}
+
+Submit Pay Unsuccessful
+
+
+Select Global Collect
+	Click Global Collect Payment Method
+
+Select Paypal 
+	Click Paypal Payment Method
+
+Must Be On Payment Page
+	Wait Until Page Contains Element     ${CETAFORM}
+
+Go To Payment Page
+	Go To Personal Data Page
+	Personal Data Should Pass When    test    test    test@test.com    test    50
+	Must Be On Collection Data Page
+	Collection Form Submit Should Pass When    test        test       test@test.com    659659659    Italy
+	Must Be On Payment Page

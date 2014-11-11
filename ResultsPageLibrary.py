@@ -1,0 +1,3 @@
+
+class ResultsPageLibrary(object):
+	

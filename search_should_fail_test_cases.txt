@@ -1,0 +1,32 @@
+*** Settings *** 
+Library          Selenium2Library
+Test Setup		 Open Browser    ${HOMEPAGE}    ${BROWSER}
+Test Template    Search Should Fail When
+Test Teardown    Close All Browsers
+Resource         SearchKeywords.txt
+
+
+*** Variables ***
+${COUNTRY}       ES
+${BROWSER}       chrome
+${HOMEPAGE}      http://francia:corcega@it.frontend.packitos.com/
+
+
+*** Test Cases ***     				Weight     Length     Width      Height     From       To
+Empty Parcel Weight                 ${empty}   10         10         10         25010      25010
+Empty Parcel Length    				1          ${empty}   10         10         25010      25010
+Empty Parcel Width     				1          10         ${empty}   10         25010      25010
+Empty Parcel Height    				1          10         10         ${empty}   25010      25010
+Empty From Zipcode    				1          10         10         10         ${empty}   25010
+Empty To Zipcode    				1          10         10         10         25010      ${empty}
+Empty From and To Zipcode    		1          10         10         10         ${empty}   ${empty}
+All Values Empty    	            ${empty}   ${empty}   ${empty}   ${empty}   ${empty}   ${empty}
+
+
+
+
+
+
+	
+
+

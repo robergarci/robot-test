@@ -1,0 +1,764 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generated="20141111 11:03:41.598" generator="Robot 2.8.6 (Python 2.7.6 on linux2)">
+<suite source="/home/miguelbeltre/Documentos/repositories/robot-test/purchase_page_fail_test_cases.txt" id="s1" name="Purchase Page Fail Test Cases">
+<kw type="setup" name="PurchasePageKeywords.Go To Payment Page">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="PersonalDataPageKeywords.Go To Personal Data Page">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="Selenium2Library.Open Browser">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>${HOMEPAGE}</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20141111 11:03:41.693" level="INFO">Opening browser 'chrome' to base url 'http://francia:corcega@it.frontend.packitos.com/'</msg>
+<status status="PASS" endtime="20141111 11:03:45.845" starttime="20141111 11:03:41.693"></status>
+</kw>
+<kw type="kw" name="SearchKeywords.Search Should Pass When">
+<doc></doc>
+<arguments>
+<arg>1</arg>
+<arg>10.5</arg>
+<arg>10</arg>
+<arg>10</arg>
+<arg>25010</arg>
+<arg>25010</arg>
+</arguments>
+<kw type="kw" name="SearchKeywords.Search Shipments With">
+<doc></doc>
+<arguments>
+<arg>${weight}</arg>
+<arg>${length}</arg>
+<arg>${width}</arg>
+<arg>${height}</arg>
+<arg>${from}</arg>
+<arg>${to}</arg>
+</arguments>
+<kw type="kw" name="SearchKeywords.Enter From Zipcode">
+<doc></doc>
+<arguments>
+<arg>${from}</arg>
+</arguments>
+<kw type="kw" name="Selenium2Library.Input Text">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>${FROMZIPCODEFIELD}</arg>
+<arg>${fromZipCode}</arg>
+</arguments>
+<msg timestamp="20141111 11:03:45.851" level="INFO">Typing text '25010' into text field 'id=HomeForm_fldFrom'</msg>
+<status status="PASS" endtime="20141111 11:03:46.022" starttime="20141111 11:03:45.851"></status>
+</kw>
+<kw type="kw" name="${resultLink} = String.Replace String">
+<doc>Replaces `search_for` in the given `string` with `replace_with`.</doc>
+<arguments>
+<arg>${ZIPCODESELECTOR}</arg>
+<arg>zipcode</arg>
+<arg>${fromZipCode}</arg>
+</arguments>
+<msg timestamp="20141111 11:03:46.023" level="INFO">${resultLink} = xpath=//a[contains(text(),"25010")]</msg>
+<status status="PASS" endtime="20141111 11:03:46.023" starttime="20141111 11:03:46.023"></status>
+</kw>
+<kw type="kw" name="Selenium2Library.Wait Until Page Contains Element">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>${resultLink}</arg>
+</arguments>
+<status status="PASS" endtime="20141111 11:03:46.681" starttime="20141111 11:03:46.024"></status>
+</kw>
+<kw type="kw" name="Selenium2Library.Wait Until Element Is Visible">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>${resultLink}</arg>
+</arguments>
+<status status="PASS" endtime="20141111 11:03:46.709" starttime="20141111 11:03:46.681"></status>
+</kw>
+<kw type="kw" name="Selenium2Library.Click Element">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${resultLink}</arg>
+</arguments>
+<msg timestamp="20141111 11:03:46.709" level="INFO">Clicking element 'xpath=//a[contains(text(),"25010")]'.</msg>
+<status status="PASS" endtime="20141111 11:03:46.772" starttime="20141111 11:03:46.709"></status>
+</kw>
+<status status="PASS" endtime="20141111 11:03:46.773" starttime="20141111 11:03:45.849"></status>
+</kw>
+<kw type="kw" name="SearchKeywords.Enter To Zipcode">
+<doc></doc>
+<arguments>
+<arg>${to}</arg>
+</arguments>
+<kw type="kw" name="Selenium2Library.Input Text">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>${TOZIPCODEFIELD}</arg>
+<arg>${toZipCode}</arg>
+</arguments>
+<msg timestamp="20141111 11:03:46.775" level="INFO">Typing text '25010' into text field 'id=HomeForm_fldTo'</msg>
+<status status="PASS" endtime="20141111 11:03:46.869" starttime="20141111 11:03:46.774"></status>
+</kw>
+<kw type="kw" name="${resultLink} = String.Replace String">
+<doc>Replaces `search_for` in the given `string` with `replace_with`.</doc>
+<arguments>
+<arg>${ZIPCODETOSELECTOR}</arg>
+<arg>zipcode</arg>
+<arg>${toZipCode}</arg>
+</arguments>
+<msg timestamp="20141111 11:03:46.870" level="INFO">${resultLink} = xpath=//*[@id="ui-id-10"]//a[contains(text(),"25010")]</msg>
+<status status="PASS" endtime="20141111 11:03:46.870" starttime="20141111 11:03:46.869"></status>
+</kw>
+<kw type="kw" name="Selenium2Library.Wait Until Page Contains Element">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>${resultLink}</arg>
+</arguments>
+<status status="PASS" endtime="20141111 11:03:47.521" starttime="20141111 11:03:46.870"></status>
+</kw>
+<kw type="kw" name="Selenium2Library.Wait Until Element Is Visible">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>${resultLink}</arg>
+</arguments>
+<status status="PASS" endtime="20141111 11:03:47.544" starttime="20141111 11:03:47.522"></status>
+</kw>
+<kw type="kw" name="Selenium2Library.Click Element">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${resultLink}</arg>
+</arguments>
+<msg timestamp="20141111 11:03:47.545" level="INFO">Clicking element 'xpath=//*[@id="ui-id-10"]//a[contains(text(),"25010")]'.</msg>
+<status status="PASS" endtime="20141111 11:03:47.595" starttime="20141111 11:03:47.545"></status>
+</kw>
+<status status="PASS" endtime="20141111 11:03:47.596" starttime="20141111 11:03:46.773"></status>
+</kw>
+<kw type="kw" name="SearchKeywords.Enter parcel weight">
+<doc></doc>
+<arguments>
+<arg>0</arg>
+<arg>${weight}</arg>
+</arguments>
+<kw type="kw" name="Selenium2Library.Input Text">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>id=ParcelForm_${parcelNumber}_weight</arg>
+<arg>${weight}</arg>
+</arguments>
+<msg timestamp="20141111 11:03:47.598" level="INFO">Typing text '1' into text field 'id=ParcelForm_0_weight'</msg>
+<status status="PASS" endtime="20141111 11:03:47.677" starttime="20141111 11:03:47.597"></status>
+</kw>
+<status status="PASS" endtime="20141111 11:03:47.678" starttime="20141111 11:03:47.596"></status>
+</kw>
+<kw type="kw" name="SearchKeywords.Enter parcel length">
+<doc></doc>
+<arguments>
+<arg>0</arg>
+<arg>${length}</arg>
+</arguments>
+<kw type="kw" name="Selenium2Library.Input Text">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>id=ParcelForm_${parcelNumber}_length</arg>
+<arg>${length}</arg>
+</arguments>
+<msg timestamp="20141111 11:03:47.680" level="INFO">Typing text '10.5' into text field 'id=ParcelForm_0_length'</msg>
+<status status="PASS" endtime="20141111 11:03:47.774" starttime="20141111 11:03:47.679"></status>
+</kw>
+<status status="PASS" endtime="20141111 11:03:47.774" starttime="20141111 11:03:47.678"></status>
+</kw>
+<kw type="kw" name="SearchKeywords.Enter parcel width">
+<doc></doc>
+<arguments>
+<arg>0</arg>
+<arg>${width}</arg>
+</arguments>
+<kw type="kw" name="Selenium2Library.Input Text">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>id=ParcelForm_${parcelNumber}_width</arg>
+<arg>${width}</arg>
+</arguments>
+<msg timestamp="20141111 11:03:47.775" level="INFO">Typing text '10' into text field 'id=ParcelForm_0_width'</msg>
+<status status="PASS" endtime="20141111 11:03:47.861" starttime="20141111 11:03:47.775"></status>
+</kw>
+<status status="PASS" endtime="20141111 11:03:47.861" starttime="20141111 11:03:47.774"></status>
+</kw>
+<kw type="kw" name="SearchKeywords.Enter parcel height">
+<doc></doc>
+<arguments>
+<arg>0</arg>
+<arg>${height}</arg>
+</arguments>
+<kw type="kw" name="Selenium2Library.Input Text">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>id=ParcelForm_${parcelNumber}_height</arg>
+<arg>${height}</arg>
+</arguments>
+<msg timestamp="20141111 11:03:47.863" level="INFO">Typing text '10' into text field 'id=ParcelForm_0_height'</msg>
+<status status="PASS" endtime="20141111 11:03:47.943" starttime="20141111 11:03:47.863"></status>
+</kw>
+<status status="PASS" endtime="20141111 11:03:47.943" starttime="20141111 11:03:47.861"></status>
+</kw>
+<kw type="kw" name="SearchKeywords.Click Search Button">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="Selenium2Library.Click Element">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>link=Ricerca</arg>
+</arguments>
+<msg timestamp="20141111 11:03:47.945" level="INFO">Clicking element 'link=Ricerca'.</msg>
+<status status="PASS" endtime="20141111 11:03:48.075" starttime="20141111 11:03:47.945"></status>
+</kw>
+<status status="PASS" endtime="20141111 11:03:48.075" starttime="20141111 11:03:47.944"></status>
+</kw>
+<status status="PASS" endtime="20141111 11:03:48.076" starttime="20141111 11:03:45.847"></status>
+</kw>
+<kw type="kw" name="SearchKeywords.Search Is Successful">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="Selenium2Library.Wait Until Element Is Visible">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>${RESULTS}</arg>
+</arguments>
+<status status="PASS" endtime="20141111 11:03:50.842" starttime="20141111 11:03:48.078"></status>
+</kw>
+<kw type="kw" name="Selenium2Library.Title Should Be">
+<doc>Verifies that current page title equals `title`.</doc>
+<arguments>
+<arg>Scegli servizio</arg>
+</arguments>
+<msg timestamp="20141111 11:03:50.846" level="INFO">Page title is 'Scegli servizio'.</msg>
+<status status="PASS" endtime="20141111 11:03:50.846" starttime="20141111 11:03:50.843"></status>
+</kw>
+<status status="PASS" endtime="20141111 11:03:50.846" starttime="20141111 11:03:48.076"></status>
+</kw>
+<status status="PASS" endtime="20141111 11:03:50.847" starttime="20141111 11:03:45.846"></status>
+</kw>
+<kw type="kw" name="ResultPageKeywords.Select First Service">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="Selenium2Library.Click Element">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${FIRSTSERVICEBUTTON}</arg>
+</arguments>
+<msg timestamp="20141111 11:03:50.848" level="INFO">Clicking element 'xpath=//*[@id="contenedorDatos"]//article/a[@data-index="0"]'.</msg>
+<status status="PASS" endtime="20141111 11:03:50.910" starttime="20141111 11:03:50.848"></status>
+</kw>
+<status status="PASS" endtime="20141111 11:03:50.910" starttime="20141111 11:03:50.847"></status>
+</kw>
+<kw type="kw" name="${orig timeout} = Selenium2Library.Set Selenium Speed">
+<doc>Sets the delay in seconds that is waited after each Selenium command.</doc>
+<arguments>
+<arg>0.5</arg>
+</arguments>
+<msg timestamp="20141111 11:03:50.912" level="INFO">${orig timeout} = 0 seconds</msg>
+<status status="PASS" endtime="20141111 11:03:50.911" starttime="20141111 11:03:50.911"></status>
+</kw>
+<kw type="kw" name="Selenium2Library.Go To">
+<doc>Navigates the active browser instance to the provided URL.</doc>
+<arguments>
+<arg>${PERSONALDATAPAGE}</arg>
+</arguments>
+<msg timestamp="20141111 11:03:50.913" level="INFO">Opening url 'https://francia:corcega@it.frontend.packitos.com/dati-personali'</msg>
+<status status="PASS" endtime="20141111 11:03:53.424" starttime="20141111 11:03:50.912"></status>
+</kw>
+<kw type="kw" name="PersonalDataPageKeywords.Must Be Personal Data Page">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="Selenium2Library.Wait Until Element Is Visible">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>${PERSONALDATAFORM}</arg>
+</arguments>
+<status status="PASS" endtime="20141111 11:03:54.462" starttime="20141111 11:03:53.425"></status>
+</kw>
+<status status="PASS" endtime="20141111 11:03:54.463" starttime="20141111 11:03:53.424"></status>
+</kw>
+<kw type="kw" name="Selenium2Library.Set Selenium Speed">
+<doc>Sets the delay in seconds that is waited after each Selenium command.</doc>
+<arguments>
+<arg>${orig timeout}</arg>
+</arguments>
+<status status="PASS" endtime="20141111 11:03:54.464" starttime="20141111 11:03:54.463"></status>
+</kw>
+<status status="PASS" endtime="20141111 11:03:54.464" starttime="20141111 11:03:41.692"></status>
+</kw>
+<kw type="kw" name="PersonalDataPageKeywords.Personal Data Should Pass When">
+<doc></doc>
+<arguments>
+<arg>test</arg>
+<arg>test</arg>
+<arg>test@test.com</arg>
+<arg>test</arg>
+<arg>50</arg>
+</arguments>
+<kw type="kw" name="PersonalDataPageKeywords.Fill User Data Form With">
+<doc></doc>
+<arguments>
+<arg>${name}</arg>
+<arg>${surname}</arg>
+<arg>${email}</arg>
+<arg>${description}</arg>
+<arg>${value}</arg>
+</arguments>
+<kw type="kw" name="PersonalDataPageKeywords.Enter Name">
+<doc></doc>
+<arguments>
+<arg>${name}</arg>
+</arguments>
+<kw type="kw" name="Selenium2Library.Input Text">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>${NAMEFIELD}</arg>
+<arg>${name}</arg>
+</arguments>
+<msg timestamp="20141111 11:03:54.473" level="INFO">Typing text 'test' into text field 'id=InfoPersonalForm_name'</msg>
+<status status="PASS" endtime="20141111 11:03:54.569" starttime="20141111 11:03:54.472"></status>
+</kw>
+<status status="PASS" endtime="20141111 11:03:54.570" starttime="20141111 11:03:54.470"></status>
+</kw>
+<kw type="kw" name="PersonalDataPageKeywords.Enter Surname">
+<doc></doc>
+<arguments>
+<arg>${surname}</arg>
+</arguments>
+<kw type="kw" name="Selenium2Library.Input Text">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>${SURNAMEFIELD}</arg>
+<arg>${surname}</arg>
+</arguments>
+<msg timestamp="20141111 11:03:54.572" level="INFO">Typing text 'test' into text field 'id=InfoPersonalForm_surnames'</msg>
+<status status="PASS" endtime="20141111 11:03:54.655" starttime="20141111 11:03:54.571"></status>
+</kw>
+<status status="PASS" endtime="20141111 11:03:54.655" starttime="20141111 11:03:54.570"></status>
+</kw>
+<kw type="kw" name="PersonalDataPageKeywords.Enter Email">
+<doc></doc>
+<arguments>
+<arg>${email}</arg>
+</arguments>
+<kw type="kw" name="Selenium2Library.Input Text">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>${EMAILFIELD}</arg>
+<arg>${email}</arg>
+</arguments>
+<msg timestamp="20141111 11:03:54.658" level="INFO">Typing text 'test@test.com' into text field 'id=EmailForm_email'</msg>
+<status status="PASS" endtime="20141111 11:03:54.775" starttime="20141111 11:03:54.657"></status>
+</kw>
+<status status="PASS" endtime="20141111 11:03:54.775" starttime="20141111 11:03:54.656"></status>
+</kw>
+<kw type="kw" name="PersonalDataPageKeywords.Enter Content Description">
+<doc></doc>
+<arguments>
+<arg>${description}</arg>
+</arguments>
+<kw type="kw" name="Selenium2Library.Input Text">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>${CONTENTDESCRIPTIONFIELD}</arg>
+<arg>${description}</arg>
+</arguments>
+<msg timestamp="20141111 11:03:54.777" level="INFO">Typing text 'test' into text field 'id=InsuranceForm_content'</msg>
+<status status="PASS" endtime="20141111 11:03:54.864" starttime="20141111 11:03:54.777"></status>
+</kw>
+<status status="PASS" endtime="20141111 11:03:54.864" starttime="20141111 11:03:54.775"></status>
+</kw>
+<kw type="kw" name="PersonalDataPageKeywords.Enter Content Value">
+<doc></doc>
+<arguments>
+<arg>${value}</arg>
+</arguments>
+<kw type="kw" name="Selenium2Library.Input Text">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>${CONTENTVALUEFIELD}</arg>
+<arg>${value}</arg>
+</arguments>
+<msg timestamp="20141111 11:03:54.866" level="INFO">Typing text '50' into text field 'id=InsuranceForm_amount'</msg>
+<status status="PASS" endtime="20141111 11:03:54.965" starttime="20141111 11:03:54.865"></status>
+</kw>
+<status status="PASS" endtime="20141111 11:03:54.965" starttime="20141111 11:03:54.864"></status>
+</kw>
+<status status="PASS" endtime="20141111 11:03:54.966" starttime="20141111 11:03:54.467"></status>
+</kw>
+<kw type="kw" name="PersonalDataPageKeywords.Click Term And Conditions Check">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="Selenium2Library.Click Element">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${TERMANDCONDITIONSCHECK}</arg>
+</arguments>
+<msg timestamp="20141111 11:03:54.968" level="INFO">Clicking element 'id=TermsAndConditionsForm_iagree'.</msg>
+<status status="PASS" endtime="20141111 11:03:55.022" starttime="20141111 11:03:54.967"></status>
+</kw>
+<status status="PASS" endtime="20141111 11:03:55.023" starttime="20141111 11:03:54.966"></status>
+</kw>
+<kw type="kw" name="PersonalDataPageKeywords.Click Next Step Button">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="Selenium2Library.Click Element">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${NEXTSTEPBUTTON}</arg>
+</arguments>
+<msg timestamp="20141111 11:03:55.025" level="INFO">Clicking element 'id=botonSiguiente'.</msg>
+<status status="PASS" endtime="20141111 11:03:57.606" starttime="20141111 11:03:55.024"></status>
+</kw>
+<status status="PASS" endtime="20141111 11:03:57.607" starttime="20141111 11:03:55.023"></status>
+</kw>
+<kw type="kw" name="PersonalDataPageKeywords.Next Step Is Successful">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="Selenium2Library.Wait Until Element Is Visible">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>${COLLECTIONFORM}</arg>
+</arguments>
+<status status="PASS" endtime="20141111 11:03:57.651" starttime="20141111 11:03:57.609"></status>
+</kw>
+<status status="PASS" endtime="20141111 11:03:57.652" starttime="20141111 11:03:57.607"></status>
+</kw>
+<status status="PASS" endtime="20141111 11:03:57.652" starttime="20141111 11:03:54.465"></status>
+</kw>
+<kw type="kw" name="CollectionPageKeywords.Must Be On Collection Data Page">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="Selenium2Library.Wait Until Element Is Visible">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>${COLLECTIONFORM}</arg>
+</arguments>
+<status status="PASS" endtime="20141111 11:03:57.667" starttime="20141111 11:03:57.653"></status>
+</kw>
+<status status="PASS" endtime="20141111 11:03:57.667" starttime="20141111 11:03:57.652"></status>
+</kw>
+<kw type="kw" name="CollectionPageKeywords.Collection Form Submit Should Pass When">
+<doc></doc>
+<arguments>
+<arg>test</arg>
+<arg>test</arg>
+<arg>test@test.com</arg>
+<arg>659659659</arg>
+<arg>Italy</arg>
+</arguments>
+<kw type="kw" name="CollectionPageKeywords.Select Available Date">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="CollectionPageKeywords.Click Collection Date Field">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="Selenium2Library.Click Element">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${COLLECTIONDATEFIELD}</arg>
+</arguments>
+<msg timestamp="20141111 11:03:57.672" level="INFO">Clicking element 'id=DateTimeForm_date'.</msg>
+<status status="PASS" endtime="20141111 11:03:57.899" starttime="20141111 11:03:57.671"></status>
+</kw>
+<status status="PASS" endtime="20141111 11:03:57.899" starttime="20141111 11:03:57.670"></status>
+</kw>
+<kw type="kw" name="Selenium2Library.Wait Until Page Contains Element">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>${FIRSTAVAILABLEDATE}</arg>
+</arguments>
+<status status="PASS" endtime="20141111 11:03:57.920" starttime="20141111 11:03:57.900"></status>
+</kw>
+<kw type="kw" name="Selenium2Library.Wait Until Element Is Visible">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>${FIRSTAVAILABLEDATE}</arg>
+</arguments>
+<status status="PASS" endtime="20141111 11:03:57.945" starttime="20141111 11:03:57.920"></status>
+</kw>
+<kw type="kw" name="Selenium2Library.Click Element">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${FIRSTAVAILABLEDATE}</arg>
+</arguments>
+<msg timestamp="20141111 11:03:57.946" level="INFO">Clicking element 'xpath=//*[@data-handler="selectDay"]'.</msg>
+<status status="PASS" endtime="20141111 11:03:58.011" starttime="20141111 11:03:57.945"></status>
+</kw>
+<status status="PASS" endtime="20141111 11:03:58.011" starttime="20141111 11:03:57.669"></status>
+</kw>
+<kw type="kw" name="CollectionPageKeywords.Click First Strip">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="Selenium2Library.Click Element">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${FIRSTDATESTRIPBUTTON}</arg>
+</arguments>
+<msg timestamp="20141111 11:03:58.015" level="INFO">Clicking element 'id=DateTimeForm_strip_0'.</msg>
+<status status="PASS" endtime="20141111 11:03:58.110" starttime="20141111 11:03:58.014"></status>
+</kw>
+<status status="PASS" endtime="20141111 11:03:58.111" starttime="20141111 11:03:58.012"></status>
+</kw>
+<kw type="kw" name="CollectionPageKeywords.Fill Collection From Form With">
+<doc></doc>
+<arguments>
+<arg>${name}</arg>
+<arg>${surname}</arg>
+<arg>${email}</arg>
+<arg>${phone}</arg>
+<arg>${address}</arg>
+</arguments>
+<kw type="kw" name="CollectionPageKeywords.Enter From Name">
+<doc></doc>
+<arguments>
+<arg>${name}</arg>
+</arguments>
+<kw type="kw" name="Selenium2Library.Input Text">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>${FROMNAMEFIELD}</arg>
+<arg>${name}</arg>
+</arguments>
+<msg timestamp="20141111 11:03:58.116" level="INFO">Typing text 'test' into text field 'id=CollectionForm_name'</msg>
+<status status="PASS" endtime="20141111 11:03:58.263" starttime="20141111 11:03:58.115"></status>
+</kw>
+<status status="PASS" endtime="20141111 11:03:58.265" starttime="20141111 11:03:58.114"></status>
+</kw>
+<kw type="kw" name="CollectionPageKeywords.Enter From Surname">
+<doc></doc>
+<arguments>
+<arg>${surname}</arg>
+</arguments>
+<kw type="kw" name="Selenium2Library.Input Text">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>${FROMSURNAMEFIELD}</arg>
+<arg>${surname}</arg>
+</arguments>
+<msg timestamp="20141111 11:03:58.267" level="INFO">Typing text 'test' into text field 'id=CollectionForm_surname'</msg>
+<status status="PASS" endtime="20141111 11:03:58.371" starttime="20141111 11:03:58.267"></status>
+</kw>
+<status status="PASS" endtime="20141111 11:03:58.371" starttime="20141111 11:03:58.266"></status>
+</kw>
+<kw type="kw" name="CollectionPageKeywords.Enter From Email">
+<doc></doc>
+<arguments>
+<arg>${email}</arg>
+</arguments>
+<kw type="kw" name="Selenium2Library.Input Text">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>${FROMEMAILFIELD}</arg>
+<arg>${email}</arg>
+</arguments>
+<msg timestamp="20141111 11:03:58.374" level="INFO">Typing text 'test@test.com' into text field 'id=CollectionForm_email'</msg>
+<status status="PASS" endtime="20141111 11:03:58.518" starttime="20141111 11:03:58.373"></status>
+</kw>
+<status status="PASS" endtime="20141111 11:03:58.519" starttime="20141111 11:03:58.372"></status>
+</kw>
+<kw type="kw" name="CollectionPageKeywords.Enter From Phone">
+<doc></doc>
+<arguments>
+<arg>${phone}</arg>
+</arguments>
+<kw type="kw" name="Selenium2Library.Input Text">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>${FROMPHONEFIELD}</arg>
+<arg>${phone}</arg>
+</arguments>
+<msg timestamp="20141111 11:03:58.521" level="INFO">Typing text '659659659' into text field 'id=CollectionForm_phone'</msg>
+<status status="PASS" endtime="20141111 11:03:58.631" starttime="20141111 11:03:58.520"></status>
+</kw>
+<status status="PASS" endtime="20141111 11:03:58.631" starttime="20141111 11:03:58.519"></status>
+</kw>
+<kw type="kw" name="CollectionPageKeywords.Enter From Address">
+<doc></doc>
+<arguments>
+<arg>${address}</arg>
+</arguments>
+<kw type="kw" name="Selenium2Library.Input Text">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>${FROMADDRESSFIELD}</arg>
+<arg>${address}</arg>
+</arguments>
+<msg timestamp="20141111 11:03:58.633" level="INFO">Typing text 'Italy' into text field 'id=CollectionForm_direction_1'</msg>
+<status status="PASS" endtime="20141111 11:03:58.731" starttime="20141111 11:03:58.632"></status>
+</kw>
+<status status="PASS" endtime="20141111 11:03:58.731" starttime="20141111 11:03:58.631"></status>
+</kw>
+<status status="PASS" endtime="20141111 11:03:58.731" starttime="20141111 11:03:58.111"></status>
+</kw>
+<kw type="kw" name="CollectionPageKeywords.Fill Collection Delivery Form With">
+<doc></doc>
+<arguments>
+<arg>${name}</arg>
+<arg>${surname}</arg>
+<arg>${email}</arg>
+<arg>${phone}</arg>
+<arg>${address}</arg>
+</arguments>
+<kw type="kw" name="CollectionPageKeywords.Enter Delivery Name">
+<doc></doc>
+<arguments>
+<arg>${name}</arg>
+</arguments>
+<kw type="kw" name="Selenium2Library.Input Text">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>${DELIVERYNAMEFIELD}</arg>
+<arg>${name}</arg>
+</arguments>
+<msg timestamp="20141111 11:03:58.733" level="INFO">Typing text 'test' into text field 'id=DeliveryForm_name'</msg>
+<status status="PASS" endtime="20141111 11:03:58.834" starttime="20141111 11:03:58.733"></status>
+</kw>
+<status status="PASS" endtime="20141111 11:03:58.834" starttime="20141111 11:03:58.732"></status>
+</kw>
+<kw type="kw" name="CollectionPageKeywords.Enter Delivery Surname">
+<doc></doc>
+<arguments>
+<arg>${surname}</arg>
+</arguments>
+<kw type="kw" name="Selenium2Library.Input Text">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>${DELIVERYSURNAMEFIELD}</arg>
+<arg>${surname}</arg>
+</arguments>
+<msg timestamp="20141111 11:03:58.836" level="INFO">Typing text 'test' into text field 'id=DeliveryForm_surname'</msg>
+<status status="PASS" endtime="20141111 11:03:58.950" starttime="20141111 11:03:58.835"></status>
+</kw>
+<status status="PASS" endtime="20141111 11:03:58.950" starttime="20141111 11:03:58.835"></status>
+</kw>
+<kw type="kw" name="CollectionPageKeywords.Enter Delivery Email">
+<doc></doc>
+<arguments>
+<arg>${email}</arg>
+</arguments>
+<kw type="kw" name="Selenium2Library.Input Text">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>${DELIVERYEMAILFIELD}</arg>
+<arg>${email}</arg>
+</arguments>
+<msg timestamp="20141111 11:03:58.952" level="INFO">Typing text 'test@test.com' into text field 'id=DeliveryForm_email'</msg>
+<status status="PASS" endtime="20141111 11:03:59.067" starttime="20141111 11:03:58.952"></status>
+</kw>
+<status status="PASS" endtime="20141111 11:03:59.068" starttime="20141111 11:03:58.951"></status>
+</kw>
+<kw type="kw" name="CollectionPageKeywords.Enter Delivery Phone">
+<doc></doc>
+<arguments>
+<arg>${phone}</arg>
+</arguments>
+<kw type="kw" name="Selenium2Library.Input Text">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>${DELIVERYPHONEFIELD}</arg>
+<arg>${phone}</arg>
+</arguments>
+<msg timestamp="20141111 11:03:59.069" level="INFO">Typing text '659659659' into text field 'id=DeliveryForm_phone'</msg>
+<status status="PASS" endtime="20141111 11:03:59.182" starttime="20141111 11:03:59.069"></status>
+</kw>
+<status status="PASS" endtime="20141111 11:03:59.183" starttime="20141111 11:03:59.068"></status>
+</kw>
+<kw type="kw" name="CollectionPageKeywords.Enter Delivery Address">
+<doc></doc>
+<arguments>
+<arg>${address}</arg>
+</arguments>
+<kw type="kw" name="Selenium2Library.Input Text">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>${DELIVERYADDRESSFIELD}</arg>
+<arg>${address}</arg>
+</arguments>
+<msg timestamp="20141111 11:03:59.184" level="INFO">Typing text 'Italy' into text field 'id=DeliveryForm_direction_1'</msg>
+<status status="PASS" endtime="20141111 11:03:59.290" starttime="20141111 11:03:59.184"></status>
+</kw>
+<status status="PASS" endtime="20141111 11:03:59.290" starttime="20141111 11:03:59.183"></status>
+</kw>
+<status status="PASS" endtime="20141111 11:03:59.290" starttime="20141111 11:03:58.731"></status>
+</kw>
+<kw type="kw" name="CollectionPageKeywords.Click Submit Button">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="Selenium2Library.Click Element">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${SUBMITDATA}</arg>
+</arguments>
+<msg timestamp="20141111 11:03:59.292" level="INFO">Clicking element 'id=btnSubmit'.</msg>
+<status status="PASS" endtime="20141111 11:04:00.814" starttime="20141111 11:03:59.292"></status>
+</kw>
+<status status="PASS" endtime="20141111 11:04:00.814" starttime="20141111 11:03:59.291"></status>
+</kw>
+<kw type="kw" name="CollectionPageKeywords.Submit Collection Form Successful">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="Selenium2Library.Wait Until Element Is Visible">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>${CESTAFORM}</arg>
+</arguments>
+<kw type="kw" name="Selenium2Library.Capture Page Screenshot">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<arguments>
+</arguments>
+<msg timestamp="20141111 11:04:06.255" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20141111 11:04:06.255" starttime="20141111 11:04:05.948"></status>
+</kw>
+<msg timestamp="20141111 11:04:06.256" level="FAIL">Element locator 'id=cestaForm' did not match any elements after 5 seconds</msg>
+<status status="FAIL" endtime="20141111 11:04:06.256" starttime="20141111 11:04:00.816"></status>
+</kw>
+<status status="FAIL" endtime="20141111 11:04:06.257" starttime="20141111 11:04:00.815"></status>
+</kw>
+<status status="FAIL" endtime="20141111 11:04:06.257" starttime="20141111 11:03:57.668"></status>
+</kw>
+<status status="FAIL" endtime="20141111 11:04:06.257" starttime="20141111 11:03:41.691"></status>
+</kw>
+<test id="s1-t1" name="No Priority Option Selected">
+<doc></doc>
+<tags>
+</tags>
+<status status="FAIL" endtime="20141111 11:04:06.258" critical="yes" starttime="20141111 11:04:06.257">Parent suite setup failed:
+Element locator 'id=cestaForm' did not match any elements after 5 seconds</status>
+</test>
+<doc></doc>
+<metadata>
+</metadata>
+<status status="FAIL" endtime="20141111 11:04:06.258" starttime="20141111 11:03:41.599">Suite setup failed:
+Element locator 'id=cestaForm' did not match any elements after 5 seconds</status>
+</suite>
+<statistics>
+<total>
+<stat fail="1" pass="0">Critical Tests</stat>
+<stat fail="1" pass="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="1" pass="0" id="s1" name="Purchase Page Fail Test Cases">Purchase Page Fail Test Cases</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

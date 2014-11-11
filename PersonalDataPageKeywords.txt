@@ -1,0 +1,91 @@
+*** Settings ***
+Resource    CollectionPageKeywords.txt
+
+*** Variables ***
+${NAMEFIELD}                id=InfoPersonalForm_name
+${SURNAMEFIELD}             id=InfoPersonalForm_surnames
+${EMAILFIELD}               id=EmailForm_email
+${CONTENTDESCRIPTIONFIELD}  id=InsuranceForm_content
+${CONTENTVALUEFIELD}        id=InsuranceForm_amount
+${TERMANDCONDITIONSCHECK}   id=TermsAndConditionsForm_iagree
+${DISCOUNTCOUPONLINK}       id=make_click_here
+${COUPONFIELD}              id=VoucherForm_cupon
+${VALIDATECOUPONBUTTON}     id=btnValidateCoupon
+${DELETECOUPONBUTTON}       id=btDelete
+${NEXTSTEPBUTTON}           id=botonSiguiente
+${PERSONALDATAFORM}         id=frmUserdata
+
+${BROWSER}       chrome
+${HOMEPAGE}      http://francia:corcega@it.frontend.packitos.com/
+${PERSONALDATAPAGE}    https://francia:corcega@it.frontend.packitos.com/dati-personali
+
+*** Keywords ***
+Enter Name    [Arguments]    ${name}
+	Input Text     ${NAMEFIELD}   ${name}
+
+Enter Surname    [Arguments]    ${surname}
+	Input Text     ${SURNAMEFIELD}    ${surname}
+
+Enter Email    [Arguments]    ${email}
+	Input Text     ${EMAILFIELD}    ${email}
+
+Enter Content Description    [Arguments]    ${description}
+	Input Text     ${CONTENTDESCRIPTIONFIELD}    ${description}
+
+Enter Content Value    [Arguments]    ${value}
+	Input Text     ${CONTENTVALUEFIELD}    ${value}
+
+Click Discount Coupon Link
+	Click Element  ${DISCOUNTCOUPONLINK}
+
+Enter Coupon    [Arguments]    ${coupon}
+	Input Text     ${COUPONFIELD}    ${coupon}
+
+Click Validate Coupon
+	Click Element  ${VALIDATECOUPONBUTTON}
+
+Click Delete Coupon 
+	Click Element  ${DELETECOUPONBUTTON}
+
+Click Next Step Button
+	Click Element  ${NEXTSTEPBUTTON}
+
+Click Term And Conditions Check
+	Click Element  ${TERMANDCONDITIONSCHECK}
+
+Next Step Is Successful
+	Wait Until Element Is Visible    ${COLLECTIONFORM}
+
+Next Step Is Unsuccessful 
+	Must Be Personal Data Page
+
+Fill User Data Form With    [Arguments]    ${name}    ${surname}    ${email}    ${description}    ${value}
+	Enter Name    ${name} 
+	Enter Surname    ${surname}
+	Enter Email    ${email}
+	Enter Content Description    ${description}
+	Enter Content Value    ${value}
+
+Personal Data Should Fail When    [Arguments]    ${name}    ${surname}    ${email}    ${description}    ${value}
+	Fill User Data Form With     ${name}    ${surname}    ${email}    ${description}    ${value}
+	Click Term And Conditions Check
+	Click Next Step Button
+	Next Step Is Unsuccessful
+
+Personal Data Should Pass When    [Arguments]    ${name}    ${surname}    ${email}    ${description}    ${value}
+	Fill User Data Form With     ${name}    ${surname}    ${email}    ${description}    ${value}
+	Click Term And Conditions Check
+	Click Next Step Button
+	Next Step Is Successful 
+
+Must Be Personal Data Page
+	Wait Until Element Is Visible    ${PERSONALDATAFORM}
+
+Go To Personal Data Page
+	Open Browser    ${HOMEPAGE}    ${BROWSER}
+	Search Should Pass When    1          10.5       10         10         25010      25010
+	Select First Service
+	${orig timeout}=    Set Selenium Speed  0.5
+	Go To    ${PERSONALDATAPAGE}
+	Must Be Personal Data Page
+	Set Selenium Speed  ${orig timeout}

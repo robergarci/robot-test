@@ -1,0 +1,14 @@
+*** Settings *** 
+Library          Selenium2Library
+Suite Setup		 Go To Payment Page
+
+Resource         SearchKeywords.txt
+Resource         PersonalDataPageKeywords.txt
+Resource         ResultPageKeywords.txt
+Resource         CollectionPageKeywords.txt
+Resource         PurchasePageKeywords.txt
+
+*** Test Cases ***
+No Priority Option Selected
+	Select Paypal
+	
