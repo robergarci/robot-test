@@ -11,7 +11,8 @@ Resource         ./Keywords/CollectionPageKeywords.txt
 Resource         ./Keywords/PaymentPageKeywords.txt
 
 *** Variables ***
-${BROWSER}    firefox
+${COUNTRY}       ES
+${BROWSER}       firefox
 ${HOMEPAGE}      http://francia:corcega@it.frontend.packitos.com/
 
 *** Test Cases ***                           priority    payMethod

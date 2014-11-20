@@ -9,9 +9,10 @@ Resource         ../Keywords/PersonalDataPageKeywords.txt
 Resource         ../Keywords/ResultsPageKeywords.txt
 Resource         ../Keywords/CollectionPageKeywords.txt
 
+
 *** Variables ***
 ${COUNTRY}       ES
-${BROWSER}       chrome
+${BROWSER}       firefox
 ${HOMEPAGE}      http://francia:corcega@it.frontend.packitos.com/
 
 

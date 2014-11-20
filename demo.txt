@@ -7,6 +7,9 @@ Test Teardown    Close All Browsers
 ${BROWSER}    firefox
 ${HOMEPAGE}    http://www.google.com
 
+${SEARCHBOX}    id=gbqfq
+${SEARCHBUTTON}    name=btnG
+
 *** Test Cases ***
 Google searches and verifying results
     [Tags]    test-tag-1
@@ -26,6 +29,6 @@ Google packlink and find packlink.de
 *** Keywords ***
 Google and check results
     [Arguments]    ${searchkey}    ${result}
-    Input Text    id=gbqfq    ${searchkey}
-    Click Button    name=btnG
+    Input Text    ${SEARCHBOX}    ${searchkey}
+    Click Button    ${SEARCHBUTTON}
     Wait Until Page Contains    ${result}

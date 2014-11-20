@@ -1,10 +1,11 @@
 *** Settings *** 
 Library          Selenium2Library
 Test Setup		 Setup Browser
-Test Template    Personal Data Should Fail When
 Test Teardown    Close All Browsers
+Test Template    Personal Data Should Fail When
 Resource         ../Keywords/SearchKeywords.txt
 Resource         ../Keywords/PersonalDataPageKeywords.txt
+Resource         ElementsLocators.txt
 
 *** Variables ***
 ${COUNTRY}       ES
@@ -24,6 +25,7 @@ Uncheked Term And Conditions   Test       Test	         test@test.com   50      
 Personal Data Should Fail When    [Arguments]    ${name}    ${surname}    ${email}    ${description}    ${value}    ${termAndConditions}
 	Fill User Data Form With     ${name}    ${surname}    ${email}    ${description}    ${value}    ${termAndConditions}
 	Click Next Step Button
+	Wait Until Page Contains Element    xpath=//*[contains(@class,\"highlightFormError\")]
 
 Setup Browser
 	Open Browser    ${HOMEPAGE}    ${BROWSER}

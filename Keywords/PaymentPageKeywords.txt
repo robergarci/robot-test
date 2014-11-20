@@ -2,7 +2,7 @@
 ${PRIORITYRADIOBUTTONYES}    id=PriorityForm_check_0
 ${PRIORITYRADIOBUTTONNO}     id=PriorityForm_check_1
 ${PAYBUTTON}                 xpath=//*[@data-js=\"pay-button\"]     
-${CETAFORM}                  id=cestaForm
+${CESTAFORM}                  id=cestaForm
 
 ${GLOBALCOLLECT}             xpath=//*[@data-name=\"gclcredit\"]
 ${PAYPAL}                    xpath=//*[@data-name=\"paypal\"]
@@ -36,8 +36,8 @@ Select Paypal
 	Click Paypal Payment Method
 
 Must Be On Payment Page
-	Wait Until Page Contains Element     ${CETAFORM}
-	Wait Until Element Is VIsible    ${CETAFORM}
+	Wait Until Page Contains Element     ${CESTAFORM}
+	Wait Until Element Is VIsible    ${CESTAFORM}
 
 Select Payment Method And Priotiry    [Arguments]    ${priority}    ${payMethod}
 	Run Keyword If    '${priority}' == 'True'    Accept Priority Offer

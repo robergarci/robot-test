@@ -1,0 +1,56 @@
+*** Settings *** 
+Library          Selenium2Library
+Test Setup		 Setup Browser
+Test Template    Complete Purchase With
+
+Resource         ./Keywords/SearchKeywords.txt
+Resource         ./Keywords/PersonalDataPageKeywords.txt
+Resource         ./Keywords/ResultsPageKeywords.txt
+Resource         ./Keywords/CollectionPageKeywords.txt
+Resource         ./Keywords/PaymentPageKeywords.txt
+Resource         ./Keywords/GlobalCollectKeywords.txt
+Resource         ./Keywords/ConfirmationPageKeywords.txt
+
+*** Variables ***
+${COUNTRY}       ES
+${BROWSER}       firefox
+${HOMEPAGE}      http://francia:corcega@it.frontend.packitos.com/
+${SECUREHOMEPAGE}    https://it.frontend.packitos.com/
+
+*** Test Cases ***
+All Data    25010    25010    1    10    10    10    True    GlobalCollect
+
+
+*** Keywords ***    |from|to|weight|length|width|height|priority|payMethod|
+Complete Purchase With    
+	[Arguments]    ${from}    ${to}    ${weight}    ${length}    ${width}    ${height}    ${priority}    ${payMethod}
+	Search Shipments With    ${weight}    ${length}    ${width}    ${height}    ${from}    ${to}
+	Select First Service
+	Fill User Data Form With    Test    Test    test@test.com    test    5    True
+	Click Next Step Button
+	Must Be On Collection Data Page
+	Select Date And Hour
+	Fill Collection From Form With    test        test       test@test.com    659659659    Italy
+	Fill Collection Delivery Form With    test        test       test@test.com    659659659    Italy
+	Click Submit Button
+	Must Be On Payment Page
+	${orig timeout}=    Set Selenium Speed  1
+	Select Payment Method And Priotiry     ${priority}    ${payMethod}  
+	Click Pay Button
+	Set Selenium Speed  ${orig timeout}
+	Must Be On Global Collect Page
+	Pay With Global Collect Default Data
+	Must Be On Confirmation Page
+	Download Receipt
+	Download Labels
+	Download Carrier Labels
+	Destination Is Not Empty
+	Parcel Reference Is Not Empty
+
+Setup Browser
+	Open Browser    ${HOMEPAGE}    ${BROWSER}
+	Maximize Browser Window
+
+	
+	
+	

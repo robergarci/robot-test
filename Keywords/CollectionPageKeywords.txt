@@ -18,8 +18,12 @@ ${DELIVERYEMAILFIELD}     id=DeliveryForm_email
 ${DELIVERYPHONEFIELD}     id=DeliveryForm_phone
 ${DELIVERYADDRESSFIELD}   id=DeliveryForm_direction_1
 
+${FROMCOMPANYFIELD}        id=CollectionForm_enterprise
+${TOCOMPANYFIELD}        id=DeliveryForm_enterprise
+
+
 ${ERRORFIELD}             xpath=//*[contains(@class,"highlightFormError")]
-${CESTAFORM}              id=cestaForm
+
 
 *** Keywords ***
 Click Collection Date Field
@@ -64,9 +68,14 @@ Enter Delivery Phone    [Arguments]    ${phone}
 Enter Delivery Address    [Arguments]    ${address}
 	Input Text     ${DELIVERYADDRESSFIELD}    ${address}
 
+Enter From Company    [Arguments]    ${company}
+	Input Text    ${FROMCOMPANYFIELD}    ${company}
+
+Enter To Company    [Arguments]    ${company}
+	Input Text    ${TOCOMPANYFIELD}    ${company}
+
 Click Submit Button
 	Click Element    ${SUBMITDATA}
-
 Submit Collection Form Unsuccessful
 	Wait Until Element Is Visible    ${ERRORFIELD}
 
@@ -78,17 +87,19 @@ Select Date And Hour
 	Select Available Date
 	Click First Strip
 
-Fill Collection From Form With    [Arguments]    ${name}    ${surname}    ${email}    ${phone}    ${address}
+Fill Collection From Form With    [Arguments]    ${name}    ${surname}    ${email}    ${phone}    ${address}    ${company}
 	Enter From Name    ${name}
 	Enter From Surname    ${surname}
 	Enter From Email    ${email}
+	Enter From Company    ${company}
 	Enter From Phone    ${phone}
 	Enter From Address    ${address}
 
-Fill Collection Delivery Form With    [Arguments]    ${name}    ${surname}    ${email}    ${phone}    ${address}
+Fill Collection Delivery Form With    [Arguments]    ${name}    ${surname}    ${email}    ${phone}    ${address}    ${company}
 	Enter Delivery Name    ${name}
 	Enter Delivery Surname    ${surname}
 	Enter Delivery Email    ${email}
+	Enter To Company    ${company}
 	Enter Delivery Phone    ${phone}
 	Enter Delivery Address    ${address}
 

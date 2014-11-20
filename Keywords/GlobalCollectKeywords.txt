@@ -1,4 +1,4 @@
-*** Variables ***
+*** Variables *** 
 ${GCREDITCARDNUMBERFIELD}    name=CREDITCARDNUMBER
 ${GCEXPMONTHFIELD}           name=EXPIRYDATE_MM
 ${GCEXPYEARFIELD}            name=EXPIRYDATE_YY
@@ -36,4 +36,8 @@ Enter Global Collect Payment Data    [Arguments]    ${cardnumber}    ${expMont} 
 Global Collect Error Message Is Visible
 	Wait Until Page Contains Element    ${ERRORMESSAGE}
 	Wait Until Element Is Visible    ${ERRORMESSAGE}
+
+Pay With Global Collect Default Data
+	Enter Global Collect Payment Data    4111111111111111    05    16    666
+	Submit Global Collect Payment
 

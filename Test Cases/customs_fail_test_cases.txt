@@ -1,0 +1,51 @@
+*** Settings *** 
+Library          Selenium2Library
+Test Setup		 Setup Browser
+Test Template    Create Customs Should Fail When
+
+Resource         ./Keywords/SearchKeywords.txt
+Resource         ./Keywords/PersonalDataPageKeywords.txt
+Resource         ./Keywords/ResultsPageKeywords.txt
+Resource         ./Keywords/CollectionPageKeywords.txt
+Resource         ./Keywords/PaymentPageKeywords.txt
+Resource         ./Keywords/GlobalCollectKeywords.txt
+Resource         ./Keywords/ConfirmationPageKeywords.txt
+
+*** Variables ***
+${COUNTRY}       ES
+${BROWSER}       firefox
+${HOMEPAGE}      http://francia:corcega@it.frontend.packitos.com/
+${SECUREHOMEPAGE}    https://it.frontend.packitos.com/
+
+*** Test Cases ***
+Create Customs Should Fail When    Italia    Argentina    25010    B6665    1    10    10    10    True    GlobalCollect
+
+
+*** Keywords ***    from country|to country|from|to|weight|length|width|height|priority|payMethod|
+Create Customs Should Fail When
+	[Arguments]    ${from_country}    ${to_country}    ${from}    ${to}    ${weight}    ${length}    ${width}    ${height}    ${priority}    ${payMethod}
+	Search Shipments With    ${weight}    ${length}    ${width}    ${height}    ${from}    ${to}    ${from_country}    ${to_country}
+	Select First Service
+	Fill User Data Form With    Test    Test    test@test.com    test    5    True
+	Click Next Step Button
+	Must Be On Collection Data Page
+	Select Date And Hour
+	Fill Collection From Form With    test        test       test@test.com   659659659    Italy    Bad Company    
+	Fill Collection Delivery Form With    test        test       test@test.com    659659659    Italy    Bad Company
+	Click Submit Button
+	Must Be On Payment Page
+	${orig timeout}=    Set Selenium Speed  1
+	Select Payment Method And Priotiry     ${priority}    ${payMethod}  
+	Click Pay Button
+	Set Selenium Speed  ${orig timeout}
+	Must Be On Global Collect Page
+	Pay With Global Collect Default Data
+	Must Be On Confirmation Page
+
+Setup Browser
+	Open Browser    ${HOMEPAGE}    ${BROWSER}
+	Maximize Browser Window
+
+	
+	
+	

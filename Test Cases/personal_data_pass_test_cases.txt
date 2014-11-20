@@ -2,15 +2,19 @@
 Library          Selenium2Library
 Test Setup		 Setup Browser
 Test Teardown    Close All Browsers
+Test Template    Personal Data Should Pass When
+Resource         ../Keywords/SearchKeywords.txt
+Resource         ../Keywords/PersonalDataPageKeywords.txt
+Resource         ElementsLocators.txt
 
 
 *** Variables ***
 ${COUNTRY}       ES
-${BROWSER}       chrome
+${BROWSER}       firefox
 ${HOMEPAGE}      http://francia:corcega@it.frontend.packitos.com/
 
 *** Test Cases ***    Name       Surname         Email           Description    Value    termAndConditions
-Valid Personal Data   Test  	 Test            test@test.com   test           50       True
+Valid Personal Data   Miguel  	 Test            test@test.com   test           50       True
 
 
 *** Keywords ***
