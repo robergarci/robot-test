@@ -1,8 +1,0 @@
-*** Variables ***
-${FIRSTSERVICEBUTTON}    xpath=//*[@id="contenedorDatos"]//article/a[@data-index="0"]
-${RESULTS}               id=contenedorDatos
-
-
-*** Keywords ***
-Select First Service
-	Click Element    ${FIRSTSERVICEBUTTON}
