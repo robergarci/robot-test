@@ -1,0 +1,58 @@
+*** Settings ***
+Resource    ResultsPageKeywords.txt
+Library     String
+
+*** Variables ***
+${TOZIPCODEFIELD}      id=HomeForm_fldTo
+${FROMZIPCODEFIELD}    id=HomeForm_fldFrom
+${SEARCHBUTTON}        xpath=//*[@data-js=\"btn-search\"]
+
+${ZIPCODESELECTOR}    xpath=//a[contains(text(),"zipcode")]
+${ZIPCODETOSELECTOR}    xpath=//*[@tabindex=\"0\" and not(contains(@style,\"none\"))]//a[contains(text(),"zipcode")]
+
+${ERRORDIALOGCLOSEBUTTON}    xpath=//*[@title=\"Close\"]
+
+*** Keywords ***
+Enter parcel weight    [Arguments]     ${parcelNumber}       ${weight}
+	Input Text     id=ParcelForm_${parcelNumber}_weight     ${weight}
+
+Enter parcel length    [Arguments]     ${parcelNumber}       ${length}
+	Input Text     id=ParcelForm_${parcelNumber}_length     ${length}
+
+Enter parcel width    [Arguments]     ${parcelNumber}       ${width}
+	Input Text     id=ParcelForm_${parcelNumber}_width     ${width}
+
+Enter parcel height   [Arguments]     ${parcelNumber}      ${height}
+	Input Text     id=ParcelForm_${parcelNumber}_height    ${height}
+
+Click Search Button
+	Click Element   ${SEARCHBUTTON}
+
+Enter From Zipcode    [Arguments]    ${fromZipCode}
+	Input Text    ${FROMZIPCODEFIELD}    ${fromZipCode}
+	${resultLink}=    Replace String    ${ZIPCODESELECTOR}    zipcode    ${fromZipCode}
+	Wait Until Page Contains Element    ${resultLink}
+	Wait Until Element Is Visible    ${resultLink}
+	Click Element    ${resultLink}
+
+Enter To Zipcode    [Arguments]      ${toZipCode}
+	Input Text    ${TOZIPCODEFIELD}    ${toZipCode}
+	${resultLink}=    Replace String    ${ZIPCODETOSELECTOR}    zipcode    ${toZipCode}
+	Wait Until Page Contains Element    ${resultLink}
+	Wait Until Element Is Visible    ${resultLink}
+	Click Element    ${resultLink}
+
+Search Error Message Is Visible
+	Wait Until Element Is Visible    ${ERRORDIALOGCLOSEBUTTON}	
+
+Search Shipments With    [Arguments]    ${weight}    ${length}    ${width}    ${height}    ${from}    ${to}
+	Run Keyword Unless    '${from}' == '${empty}'   Enter From Zipcode     ${from}
+	Run Keyword Unless    '${to}' == '${empty}'    Enter To Zipcode       ${to}
+	Enter parcel weight    0        ${weight}
+	Enter parcel length    0        ${length}
+	Enter parcel width     0        ${width}
+	Enter parcel height    0        ${height}
+	Click Search Button
+
+
+

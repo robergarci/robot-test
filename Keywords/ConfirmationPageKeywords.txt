@@ -1,0 +1,11 @@
+*** Variables ***
+${SHIPMENTLABELS}     id=a-etiquetas
+${ADDRESSSHEET}       //*[contains(@class,\"hojasTextoBlanco\")]
+${DELIVERYADDRESS}    //*[contains(@class,\"destinoTextoBlanco\")]
+${CREATEINVOICELINK}  id=need_factura
+${RECIEPE}            xpath=//*[contains(@href,\"recibo\")]
+${SHIPMENTREF}        //*[contains(@class,\"envioTextoBlanco\")]
+
+
+*** Keywords ***
+

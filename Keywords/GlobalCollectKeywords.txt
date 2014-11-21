@@ -1,0 +1,39 @@
+*** Variables ***
+${GCREDITCARDNUMBERFIELD}    name=CREDITCARDNUMBER
+${GCEXPMONTHFIELD}           name=EXPIRYDATE_MM
+${GCEXPYEARFIELD}            name=EXPIRYDATE_YY
+${GCCVVFIELD}                name=CVV
+${GCSUBMITBUTTON}            id=btnSubmit
+
+${ERRORMESSAGE}              xpath="//*[@id=\"ERROR_F1010\" and not(contains(@style,\"none\"))]"
+
+*** Keywords ***
+Submit Global Collect Payment
+	Click Element    ${GCSUBMITBUTTON}
+
+Enter Global Collect Card Number    [Arguments]    ${cardnumber}
+	Input Text    ${GCREDITCARDNUMBERFIELD}    ${cardnumber}
+
+Select Card Expiration Month    [Arguments]    ${month}
+	Select From List By Value    ${GCEXPMONTHFIELD}    ${month}
+
+Select Card Expiration Year    [Arguments]    ${year}
+	Select From List By Value    ${GCEXPYEARFIELD}    ${year}
+
+Enter Card CVV    [Arguments]    ${cvv}
+	Input Text    ${GCCVVFIELD}    ${cvv}
+
+Must Be On Global Collect Page
+	Wait Until Page Contains Element    ${GCREDITCARDNUMBERFIELD}
+	Wait Until Element Is Visible    ${GCREDITCARDNUMBERFIELD}
+
+Enter Global Collect Payment Data    [Arguments]    ${cardnumber}    ${expMont}    ${expYear}    ${cvv}
+	Enter Global Collect Card Number    ${cardnumber}
+	Select Card Expiration Month    ${expMont}
+	Select Card Expiration Year    ${expYear}
+	Enter Card CVV    ${cvv}
+
+Global Collect Error Message Is Visible
+	Wait Until Page Contains Element    ${ERRORMESSAGE}
+	Wait Until Element Is Visible    ${ERRORMESSAGE}
+

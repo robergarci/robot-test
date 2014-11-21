@@ -1,0 +1,67 @@
+*** Variables ***
+${NAMEFIELD}                id=InfoPersonalForm_name
+${SURNAMEFIELD}             id=InfoPersonalForm_surnames
+${EMAILFIELD}               id=EmailForm_email
+${CONTENTDESCRIPTIONFIELD}  id=InsuranceForm_content
+${CONTENTVALUEFIELD}        id=InsuranceForm_amount
+${TERMANDCONDITIONSCHECK}   id=TermsAndConditionsForm_iagree
+${DISCOUNTCOUPONLINK}       id=make_click_here
+${COUPONFIELD}              id=VoucherForm_cupon
+${VALIDATECOUPONBUTTON}     id=btnValidateCoupon
+${DELETECOUPONBUTTON}       id=btDelete
+${NEXTSTEPBUTTON}           id=botonSiguiente
+${PERSONALDATAFORM}         id=frmUserdata
+
+
+*** Keywords ***
+Enter Name    [Arguments]    ${name}
+	Wait Until Page Contains Element    ${NAMEFIELD}
+	Input Text     ${NAMEFIELD}   ${name}
+
+Enter Surname    [Arguments]    ${surname}
+	Input Text     ${SURNAMEFIELD}    ${surname}
+
+Enter Email    [Arguments]    ${email}
+	Input Text     ${EMAILFIELD}    ${email}
+
+Enter Content Description    [Arguments]    ${description}
+	Input Text     ${CONTENTDESCRIPTIONFIELD}    ${description}
+
+Enter Content Value    [Arguments]    ${value}
+	Input Text     ${CONTENTVALUEFIELD}    ${value}
+
+Click Discount Coupon Link
+	Click Element  ${DISCOUNTCOUPONLINK}
+
+Enter Coupon    [Arguments]    ${coupon}
+	Input Text     ${COUPONFIELD}    ${coupon}
+
+Click Validate Coupon
+	Click Element  ${VALIDATECOUPONBUTTON}
+
+Click Delete Coupon 
+	Click Element  ${DELETECOUPONBUTTON}
+
+Click Next Step Button
+	Click Element  ${NEXTSTEPBUTTON}
+
+Click Term And Conditions Check
+	Click Element  ${TERMANDCONDITIONSCHECK}
+
+Next Step Is Successful
+	Wait Until Element Is Visible    ${COLLECTIONFORM}
+
+Next Step Is Unsuccessful 
+	Must Be Personal Data Page
+
+Fill User Data Form With    [Arguments]    ${name}    ${surname}    ${email}    ${description}    ${value}    ${termAndConditions}
+	Enter Name    ${name} 
+	Enter Surname    ${surname}
+	Enter Email    ${email}
+	Enter Content Description    ${description}
+	Enter Content Value    ${value}
+	Run Keyword If    '${termAndConditions}' == 'True'    Click Term And Conditions Check
+
+Must Be Personal Data Page
+	Wait Until Page Contains Element    ${PERSONALDATAFORM}
+	Wait Until Element Is Visible    ${PERSONALDATAFORM}

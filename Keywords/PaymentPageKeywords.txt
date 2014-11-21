@@ -1,0 +1,47 @@
+*** Variables ***
+${PRIORITYRADIOBUTTONYES}    id=PriorityForm_check_0
+${PRIORITYRADIOBUTTONNO}     id=PriorityForm_check_1
+${PAYBUTTON}                 xpath=//*[@data-js=\"pay-button\"]     
+${CETAFORM}                  id=cestaForm
+
+${GLOBALCOLLECT}             xpath=//*[@data-name=\"gclcredit\"]
+${PAYPAL}                    xpath=//*[@data-name=\"paypal\"]
+
+*** Keywords ***
+Click Priority Yes
+	Click Element    ${PRIORITYRADIOBUTTONYES}
+
+Click Priority No
+	Click Element    ${PRIORITYRADIOBUTTONNO}
+
+Decline Priority Offer
+	Click Priority No
+
+Accept Priority Offer
+	Click Priority Yes
+
+Click Global Collect Payment Method
+	Click Element    ${GLOBALCOLLECT}
+
+Click Paypal Payment Method
+	Click Element    ${PAYPAL}
+
+Click Pay Button 
+	Click Element    ${PAYBUTTON}
+
+Select Global Collect
+	Click Global Collect Payment Method
+
+Select Paypal 
+	Click Paypal Payment Method
+
+Must Be On Payment Page
+	Wait Until Page Contains Element     ${CETAFORM}
+	Wait Until Element Is VIsible    ${CETAFORM}
+
+Select Payment Method And Priotiry    [Arguments]    ${priority}    ${payMethod}
+	Run Keyword If    '${priority}' == 'True'    Accept Priority Offer
+	Run Keyword If    '${priority}' == 'False'    Decline Priority Offer
+	Run Keyword If    '${payMethod}' == 'PayPal'    Click Paypal Payment Method
+	Run Keyword If    '${payMethod}' == 'GlobalCollect'    Select Global Collect
+

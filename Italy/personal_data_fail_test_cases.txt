@@ -1,0 +1,32 @@
+*** Settings *** 
+Library          Selenium2Library
+Test Setup		 Setup Browser
+Test Template    Personal Data Should Fail When
+Test Teardown    Close All Browsers
+Resource         ../Keywords/SearchKeywords.txt
+Resource         ../Keywords/PersonalDataPageKeywords.txt
+
+*** Variables ***
+${COUNTRY}       ES
+${BROWSER}       firefox
+${HOMEPAGE}      http://francia:corcega@it.frontend.packitos.com/
+
+*** Test Cases ***    Name       Surname         Email           Description    Value      termAndConditions
+Empty Name            ${empty}	 Test            test@test.com   test           50         True
+Empty Surname         Test       ${empty}	     test@test.com   test           50         True
+Empty Email           Test       Test            ${empty}	     test           50         True
+Empty Description     Test       Test	         test@test.com   ${empty}       50         True 
+Empty Content Value   Test       Test	         test@test.com   50             ${empty}   True
+Uncheked Term And Conditions   Test       Test	         test@test.com   50             50         False
+
+
+*** Keywords *** 
+Personal Data Should Fail When    [Arguments]    ${name}    ${surname}    ${email}    ${description}    ${value}    ${termAndConditions}
+	Fill User Data Form With     ${name}    ${surname}    ${email}    ${description}    ${value}    ${termAndConditions}
+	Click Next Step Button
+
+Setup Browser
+	Open Browser    ${HOMEPAGE}    ${BROWSER}
+	Maximize Browser Window
+	Search Shipments With    1          10         10         10         25010      25010
+	Select First Service

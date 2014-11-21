@@ -1,0 +1,26 @@
+*** Settings *** 
+Library          Selenium2Library
+Test Setup		 Setup Browser
+Test Teardown    Close All Browsers
+
+
+*** Variables ***
+${COUNTRY}       ES
+${BROWSER}       chrome
+${HOMEPAGE}      http://francia:corcega@it.frontend.packitos.com/
+
+*** Test Cases ***    Name       Surname         Email           Description    Value    termAndConditions
+Valid Personal Data   Test  	 Test            test@test.com   test           50       True
+
+
+*** Keywords ***
+Personal Data Should Pass When    [Arguments]    ${name}    ${surname}    ${email}    ${description}    ${value}    ${termAndConditions}
+	Fill User Data Form With     ${name}    ${surname}    ${email}    ${description}    ${value}    ${termAndConditions}
+	Click Next Step Button
+
+
+Setup Browser
+	Open Browser    ${HOMEPAGE}    ${BROWSER}
+	Maximize Browser Window
+	Search Shipments With    1          10         10         10         25010      25010
+	Select First Service
