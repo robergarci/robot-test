@@ -1,0 +1,13 @@
+*** Settings *** 
+Variables        ../Config/${COUNTRY}.py 
+Resource         ../Keywords/SearchKeywords.txt
+
+*** Keywords ***
+Search Should Pass When    [Arguments]    ${weight}    ${length}    ${width}    ${height}    ${from}    ${to}    ${from_country}    ${to_country}
+	Search Shipments With    ${weight}    ${length}    ${width}    ${height}    ${from}    ${to}    ${from_country}    ${to_country}
+	Must Be On Results Page
+
+Setup Browser
+	Open Browser    ${HOMEPAGE}    ${BROWSER}
+	Maximize Browser Window
+

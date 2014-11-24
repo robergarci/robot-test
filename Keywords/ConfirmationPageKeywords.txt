@@ -4,30 +4,6 @@ Library    String
 Library    Collections
 Library    PackLinkUtils
 
-
-*** Variables ***
-${SHIPMENTLABELS}     id=a-etiquetas
-${ADDRESSSHEET}       //*[contains(@class,\"hojasTextoBlanco\")]/a
-${DELIVERYADDRESS}    //*[contains(@class,\"destinoTextoBlanco\")]
-${CREATEINVOICELINK}  id=need_factura
-${RECEIPT}            xpath=//*[contains(@href,\"recibo\")]
-${SHIPMENTREF}        //*[contains(@class,\"envioTextoBlanco\")]
-
-${PRINTCUSTOMSBUTTON}    xpath=//*[contains(@class,\"adunatoggle\")]
-${ACEPTCUSTOMSBUTTON}    id=aceptarAduana
-${SELECTAXTYPE}       id=tipoiva
-${SELECTREASON}    id=motivo
-${SELECTARTICLESTYPE}    id=numtems
-${SENDERIDFIELD}        id=dniremitente
-
-${PACKAGEDESCRIPTION_LOCAL}    id=txtspa1
-${PACKAGEDESCRIPTION_EN}    id=txteng1
-${SELECTPACKAGEORIGIN}            id=country1
-${QUANTITYFIELD}                 id=cantidad1
-${WEIGHTFIELD}                   id=peso1
-${VALUEFIELD}                    id=valor1
-
-
 *** Keywords ***
 Click Print Customs
 	Click Element    ${PRINTCUSTOMS}

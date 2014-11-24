@@ -1,0 +1,36 @@
+*** Settings ***
+Library          Selenium2Library
+Test Setup		 Setup Browser
+Test Teardown    Close All Browsers
+Test Template    Complete Purchase With
+Resource    ../../Test Templates/complete_purchase_test_template.txt
+
+*** Variables ***
+${COUNTRY}    it
+
+*** Test Cases ***    service|from zipcode|to zipcode|form country| to country|weight|length|width|height|contentValue|Insurance|priority|payMethod|
+#Global Collect
+KEAVO Domestic +GlobalCollect  KEAVO Domestic  25010  25010  Italia  Italia  1  10  10  10  50    ${empty}  False  GlobalCollect
+
+KEAVO Domestic +Priority+GlobalCollect  KEAVO Domestic  25010  25010  Italia  Italia  1  10  10  10  50    ${empty}  True   GlobalCollect
+
+KEAVO Domestic +100+GlobalCollect  KEAVO Domestic  25010  25010  Italia  Italia  1  10  10  10  300   False     False  GlobalCollect
+
+KEAVO Domestic +100+Priority+GlobalCollect  KEAVO Domestic  25010  25010  Italia  Italia  1  10  10  10  300   False     True   GlobalCollect
+
+KEAVO Domestic +100+Insurrance+GlobalCollect  KEAVO Domestic  25010  25010  Italia  Italia  1  10  10  10  300   True      False  GlobalCollect
+
+KEAVO Domestic +100+Priority+Insurrance+GlobalCollect  KEAVO Domestic  25010  25010  Italia  Italia  1  10  10  10  300   True      True   GlobalCollect
+
+#PAYPAL
+KEAVO Domestic +PayPal  KEAVO Domestic  25010  25010  Italia  Italia  1  10  10  10  50    ${empty}  False  PayPal
+
+KEAVO Domestic +Priority+PayPal  KEAVO Domestic  25010  25010  Italia  Italia  1  10  10  10  50    ${empty}  True   PayPal
+
+KEAVO Domestic +100+PayPal  KEAVO Domestic  25010  25010  Italia  Italia  1  10  10  10  300   False     False  PayPal
+
+KEAVO Domestic +100+Priority+PayPal  KEAVO Domestic  25010  25010  Italia  Italia  1  10  10  10  300   False     True   PayPal
+
+KEAVO Domestic +100+Insurrance+PayPal  KEAVO Domestic  25010  25010  Italia  Italia  1  10  10  10  300   True      False  PayPal
+
+KEAVO Domestic +100+Priority+Insurrance+PayPal  KEAVO Domestic  25010  25010  Italia  Italia  1  10  10  10  300   True      True   PayPal

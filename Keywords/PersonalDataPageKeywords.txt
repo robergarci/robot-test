@@ -1,18 +1,3 @@
-*** Variables ***
-${NAMEFIELD}                id=InfoPersonalForm_name
-${SURNAMEFIELD}             id=InfoPersonalForm_surnames
-${EMAILFIELD}               id=EmailForm_email
-${CONTENTDESCRIPTIONFIELD}  id=InsuranceForm_content
-${CONTENTVALUEFIELD}        id=InsuranceForm_amount
-${TERMANDCONDITIONSCHECK}   id=TermsAndConditionsForm_iagree
-${DISCOUNTCOUPONLINK}       id=make_click_here
-${COUPONFIELD}              id=VoucherForm_cupon
-${VALIDATECOUPONBUTTON}     id=btnValidateCoupon
-${DELETECOUPONBUTTON}       id=btDelete
-${NEXTSTEPBUTTON}           id=botonSiguiente
-${PERSONALDATAFORM}         id=frmUserdata
-
-
 *** Keywords ***
 Enter Name    [Arguments]    ${name}
 	Wait Until Page Contains Element    ${NAMEFIELD}
@@ -48,18 +33,28 @@ Click Next Step Button
 Click Term And Conditions Check
 	Click Element  ${TERMANDCONDITIONSCHECK}
 
+Click Insurrance Yes
+	Wait Until Element Is Visible    ${INSURRANCEYES}
+	Click Element  ${INSURRANCEYES}
+
+Click Insurrance No
+	Wait Until Element Is Visible    ${INSURRANCENO}
+	Click Element  ${INSURRANCENO}
+
 Next Step Is Successful
 	Wait Until Element Is Visible    ${COLLECTIONFORM}
 
 Next Step Is Unsuccessful 
 	Must Be Personal Data Page
 
-Fill User Data Form With    [Arguments]    ${name}    ${surname}    ${email}    ${description}    ${value}    ${termAndConditions}
+Fill User Data Form With    [Arguments]    ${name}    ${surname}    ${email}    ${description}    ${value}    ${insurrance}    ${termAndConditions}
 	Enter Name    ${name} 
 	Enter Surname    ${surname}
 	Enter Email    ${email}
 	Enter Content Description    ${description}
 	Enter Content Value    ${value}
+	Run Keyword If    '${insurrance}' == 'True'    Click Insurrance Yes
+	Run Keyword If    '${insurrance}' == 'False'    Click Insurrance No
 	Run Keyword If    '${termAndConditions}' == 'True'    Click Term And Conditions Check
 
 Must Be Personal Data Page

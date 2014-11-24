@@ -1,0 +1,19 @@
+*** Settings ***
+Library          Selenium2Library
+Test Setup		 Setup Browser
+Test Teardown    Close All Browsers
+Test Template    Search Should Fail When
+Resource    ../../Test Templates/search_page_fail_test_template.txt
+
+*** Variables ***
+${COUNTRY}    es
+
+*** Test Cases ***     		 Weight     Length     Width      Height     From       To        Origin               To Country
+Empty Parcel Weight          ${empty}   10         10         10         28014      10115     España - Peninsular  Alemania
+Empty Parcel Length    		 1          ${empty}   10         10         28014      10115     España - Peninsular    Alemania
+Empty Parcel Width     		 1          10         ${empty}   10         28014      10115     España - Peninsular    Alemania
+Empty Parcel Height    		 1          10         10         ${empty}   28014      10115     España - Peninsular    Alemania
+Empty From Zipcode    		 1          10         10         10         ${empty}   10115     España - Peninsular    Alemania
+Empty From and To Zipcode    1          10         10         10         ${empty}   ${empty}  España - Peninsular    Alemania
+Empty To Zipcode    		 1          10         10         10         28014      ${empty}  España - Peninsular    Alemania
+All Values Empty    	     ${empty}   ${empty}   ${empty}   ${empty}   ${empty}   ${empty}  España - Peninsular    Alemania

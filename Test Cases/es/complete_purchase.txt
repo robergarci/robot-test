@@ -1,0 +1,12 @@
+*** Settings ***
+Library          Selenium2Library
+Test Setup		 Setup Browser
+Test Teardown    Close All Browsers
+Test Template    Complete Purchase With
+Resource    ../../Test Templates/complete_purchase_test_template.txt
+
+*** Variables ***
+${COUNTRY}    es
+
+*** Test Cases ***    service|from zipcode|to zipcode|form country| to country|weight|length|width|height|contentValue|Insurance|priority|payMethod|
+Purchase With  SODEXI Sodexi National Relais  28014  28015  España - Peninsular  España - Peninsular  1  10  10  10  50  ${empty}  False  GlobalCollect    

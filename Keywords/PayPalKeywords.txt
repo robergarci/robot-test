@@ -1,8 +1,3 @@
-*** Variables ***
-${EMAILFIELD}    id=login_email
-${PASSWORDFIELD}    id=login_password
-${LOGINBUTTON}    id=submitLogin
-
 *** Keywords ***
 Must Be On PayPal Page
 	Wait Until Page Contains Element    ${LOGINBUTTON}

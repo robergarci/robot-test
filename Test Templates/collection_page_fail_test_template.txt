@@ -1,0 +1,35 @@
+*** Settings ***
+Variables        ../Config/${COUNTRY}.py 
+
+
+Resource         ../Keywords/SearchKeywords.txt
+Resource         ../Keywords/PersonalDataPageKeywords.txt
+Resource         ../Keywords/ResultsPageKeywords.txt
+Resource         ../Keywords/CollectionPageKeywords.txt
+
+*** Test Cases ***    NAME        SURNAME    EMAIL            PHONE        ADDRESS     Company
+Name Is Empty    	  ${empty}    test       test@test.com    659659659    Italy       Bad Company
+Surname Is Empty      test        ${empty}   test@test.com    659659659    Italy       Bad Company
+Email Is Empty    	  test        test       ${empty}         659659659    Italy       Bad Company
+Phone Is Empty    	  test        test       test@test.com    ${empty}     Italy       Bad Company
+Address Is Empty   	  test        test       test@test.com    659659659    ${Empty}    Bad Company
+Phone Is Too Short 	  test        test       test@test.com    6596         ${Empty}    Bad Company
+
+*** Keywords ***
+Collection Form Submit Should Fail When    [Arguments]    ${name}    ${surname}    ${email}    ${phone}    ${address}    ${company}
+	Select Date And Hour
+	Fill Collection From Form With    ${name}    ${surname}    ${email}    ${phone}    ${address}    ${company}
+	Fill Collection Delivery Form With    ${name}    ${surname}    ${email}    ${phone}    ${address}    ${company}
+	Click Submit Button
+	Submit Collection Form Unsuccessful
+	
+Setup Browser
+	Open Browser    ${HOMEPAGE}    ${BROWSER}
+	Maximize Browser Window
+	Search Shipments With    1    10    10    10    28014    10115    España - Peninsular    Alemania
+	Select First Service
+	Fill User Data Form With    Test    Test    test@test.com    test    5    True
+	Click Next Step Button
+	Must Be On Collection Data Page
+
+	

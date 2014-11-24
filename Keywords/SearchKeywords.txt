@@ -2,34 +2,23 @@
 Resource    ResultsPageKeywords.txt
 Library     String
 
-*** Variables ***
-${TOZIPCODEFIELD}      id=HomeForm_fldTo
-${FROMZIPCODEFIELD}    id=HomeForm_fldFrom
-${FROMCOUTRYFIELD}     id=HomeForm_locationFrom
-${TOCOUTRYFIELD}     id=HomeForm_locationTo
-${parcelNumber}      10
-${parcel}     id=ParcelForm_${parcelNumber}_length
-
-${SEARCHBUTTON}        xpath=//*[@data-js=\"btn-search\"]
-
-${ZIPCODESELECTOR}    xpath=//a[contains(text(),"zipcode")]
-${ZIPCODETOSELECTOR}    xpath=//*[@tabindex=\"0\" and not(contains(@style,\"none\"))]//a[contains(text(),"zipcode")]
-
-${ERRORDIALOGCLOSEBUTTON}    xpath=//*[@title=\"Close\"]
-
-
 *** Keywords ***
 Enter parcel weight    [Arguments]     ${parcelNumber}       ${weight}
-	Input Text     ${parcel}     ${weight}
+	Run Keyword If    '${COUNTRY}' == 'it'    Input Text     id=ParcelForm_${parcelNumber}_weight     ${weight}
+	Run Keyword If    '${COUNTRY}' == 'es'    Input Text     id=peso1     ${weight}
 
 Enter parcel length    [Arguments]     ${parcelNumber}       ${length}
-	Input Text          ${length}
+	Run Keyword If    '${COUNTRY}' == 'it'    Input Text     id=ParcelForm_${parcelNumber}_length     ${length}
+	Run Keyword If    '${COUNTRY}' == 'es'    Input Text     id=largo1     ${length}
 
 Enter parcel width    [Arguments]     ${parcelNumber}       ${width}
-	Input Text     id=ParcelForm_${parcelNumber}_width     ${width}
+	Run Keyword If    '${COUNTRY}' == 'it'    Input Text     id=ParcelForm_${parcelNumber}_width     ${width}
+	Run Keyword If    '${COUNTRY}' == 'es'    Input Text     id=ancho1     ${width}
+
 
 Enter parcel height   [Arguments]     ${parcelNumber}      ${height}
-	Input Text     id=ParcelForm_${parcelNumber}_height    ${height}
+	Run Keyword If    '${COUNTRY}' == 'it'    Input Text     id=ParcelForm_${parcelNumber}_height    ${height}
+	Run Keyword If    '${COUNTRY}' == 'es'    Input Text     id=alto1     ${height}
 
 Click Search Button
 	Click Element   ${SEARCHBUTTON}

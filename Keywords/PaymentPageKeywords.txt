@@ -1,12 +1,3 @@
-*** Variables ***
-${PRIORITYRADIOBUTTONYES}    id=PriorityForm_check_0
-${PRIORITYRADIOBUTTONNO}     id=PriorityForm_check_1
-${PAYBUTTON}                 xpath=//*[@data-js=\"pay-button\"]     
-${CESTAFORM}                  id=cestaForm
-
-${GLOBALCOLLECT}             xpath=//*[@data-name=\"gclcredit\"]
-${PAYPAL}                    xpath=//*[@data-name=\"paypal\"]
-
 *** Keywords ***
 Click Priority Yes
 	Click Element    ${PRIORITYRADIOBUTTONYES}

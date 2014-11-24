@@ -1,11 +1,3 @@
-*** Variables *** 
-${GCREDITCARDNUMBERFIELD}    name=CREDITCARDNUMBER
-${GCEXPMONTHFIELD}           name=EXPIRYDATE_MM
-${GCEXPYEARFIELD}            name=EXPIRYDATE_YY
-${GCCVVFIELD}                name=CVV
-${GCSUBMITBUTTON}            id=btnSubmit
-
-${ERRORMESSAGE}              xpath="//*[@id=\"ERROR_F1010\" and not(contains(@style,\"none\"))]"
 
 *** Keywords ***
 Submit Global Collect Payment

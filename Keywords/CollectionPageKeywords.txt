@@ -1,30 +1,3 @@
-*** Variables ***
-${COLLECTIONDATEFIELD}    id=DateTimeForm_date
-${FIRSTDATESTRIPBUTTON}   id=DateTimeForm_strip_0
-${SUBMITDATA}             id=btnSubmit 
-${CESTAFORM}              id=cestaForm
-${COLLECTIONFORM}         id=frmCollection
-${FIRSTAVAILABLEDATE}     xpath=//*[@data-handler="selectDay"]
-
-${FROMNAMEFIELD}          id=CollectionForm_name
-${FROMSURNAMEFIELD}       id=CollectionForm_surname
-${FROMEMAILFIELD}         id=CollectionForm_email
-${FROMPHONEFIELD}         id=CollectionForm_phone
-${FROMADDRESSFIELD}       id=CollectionForm_direction_1
-
-${DELIVERYNAMEFIELD}      id=DeliveryForm_name
-${DELIVERYSURNAMEFIELD}   id=DeliveryForm_surname
-${DELIVERYEMAILFIELD}     id=DeliveryForm_email
-${DELIVERYPHONEFIELD}     id=DeliveryForm_phone
-${DELIVERYADDRESSFIELD}   id=DeliveryForm_direction_1
-
-${FROMCOMPANYFIELD}        id=CollectionForm_enterprise
-${TOCOMPANYFIELD}        id=DeliveryForm_enterprise
-
-
-${ERRORFIELD}             xpath=//*[contains(@class,"highlightFormError")]
-
-
 *** Keywords ***
 Click Collection Date Field
 	Click Element    ${COLLECTIONDATEFIELD}
@@ -76,6 +49,7 @@ Enter To Company    [Arguments]    ${company}
 
 Click Submit Button
 	Click Element    ${SUBMITDATA}
+	
 Submit Collection Form Unsuccessful
 	Wait Until Element Is Visible    ${ERRORFIELD}
 

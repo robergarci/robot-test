@@ -14,8 +14,7 @@ Resource         ./Keywords/ConfirmationPageKeywords.txt
 *** Variables ***
 ${COUNTRY}       ES
 ${BROWSER}       firefox
-${HOMEPAGE}      http://francia:corcega@it.frontend.packitos.com/
-${SECUREHOMEPAGE}    https://it.frontend.packitos.com/
+
 
 *** Test Cases ***
 Create Customs Should Fail When    Italia    Argentina    25010    B6665    1    10    10    10    True    GlobalCollect
