@@ -3,21 +3,25 @@ Resource    ResultsPageKeywords.txt
 Library     String
 
 *** Keywords ***
-Enter parcel weight    [Arguments]     ${parcelNumber}       ${weight}
-	Run Keyword If    '${COUNTRY}' == 'it'    Input Text     id=ParcelForm_${parcelNumber}_weight     ${weight}
+Enter parcel weight    [Arguments]    ${weight}
+	Run Keyword If    '${COUNTRY}' == 'it'    Input Text     id=ParcelForm_1_weight     ${weight}
 	Run Keyword If    '${COUNTRY}' == 'es'    Input Text     id=peso1     ${weight}
+	Run Keyword If    '${COUNTRY}' == 'de'    Input Text     id=ParcelForm_1_weight     ${weight}
 
-Enter parcel length    [Arguments]     ${parcelNumber}       ${length}
-	Run Keyword If    '${COUNTRY}' == 'it'    Input Text     id=ParcelForm_${parcelNumber}_length     ${length}
+Enter parcel length    [Arguments]    ${length}
+	Run Keyword If    '${COUNTRY}' == 'it'    Input Text     id=ParcelForm_1_length     ${length}
+	Run Keyword If    '${COUNTRY}' == 'de'    Input Text     id=ParcelForm_1_length     ${length}
 	Run Keyword If    '${COUNTRY}' == 'es'    Input Text     id=largo1     ${length}
 
-Enter parcel width    [Arguments]     ${parcelNumber}       ${width}
-	Run Keyword If    '${COUNTRY}' == 'it'    Input Text     id=ParcelForm_${parcelNumber}_width     ${width}
+Enter parcel width    [Arguments]     ${width}
+	Run Keyword If    '${COUNTRY}' == 'it'    Input Text     id=ParcelForm_1_width     ${width}
+	Run Keyword If    '${COUNTRY}' == 'de'    Input Text     id=ParcelForm_1_width     ${width}
 	Run Keyword If    '${COUNTRY}' == 'es'    Input Text     id=ancho1     ${width}
 
 
-Enter parcel height   [Arguments]     ${parcelNumber}      ${height}
-	Run Keyword If    '${COUNTRY}' == 'it'    Input Text     id=ParcelForm_${parcelNumber}_height    ${height}
+Enter parcel height   [Arguments]     ${height}
+	Run Keyword If    '${COUNTRY}' == 'it'    Input Text     id=ParcelForm_1_height    ${height}
+	Run Keyword If    '${COUNTRY}' == 'de'    Input Text     id=ParcelForm_1_height    ${height}
 	Run Keyword If    '${COUNTRY}' == 'es'    Input Text     id=alto1     ${height}
 
 Click Search Button
@@ -45,10 +49,10 @@ Search Shipments With    [Arguments]    ${weight}    ${length}    ${width}    ${
 	Select From List By Label    ${TOCOUTRYFIELD}    ${to_country}
 	Run Keyword Unless    '${from}' == '${empty}'   Enter From Zipcode     ${from}
 	Run Keyword Unless    '${to}' == '${empty}'    Enter To Zipcode       ${to}
-	Enter parcel weight    0        ${weight}
-	Enter parcel length    0        ${length}
-	Enter parcel width     0        ${width}
-	Enter parcel height    0        ${height}
+	Enter parcel weight    ${weight}
+	Enter parcel length    ${length}
+	Enter parcel width     ${width}
+	Enter parcel height    ${height}
 	Click Search Button
 
 

@@ -1,0 +1,22 @@
+*** Settings ***
+Library          Selenium2Library
+Test Setup		 Setup Browser
+Test Teardown    Close All Browsers
+Test Template    Submit Payment Should Fail When
+Resource    ../../Test Templates/payment_page_fail_test_template.txt
+
+*** Variables ***
+${COUNTRY}    es
+
+*** Test Cases ***   |priority|payMethod|from|to|from_country|to_country
+No Priority Option Selected PayPal
+	${empty}   PayPal   01001  05001  España - Peninsular  España - Peninsular
+
+No Priority Option Selected Global Collect
+	${empty}   GlobalCollect   01001  05001  España - Peninsular  España - Peninsular
+
+No Payment Method Selected With Priority
+	True    ${empty}   01001  05001  España - Peninsular  España - Peninsular    
+
+No Payment Method And Priority
+	${empty}    ${empty}   01001  05001  España - Peninsular  España - Peninsular

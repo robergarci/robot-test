@@ -1,4 +1,4 @@
-kclass PackLinkUtils(object):
+class PackLinkUtils(object):
 	def cookies_to_dict(self, cookie_str):
 		cookie_list = cookie_str.split(";")
 		cookie_dict = {}

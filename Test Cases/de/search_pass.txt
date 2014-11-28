@@ -1,0 +1,29 @@
+*** Settings ***
+Library   Selenium2Library
+Test Setup		 Setup Browser
+Test Teardown    Close All Browsers
+Test Template    Search Should Pass When
+Resource    ../../Test Templates/search_page_pass_test_template.txt
+
+*** Variables ***
+${COUNTRY}    de
+
+*** Test Cases ***    |Weight|Length|Width|Height|From|To|From Country|To Country
+Search With Decimal Weight     
+	1.5  15  15  15  25335  21027  Deutschland  Deutschland
+
+Search With Decimal Length
+	1  10.5  10  10  25335  21027  Deutschland  Deutschland
+
+Search With Decimal Width
+	1  10  10.4  10  25335  21027  Deutschland  Deutschland
+
+Search With Decimal Height
+	1  10  10  10.8  25335  21027  Deutschland  Deutschland
+
+Search With All Decimals
+	1.2  10.6  10.2  10.1  25335  21027  Deutschland  Deutschland
+
+Search With Whole Numbers
+	1  10  10  10  25335  21027  Deutschland  Deutschland
+

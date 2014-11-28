@@ -1,4 +1,6 @@
-BROWSER = "chrome"
-HOMEPAGE = "http://francia:corcega@de.frontend.packitos.com/"
-PERSONALDATAPAGE = "https://francia:corcega@de.frontend.packitos.com/dati-personali"
-SECUREHOMEPAGE = "https://de.frontend.packitos.com/"
+from ElementsLocatorsKokudo import *
+
+BROWSER = "firefox"
+HOMEPAGE = "http://de.www.packitos.com/"
+PERSONALDATAPAGE = "https://francia:corcega@de.www.packitos.com/persoenliche-daten"
+SECUREHOMEPAGE = "http://de.www.packitos.com/"

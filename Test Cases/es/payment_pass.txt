@@ -1,0 +1,16 @@
+*** Settings ***
+Library          Selenium2Library
+Test Setup		 Setup Browser
+Test Teardown    Close All Browsers
+Test Template    Submit Payment Should Pass When
+Resource    ../../Test Templates/payment_page_pass_test_template.txt
+
+*** Variables ***
+${COUNTRY}    es
+
+*** Test Cases ***   |priority|payMethod|from|to|from_country|to_country
+Priority Option Selected PayPal
+	True   PayPal    01001  05001  España - Peninsular  España - Peninsular
+
+Priority Option Selected Global Collect
+	True   GlobalCollect    01001  05001  España - Peninsular  España - Peninsular

@@ -1,0 +1,849 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generated="20141128 14:35:19.255" generator="Robot 2.8.6 (Python 2.7.6 on linux2)">
+<suite source="/home/miguelbeltre/Documentos/repositories/robot-test/Test Cases/it/complete_purchase.txt" id="s1" name="Complete Purchase">
+<test id="s1-t1" name="KEAVO Domestic +GlobalCollect">
+<kw type="setup" name="complete_purchase_test_template.Setup Browser">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="Open Browser">
+<doc></doc>
+<arguments>
+<arg>${HOMEPAGE}</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20141128 14:35:19.395" level="FAIL">No keyword with name 'Open Browser' found.</msg>
+<status status="FAIL" endtime="20141128 14:35:19.395" starttime="20141128 14:35:19.395"></status>
+</kw>
+<status status="FAIL" endtime="20141128 14:35:19.395" starttime="20141128 14:35:19.392"></status>
+</kw>
+<kw type="teardown" name="Close All Browsers">
+<doc></doc>
+<arguments>
+</arguments>
+<msg timestamp="20141128 14:35:19.398" level="FAIL">No keyword with name 'Close All Browsers' found.</msg>
+<status status="FAIL" endtime="20141128 14:35:19.398" starttime="20141128 14:35:19.398">No keyword with name 'Close All Browsers' found.</status>
+</kw>
+<doc></doc>
+<tags>
+<tag>Sanity</tag>
+</tags>
+<status status="FAIL" endtime="20141128 14:35:19.399" critical="yes" starttime="20141128 14:35:19.391">Setup failed:
+No keyword with name 'Open Browser' found.
+
+Also teardown failed:
+No keyword with name 'Close All Browsers' found.</status>
+</test>
+<test id="s1-t2" name="KEAVO International Air +GlobalCollect">
+<kw type="setup" name="complete_purchase_test_template.Setup Browser">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="Open Browser">
+<doc></doc>
+<arguments>
+<arg>${HOMEPAGE}</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20141128 14:35:19.404" level="FAIL">No keyword with name 'Open Browser' found.</msg>
+<status status="FAIL" endtime="20141128 14:35:19.404" starttime="20141128 14:35:19.403"></status>
+</kw>
+<status status="FAIL" endtime="20141128 14:35:19.404" starttime="20141128 14:35:19.400"></status>
+</kw>
+<kw type="teardown" name="Close All Browsers">
+<doc></doc>
+<arguments>
+</arguments>
+<msg timestamp="20141128 14:35:19.407" level="FAIL">No keyword with name 'Close All Browsers' found.</msg>
+<status status="FAIL" endtime="20141128 14:35:19.408" starttime="20141128 14:35:19.407">No keyword with name 'Close All Browsers' found.</status>
+</kw>
+<doc></doc>
+<tags>
+<tag>Sanity</tag>
+</tags>
+<status status="FAIL" endtime="20141128 14:35:19.408" critical="yes" starttime="20141128 14:35:19.399">Setup failed:
+No keyword with name 'Open Browser' found.
+
+Also teardown failed:
+No keyword with name 'Close All Browsers' found.</status>
+</test>
+<test id="s1-t3" name="KEAVO International Road +GlobalCollect">
+<kw type="setup" name="complete_purchase_test_template.Setup Browser">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="Open Browser">
+<doc></doc>
+<arguments>
+<arg>${HOMEPAGE}</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20141128 14:35:19.412" level="FAIL">No keyword with name 'Open Browser' found.</msg>
+<status status="FAIL" endtime="20141128 14:35:19.412" starttime="20141128 14:35:19.412"></status>
+</kw>
+<status status="FAIL" endtime="20141128 14:35:19.412" starttime="20141128 14:35:19.409"></status>
+</kw>
+<kw type="teardown" name="Close All Browsers">
+<doc></doc>
+<arguments>
+</arguments>
+<msg timestamp="20141128 14:35:19.415" level="FAIL">No keyword with name 'Close All Browsers' found.</msg>
+<status status="FAIL" endtime="20141128 14:35:19.415" starttime="20141128 14:35:19.415">No keyword with name 'Close All Browsers' found.</status>
+</kw>
+<doc></doc>
+<tags>
+<tag>Sanity</tag>
+</tags>
+<status status="FAIL" endtime="20141128 14:35:19.416" critical="yes" starttime="20141128 14:35:19.408">Setup failed:
+No keyword with name 'Open Browser' found.
+
+Also teardown failed:
+No keyword with name 'Close All Browsers' found.</status>
+</test>
+<test id="s1-t4" name="KEAVO International Air Import +GlobalCollect">
+<kw type="setup" name="complete_purchase_test_template.Setup Browser">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="Open Browser">
+<doc></doc>
+<arguments>
+<arg>${HOMEPAGE}</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20141128 14:35:19.421" level="FAIL">No keyword with name 'Open Browser' found.</msg>
+<status status="FAIL" endtime="20141128 14:35:19.421" starttime="20141128 14:35:19.421"></status>
+</kw>
+<status status="FAIL" endtime="20141128 14:35:19.421" starttime="20141128 14:35:19.417"></status>
+</kw>
+<kw type="teardown" name="Close All Browsers">
+<doc></doc>
+<arguments>
+</arguments>
+<msg timestamp="20141128 14:35:19.425" level="FAIL">No keyword with name 'Close All Browsers' found.</msg>
+<status status="FAIL" endtime="20141128 14:35:19.425" starttime="20141128 14:35:19.425">No keyword with name 'Close All Browsers' found.</status>
+</kw>
+<doc></doc>
+<tags>
+<tag>Sanity</tag>
+</tags>
+<status status="FAIL" endtime="20141128 14:35:19.425" critical="yes" starttime="20141128 14:35:19.416">Setup failed:
+No keyword with name 'Open Browser' found.
+
+Also teardown failed:
+No keyword with name 'Close All Browsers' found.</status>
+</test>
+<test id="s1-t5" name="BARTOLINI Express +GlobalCollect">
+<kw type="setup" name="complete_purchase_test_template.Setup Browser">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="Open Browser">
+<doc></doc>
+<arguments>
+<arg>${HOMEPAGE}</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20141128 14:35:19.430" level="FAIL">No keyword with name 'Open Browser' found.</msg>
+<status status="FAIL" endtime="20141128 14:35:19.430" starttime="20141128 14:35:19.430"></status>
+</kw>
+<status status="FAIL" endtime="20141128 14:35:19.430" starttime="20141128 14:35:19.427"></status>
+</kw>
+<kw type="teardown" name="Close All Browsers">
+<doc></doc>
+<arguments>
+</arguments>
+<msg timestamp="20141128 14:35:19.433" level="FAIL">No keyword with name 'Close All Browsers' found.</msg>
+<status status="FAIL" endtime="20141128 14:35:19.433" starttime="20141128 14:35:19.433">No keyword with name 'Close All Browsers' found.</status>
+</kw>
+<doc></doc>
+<tags>
+<tag>Sanity</tag>
+</tags>
+<status status="FAIL" endtime="20141128 14:35:19.434" critical="yes" starttime="20141128 14:35:19.425">Setup failed:
+No keyword with name 'Open Browser' found.
+
+Also teardown failed:
+No keyword with name 'Close All Browsers' found.</status>
+</test>
+<test id="s1-t6" name="BARTOLINI Euroexpress +GlobalCollect">
+<kw type="setup" name="complete_purchase_test_template.Setup Browser">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="Open Browser">
+<doc></doc>
+<arguments>
+<arg>${HOMEPAGE}</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20141128 14:35:19.438" level="FAIL">No keyword with name 'Open Browser' found.</msg>
+<status status="FAIL" endtime="20141128 14:35:19.438" starttime="20141128 14:35:19.438"></status>
+</kw>
+<status status="FAIL" endtime="20141128 14:35:19.438" starttime="20141128 14:35:19.435"></status>
+</kw>
+<kw type="teardown" name="Close All Browsers">
+<doc></doc>
+<arguments>
+</arguments>
+<msg timestamp="20141128 14:35:19.441" level="FAIL">No keyword with name 'Close All Browsers' found.</msg>
+<status status="FAIL" endtime="20141128 14:35:19.441" starttime="20141128 14:35:19.441">No keyword with name 'Close All Browsers' found.</status>
+</kw>
+<doc></doc>
+<tags>
+<tag>Sanity</tag>
+</tags>
+<status status="FAIL" endtime="20141128 14:35:19.441" critical="yes" starttime="20141128 14:35:19.434">Setup failed:
+No keyword with name 'Open Browser' found.
+
+Also teardown failed:
+No keyword with name 'Close All Browsers' found.</status>
+</test>
+<test id="s1-t7" name="BARTOLINI DPD +GlobalCollect">
+<kw type="setup" name="complete_purchase_test_template.Setup Browser">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="Open Browser">
+<doc></doc>
+<arguments>
+<arg>${HOMEPAGE}</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20141128 14:35:19.445" level="FAIL">No keyword with name 'Open Browser' found.</msg>
+<status status="FAIL" endtime="20141128 14:35:19.445" starttime="20141128 14:35:19.445"></status>
+</kw>
+<status status="FAIL" endtime="20141128 14:35:19.445" starttime="20141128 14:35:19.442"></status>
+</kw>
+<kw type="teardown" name="Close All Browsers">
+<doc></doc>
+<arguments>
+</arguments>
+<msg timestamp="20141128 14:35:19.449" level="FAIL">No keyword with name 'Close All Browsers' found.</msg>
+<status status="FAIL" endtime="20141128 14:35:19.449" starttime="20141128 14:35:19.449">No keyword with name 'Close All Browsers' found.</status>
+</kw>
+<doc></doc>
+<tags>
+<tag>Sanity</tag>
+</tags>
+<status status="FAIL" endtime="20141128 14:35:19.449" critical="yes" starttime="20141128 14:35:19.441">Setup failed:
+No keyword with name 'Open Browser' found.
+
+Also teardown failed:
+No keyword with name 'Close All Browsers' found.</status>
+</test>
+<test id="s1-t8" name="UPS Express Saver +GlobalCollect">
+<kw type="setup" name="complete_purchase_test_template.Setup Browser">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="Open Browser">
+<doc></doc>
+<arguments>
+<arg>${HOMEPAGE}</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20141128 14:35:19.454" level="FAIL">No keyword with name 'Open Browser' found.</msg>
+<status status="FAIL" endtime="20141128 14:35:19.454" starttime="20141128 14:35:19.454"></status>
+</kw>
+<status status="FAIL" endtime="20141128 14:35:19.454" starttime="20141128 14:35:19.451"></status>
+</kw>
+<kw type="teardown" name="Close All Browsers">
+<doc></doc>
+<arguments>
+</arguments>
+<msg timestamp="20141128 14:35:19.458" level="FAIL">No keyword with name 'Close All Browsers' found.</msg>
+<status status="FAIL" endtime="20141128 14:35:19.458" starttime="20141128 14:35:19.458">No keyword with name 'Close All Browsers' found.</status>
+</kw>
+<doc></doc>
+<tags>
+<tag>Sanity</tag>
+</tags>
+<status status="FAIL" endtime="20141128 14:35:19.458" critical="yes" starttime="20141128 14:35:19.449">Setup failed:
+No keyword with name 'Open Browser' found.
+
+Also teardown failed:
+No keyword with name 'Close All Browsers' found.</status>
+</test>
+<test id="s1-t9" name="UPS Express Saver Import UE +GlobalCollect">
+<kw type="setup" name="complete_purchase_test_template.Setup Browser">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="Open Browser">
+<doc></doc>
+<arguments>
+<arg>${HOMEPAGE}</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20141128 14:35:19.463" level="FAIL">No keyword with name 'Open Browser' found.</msg>
+<status status="FAIL" endtime="20141128 14:35:19.463" starttime="20141128 14:35:19.463"></status>
+</kw>
+<status status="FAIL" endtime="20141128 14:35:19.463" starttime="20141128 14:35:19.459"></status>
+</kw>
+<kw type="teardown" name="Close All Browsers">
+<doc></doc>
+<arguments>
+</arguments>
+<msg timestamp="20141128 14:35:19.467" level="FAIL">No keyword with name 'Close All Browsers' found.</msg>
+<status status="FAIL" endtime="20141128 14:35:19.467" starttime="20141128 14:35:19.466">No keyword with name 'Close All Browsers' found.</status>
+</kw>
+<doc></doc>
+<tags>
+<tag>Sanity</tag>
+</tags>
+<status status="FAIL" endtime="20141128 14:35:19.467" critical="yes" starttime="20141128 14:35:19.458">Setup failed:
+No keyword with name 'Open Browser' found.
+
+Also teardown failed:
+No keyword with name 'Close All Browsers' found.</status>
+</test>
+<test id="s1-t10" name="UPS Express Saver Import International +GlobalCollect">
+<kw type="setup" name="complete_purchase_test_template.Setup Browser">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="Open Browser">
+<doc></doc>
+<arguments>
+<arg>${HOMEPAGE}</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20141128 14:35:19.471" level="FAIL">No keyword with name 'Open Browser' found.</msg>
+<status status="FAIL" endtime="20141128 14:35:19.471" starttime="20141128 14:35:19.471"></status>
+</kw>
+<status status="FAIL" endtime="20141128 14:35:19.471" starttime="20141128 14:35:19.468"></status>
+</kw>
+<kw type="teardown" name="Close All Browsers">
+<doc></doc>
+<arguments>
+</arguments>
+<msg timestamp="20141128 14:35:19.474" level="FAIL">No keyword with name 'Close All Browsers' found.</msg>
+<status status="FAIL" endtime="20141128 14:35:19.474" starttime="20141128 14:35:19.474">No keyword with name 'Close All Browsers' found.</status>
+</kw>
+<doc></doc>
+<tags>
+<tag>Sanity</tag>
+</tags>
+<status status="FAIL" endtime="20141128 14:35:19.474" critical="yes" starttime="20141128 14:35:19.467">Setup failed:
+No keyword with name 'Open Browser' found.
+
+Also teardown failed:
+No keyword with name 'Close All Browsers' found.</status>
+</test>
+<test id="s1-t11" name="UPS Express Saver Export UE +GlobalCollect">
+<kw type="setup" name="complete_purchase_test_template.Setup Browser">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="Open Browser">
+<doc></doc>
+<arguments>
+<arg>${HOMEPAGE}</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20141128 14:35:19.479" level="FAIL">No keyword with name 'Open Browser' found.</msg>
+<status status="FAIL" endtime="20141128 14:35:19.479" starttime="20141128 14:35:19.479"></status>
+</kw>
+<status status="FAIL" endtime="20141128 14:35:19.479" starttime="20141128 14:35:19.476"></status>
+</kw>
+<kw type="teardown" name="Close All Browsers">
+<doc></doc>
+<arguments>
+</arguments>
+<msg timestamp="20141128 14:35:19.483" level="FAIL">No keyword with name 'Close All Browsers' found.</msg>
+<status status="FAIL" endtime="20141128 14:35:19.483" starttime="20141128 14:35:19.483">No keyword with name 'Close All Browsers' found.</status>
+</kw>
+<doc></doc>
+<tags>
+<tag>Sanity</tag>
+</tags>
+<status status="FAIL" endtime="20141128 14:35:19.484" critical="yes" starttime="20141128 14:35:19.475">Setup failed:
+No keyword with name 'Open Browser' found.
+
+Also teardown failed:
+No keyword with name 'Close All Browsers' found.</status>
+</test>
+<test id="s1-t12" name="UPS Express Saver Export International +GlobalCollect">
+<kw type="setup" name="complete_purchase_test_template.Setup Browser">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="Open Browser">
+<doc></doc>
+<arguments>
+<arg>${HOMEPAGE}</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20141128 14:35:19.488" level="FAIL">No keyword with name 'Open Browser' found.</msg>
+<status status="FAIL" endtime="20141128 14:35:19.488" starttime="20141128 14:35:19.488"></status>
+</kw>
+<status status="FAIL" endtime="20141128 14:35:19.489" starttime="20141128 14:35:19.485"></status>
+</kw>
+<kw type="teardown" name="Close All Browsers">
+<doc></doc>
+<arguments>
+</arguments>
+<msg timestamp="20141128 14:35:19.492" level="FAIL">No keyword with name 'Close All Browsers' found.</msg>
+<status status="FAIL" endtime="20141128 14:35:19.492" starttime="20141128 14:35:19.492">No keyword with name 'Close All Browsers' found.</status>
+</kw>
+<doc></doc>
+<tags>
+<tag>Sanity</tag>
+</tags>
+<status status="FAIL" endtime="20141128 14:35:19.492" critical="yes" starttime="20141128 14:35:19.484">Setup failed:
+No keyword with name 'Open Browser' found.
+
+Also teardown failed:
+No keyword with name 'Close All Browsers' found.</status>
+</test>
+<test id="s1-t13" name="UPS Standard Export UE Monobulto +GlobalCollect">
+<kw type="setup" name="complete_purchase_test_template.Setup Browser">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="Open Browser">
+<doc></doc>
+<arguments>
+<arg>${HOMEPAGE}</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20141128 14:35:19.497" level="FAIL">No keyword with name 'Open Browser' found.</msg>
+<status status="FAIL" endtime="20141128 14:35:19.497" starttime="20141128 14:35:19.497"></status>
+</kw>
+<status status="FAIL" endtime="20141128 14:35:19.497" starttime="20141128 14:35:19.493"></status>
+</kw>
+<kw type="teardown" name="Close All Browsers">
+<doc></doc>
+<arguments>
+</arguments>
+<msg timestamp="20141128 14:35:19.500" level="FAIL">No keyword with name 'Close All Browsers' found.</msg>
+<status status="FAIL" endtime="20141128 14:35:19.500" starttime="20141128 14:35:19.500">No keyword with name 'Close All Browsers' found.</status>
+</kw>
+<doc></doc>
+<tags>
+<tag>Sanity</tag>
+</tags>
+<status status="FAIL" endtime="20141128 14:35:19.500" critical="yes" starttime="20141128 14:35:19.492">Setup failed:
+No keyword with name 'Open Browser' found.
+
+Also teardown failed:
+No keyword with name 'Close All Browsers' found.</status>
+</test>
+<test id="s1-t14" name="UPS Standard Import UE Monobulto +GlobalCollect">
+<kw type="setup" name="complete_purchase_test_template.Setup Browser">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="Open Browser">
+<doc></doc>
+<arguments>
+<arg>${HOMEPAGE}</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20141128 14:35:19.504" level="FAIL">No keyword with name 'Open Browser' found.</msg>
+<status status="FAIL" endtime="20141128 14:35:19.504" starttime="20141128 14:35:19.504"></status>
+</kw>
+<status status="FAIL" endtime="20141128 14:35:19.505" starttime="20141128 14:35:19.501"></status>
+</kw>
+<kw type="teardown" name="Close All Browsers">
+<doc></doc>
+<arguments>
+</arguments>
+<msg timestamp="20141128 14:35:19.508" level="FAIL">No keyword with name 'Close All Browsers' found.</msg>
+<status status="FAIL" endtime="20141128 14:35:19.508" starttime="20141128 14:35:19.508">No keyword with name 'Close All Browsers' found.</status>
+</kw>
+<doc></doc>
+<tags>
+<tag>Sanity</tag>
+</tags>
+<status status="FAIL" endtime="20141128 14:35:19.508" critical="yes" starttime="20141128 14:35:19.500">Setup failed:
+No keyword with name 'Open Browser' found.
+
+Also teardown failed:
+No keyword with name 'Close All Browsers' found.</status>
+</test>
+<test id="s1-t15" name="UPS Standard National Monobulto +GlobalCollect">
+<kw type="setup" name="complete_purchase_test_template.Setup Browser">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="Open Browser">
+<doc></doc>
+<arguments>
+<arg>${HOMEPAGE}</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20141128 14:35:19.513" level="FAIL">No keyword with name 'Open Browser' found.</msg>
+<status status="FAIL" endtime="20141128 14:35:19.513" starttime="20141128 14:35:19.513"></status>
+</kw>
+<status status="FAIL" endtime="20141128 14:35:19.513" starttime="20141128 14:35:19.509"></status>
+</kw>
+<kw type="teardown" name="Close All Browsers">
+<doc></doc>
+<arguments>
+</arguments>
+<msg timestamp="20141128 14:35:19.517" level="FAIL">No keyword with name 'Close All Browsers' found.</msg>
+<status status="FAIL" endtime="20141128 14:35:19.517" starttime="20141128 14:35:19.516">No keyword with name 'Close All Browsers' found.</status>
+</kw>
+<doc></doc>
+<tags>
+<tag>Sanity</tag>
+</tags>
+<status status="FAIL" endtime="20141128 14:35:19.517" critical="yes" starttime="20141128 14:35:19.508">Setup failed:
+No keyword with name 'Open Browser' found.
+
+Also teardown failed:
+No keyword with name 'Close All Browsers' found.</status>
+</test>
+<test id="s1-t16" name="UPS Express Import International +GlobalCollect">
+<kw type="setup" name="complete_purchase_test_template.Setup Browser">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="Open Browser">
+<doc></doc>
+<arguments>
+<arg>${HOMEPAGE}</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20141128 14:35:19.522" level="FAIL">No keyword with name 'Open Browser' found.</msg>
+<status status="FAIL" endtime="20141128 14:35:19.522" starttime="20141128 14:35:19.522"></status>
+</kw>
+<status status="FAIL" endtime="20141128 14:35:19.522" starttime="20141128 14:35:19.518"></status>
+</kw>
+<kw type="teardown" name="Close All Browsers">
+<doc></doc>
+<arguments>
+</arguments>
+<msg timestamp="20141128 14:35:19.526" level="FAIL">No keyword with name 'Close All Browsers' found.</msg>
+<status status="FAIL" endtime="20141128 14:35:19.526" starttime="20141128 14:35:19.525">No keyword with name 'Close All Browsers' found.</status>
+</kw>
+<doc></doc>
+<tags>
+<tag>Sanity</tag>
+</tags>
+<status status="FAIL" endtime="20141128 14:35:19.526" critical="yes" starttime="20141128 14:35:19.517">Setup failed:
+No keyword with name 'Open Browser' found.
+
+Also teardown failed:
+No keyword with name 'Close All Browsers' found.</status>
+</test>
+<test id="s1-t17" name="UPS Express European Import +GlobalCollect">
+<kw type="setup" name="complete_purchase_test_template.Setup Browser">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="Open Browser">
+<doc></doc>
+<arguments>
+<arg>${HOMEPAGE}</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20141128 14:35:19.530" level="FAIL">No keyword with name 'Open Browser' found.</msg>
+<status status="FAIL" endtime="20141128 14:35:19.530" starttime="20141128 14:35:19.530"></status>
+</kw>
+<status status="FAIL" endtime="20141128 14:35:19.530" starttime="20141128 14:35:19.527"></status>
+</kw>
+<kw type="teardown" name="Close All Browsers">
+<doc></doc>
+<arguments>
+</arguments>
+<msg timestamp="20141128 14:35:19.533" level="FAIL">No keyword with name 'Close All Browsers' found.</msg>
+<status status="FAIL" endtime="20141128 14:35:19.533" starttime="20141128 14:35:19.533">No keyword with name 'Close All Browsers' found.</status>
+</kw>
+<doc></doc>
+<tags>
+<tag>Sanity</tag>
+</tags>
+<status status="FAIL" endtime="20141128 14:35:19.534" critical="yes" starttime="20141128 14:35:19.526">Setup failed:
+No keyword with name 'Open Browser' found.
+
+Also teardown failed:
+No keyword with name 'Close All Browsers' found.</status>
+</test>
+<test id="s1-t18" name="UPS Express European Export +GlobalCollect">
+<kw type="setup" name="complete_purchase_test_template.Setup Browser">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="Open Browser">
+<doc></doc>
+<arguments>
+<arg>${HOMEPAGE}</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20141128 14:35:19.538" level="FAIL">No keyword with name 'Open Browser' found.</msg>
+<status status="FAIL" endtime="20141128 14:35:19.538" starttime="20141128 14:35:19.538"></status>
+</kw>
+<status status="FAIL" endtime="20141128 14:35:19.538" starttime="20141128 14:35:19.535"></status>
+</kw>
+<kw type="teardown" name="Close All Browsers">
+<doc></doc>
+<arguments>
+</arguments>
+<msg timestamp="20141128 14:35:19.542" level="FAIL">No keyword with name 'Close All Browsers' found.</msg>
+<status status="FAIL" endtime="20141128 14:35:19.542" starttime="20141128 14:35:19.541">No keyword with name 'Close All Browsers' found.</status>
+</kw>
+<doc></doc>
+<tags>
+<tag>Sanity</tag>
+</tags>
+<status status="FAIL" endtime="20141128 14:35:19.542" critical="yes" starttime="20141128 14:35:19.534">Setup failed:
+No keyword with name 'Open Browser' found.
+
+Also teardown failed:
+No keyword with name 'Close All Browsers' found.</status>
+</test>
+<test id="s1-t19" name="UPS Express Export International +GlobalCollect">
+<kw type="setup" name="complete_purchase_test_template.Setup Browser">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="Open Browser">
+<doc></doc>
+<arguments>
+<arg>${HOMEPAGE}</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20141128 14:35:19.547" level="FAIL">No keyword with name 'Open Browser' found.</msg>
+<status status="FAIL" endtime="20141128 14:35:19.547" starttime="20141128 14:35:19.547"></status>
+</kw>
+<status status="FAIL" endtime="20141128 14:35:19.547" starttime="20141128 14:35:19.543"></status>
+</kw>
+<kw type="teardown" name="Close All Browsers">
+<doc></doc>
+<arguments>
+</arguments>
+<msg timestamp="20141128 14:35:19.551" level="FAIL">No keyword with name 'Close All Browsers' found.</msg>
+<status status="FAIL" endtime="20141128 14:35:19.551" starttime="20141128 14:35:19.550">No keyword with name 'Close All Browsers' found.</status>
+</kw>
+<doc></doc>
+<tags>
+<tag>Sanity</tag>
+</tags>
+<status status="FAIL" endtime="20141128 14:35:19.551" critical="yes" starttime="20141128 14:35:19.542">Setup failed:
+No keyword with name 'Open Browser' found.
+
+Also teardown failed:
+No keyword with name 'Close All Browsers' found.</status>
+</test>
+<test id="s1-t20" name="UPS Express European Export +GlobalCollect">
+<kw type="setup" name="complete_purchase_test_template.Setup Browser">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="Open Browser">
+<doc></doc>
+<arguments>
+<arg>${HOMEPAGE}</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20141128 14:35:19.556" level="FAIL">No keyword with name 'Open Browser' found.</msg>
+<status status="FAIL" endtime="20141128 14:35:19.556" starttime="20141128 14:35:19.556"></status>
+</kw>
+<status status="FAIL" endtime="20141128 14:35:19.556" starttime="20141128 14:35:19.552"></status>
+</kw>
+<kw type="teardown" name="Close All Browsers">
+<doc></doc>
+<arguments>
+</arguments>
+<msg timestamp="20141128 14:35:19.559" level="FAIL">No keyword with name 'Close All Browsers' found.</msg>
+<status status="FAIL" endtime="20141128 14:35:19.559" starttime="20141128 14:35:19.559">No keyword with name 'Close All Browsers' found.</status>
+</kw>
+<doc></doc>
+<tags>
+<tag>Sanity</tag>
+</tags>
+<status status="FAIL" endtime="20141128 14:35:19.559" critical="yes" starttime="20141128 14:35:19.551">Setup failed:
+No keyword with name 'Open Browser' found.
+
+Also teardown failed:
+No keyword with name 'Close All Browsers' found.</status>
+</test>
+<test id="s1-t21" name="TNT Express +GlobalCollect">
+<kw type="setup" name="complete_purchase_test_template.Setup Browser">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="Open Browser">
+<doc></doc>
+<arguments>
+<arg>${HOMEPAGE}</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20141128 14:35:19.563" level="FAIL">No keyword with name 'Open Browser' found.</msg>
+<status status="FAIL" endtime="20141128 14:35:19.564" starttime="20141128 14:35:19.563"></status>
+</kw>
+<status status="FAIL" endtime="20141128 14:35:19.564" starttime="20141128 14:35:19.560"></status>
+</kw>
+<kw type="teardown" name="Close All Browsers">
+<doc></doc>
+<arguments>
+</arguments>
+<msg timestamp="20141128 14:35:19.567" level="FAIL">No keyword with name 'Close All Browsers' found.</msg>
+<status status="FAIL" endtime="20141128 14:35:19.567" starttime="20141128 14:35:19.567">No keyword with name 'Close All Browsers' found.</status>
+</kw>
+<doc></doc>
+<tags>
+<tag>Sanity</tag>
+</tags>
+<status status="FAIL" endtime="20141128 14:35:19.567" critical="yes" starttime="20141128 14:35:19.560">Setup failed:
+No keyword with name 'Open Browser' found.
+
+Also teardown failed:
+No keyword with name 'Close All Browsers' found.</status>
+</test>
+<test id="s1-t22" name="TNT Economy Express +GlobalCollect">
+<kw type="setup" name="complete_purchase_test_template.Setup Browser">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="Open Browser">
+<doc></doc>
+<arguments>
+<arg>${HOMEPAGE}</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20141128 14:35:19.571" level="FAIL">No keyword with name 'Open Browser' found.</msg>
+<status status="FAIL" endtime="20141128 14:35:19.571" starttime="20141128 14:35:19.571"></status>
+</kw>
+<status status="FAIL" endtime="20141128 14:35:19.571" starttime="20141128 14:35:19.568"></status>
+</kw>
+<kw type="teardown" name="Close All Browsers">
+<doc></doc>
+<arguments>
+</arguments>
+<msg timestamp="20141128 14:35:19.575" level="FAIL">No keyword with name 'Close All Browsers' found.</msg>
+<status status="FAIL" endtime="20141128 14:35:19.575" starttime="20141128 14:35:19.575">No keyword with name 'Close All Browsers' found.</status>
+</kw>
+<doc></doc>
+<tags>
+<tag>Sanity</tag>
+</tags>
+<status status="FAIL" endtime="20141128 14:35:19.575" critical="yes" starttime="20141128 14:35:19.567">Setup failed:
+No keyword with name 'Open Browser' found.
+
+Also teardown failed:
+No keyword with name 'Close All Browsers' found.</status>
+</test>
+<test id="s1-t23" name="GLS Euro Parcel +GlobalCollect">
+<kw type="setup" name="complete_purchase_test_template.Setup Browser">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="Open Browser">
+<doc></doc>
+<arguments>
+<arg>${HOMEPAGE}</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20141128 14:35:19.580" level="FAIL">No keyword with name 'Open Browser' found.</msg>
+<status status="FAIL" endtime="20141128 14:35:19.580" starttime="20141128 14:35:19.580"></status>
+</kw>
+<status status="FAIL" endtime="20141128 14:35:19.581" starttime="20141128 14:35:19.577"></status>
+</kw>
+<kw type="teardown" name="Close All Browsers">
+<doc></doc>
+<arguments>
+</arguments>
+<msg timestamp="20141128 14:35:19.584" level="FAIL">No keyword with name 'Close All Browsers' found.</msg>
+<status status="FAIL" endtime="20141128 14:35:19.584" starttime="20141128 14:35:19.584">No keyword with name 'Close All Browsers' found.</status>
+</kw>
+<doc></doc>
+<tags>
+<tag>Sanity</tag>
+</tags>
+<status status="FAIL" endtime="20141128 14:35:19.584" critical="yes" starttime="20141128 14:35:19.576">Setup failed:
+No keyword with name 'Open Browser' found.
+
+Also teardown failed:
+No keyword with name 'Close All Browsers' found.</status>
+</test>
+<test id="s1-t24" name="GLS Euro Parcel Import +GlobalCollect">
+<kw type="setup" name="complete_purchase_test_template.Setup Browser">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="Open Browser">
+<doc></doc>
+<arguments>
+<arg>${HOMEPAGE}</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20141128 14:35:19.589" level="FAIL">No keyword with name 'Open Browser' found.</msg>
+<status status="FAIL" endtime="20141128 14:35:19.589" starttime="20141128 14:35:19.588"></status>
+</kw>
+<status status="FAIL" endtime="20141128 14:35:19.589" starttime="20141128 14:35:19.585"></status>
+</kw>
+<kw type="teardown" name="Close All Browsers">
+<doc></doc>
+<arguments>
+</arguments>
+<msg timestamp="20141128 14:35:19.592" level="FAIL">No keyword with name 'Close All Browsers' found.</msg>
+<status status="FAIL" endtime="20141128 14:35:19.592" starttime="20141128 14:35:19.592">No keyword with name 'Close All Browsers' found.</status>
+</kw>
+<doc></doc>
+<tags>
+<tag>Sanity</tag>
+</tags>
+<status status="FAIL" endtime="20141128 14:35:19.592" critical="yes" starttime="20141128 14:35:19.584">Setup failed:
+No keyword with name 'Open Browser' found.
+
+Also teardown failed:
+No keyword with name 'Close All Browsers' found.</status>
+</test>
+<test id="s1-t25" name="GLS Domestic +GlobalCollect">
+<kw type="setup" name="complete_purchase_test_template.Setup Browser">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="Open Browser">
+<doc></doc>
+<arguments>
+<arg>${HOMEPAGE}</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20141128 14:35:19.596" level="FAIL">No keyword with name 'Open Browser' found.</msg>
+<status status="FAIL" endtime="20141128 14:35:19.596" starttime="20141128 14:35:19.596"></status>
+</kw>
+<status status="FAIL" endtime="20141128 14:35:19.596" starttime="20141128 14:35:19.593"></status>
+</kw>
+<kw type="teardown" name="Close All Browsers">
+<doc></doc>
+<arguments>
+</arguments>
+<msg timestamp="20141128 14:35:19.600" level="FAIL">No keyword with name 'Close All Browsers' found.</msg>
+<status status="FAIL" endtime="20141128 14:35:19.600" starttime="20141128 14:35:19.599">No keyword with name 'Close All Browsers' found.</status>
+</kw>
+<doc></doc>
+<tags>
+<tag>Sanity</tag>
+</tags>
+<status status="FAIL" endtime="20141128 14:35:19.600" critical="yes" starttime="20141128 14:35:19.592">Setup failed:
+No keyword with name 'Open Browser' found.
+
+Also teardown failed:
+No keyword with name 'Close All Browsers' found.</status>
+</test>
+<doc></doc>
+<metadata>
+</metadata>
+<status status="FAIL" endtime="20141128 14:35:19.600" starttime="20141128 14:35:19.256"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="25" pass="0">Critical Tests</stat>
+<stat fail="25" pass="0">All Tests</stat>
+</total>
+<tag>
+<stat info="" links="" doc="" combined="" pass="0" fail="25">Sanity</stat>
+</tag>
+<suite>
+<stat fail="25" pass="0" id="s1" name="Complete Purchase">Complete Purchase</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20141128 14:35:19.551" level="WARN">Multiple test cases with name 'UPS Express European Export +GlobalCollect' executed in test suite 'Complete Purchase'.</msg>
+</errors>
+</robot>

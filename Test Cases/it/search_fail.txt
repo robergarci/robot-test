@@ -8,12 +8,27 @@ Resource    ../../Test Templates/search_page_fail_test_template.txt
 *** Variables ***
 ${COUNTRY}    it
 
-*** Test Cases ***     		 Weight     Length     Width      Height     From       To        Origin               To Country
-Empty Parcel Weight          ${empty}   10         10         10         28014      28014     Italia               Italia
-Empty Parcel Length    		 1          ${empty}   10         10         28014      28014     Italia               Italia
-Empty Parcel Width     		 1          10         ${empty}   10         28014      28014     Italia               Italia
-Empty Parcel Height    		 1          10         10         ${empty}   28014      28014     Italia               Italia
-Empty From Zipcode    		 1          10         10         10         ${empty}   28014     Italia               Italia
-Empty From and To Zipcode    1          10         10         10         ${empty}   ${empty}  Italia               Italia
-Empty To Zipcode    		 1          10         10         10         28014      ${empty}  Italia               Italia
-All Values Empty    	     ${empty}   ${empty}   ${empty}   ${empty}   ${empty}   ${empty}  Italia               Italia
+*** Test Cases ***    |Weight|Length|Width|Height|From|To|From Country|To Country
+Empty Parcel Weight
+	${empty}  10  10  10  25010  25010  Italia  Italia
+
+Empty Parcel Length
+	1  ${empty}  10  10  25010  25010  Italia  Italia
+
+Empty Parcel Width
+	1  10  ${empty}  10  25010  25010  Italia  Italia
+
+Empty Parcel Height
+	1  10  10  ${empty}  25010  25010  Italia  Italia
+
+Empty From Zipcode
+	1  10  10  10  ${empty}  25010  Italia  Italia
+
+Empty From and To Zipcode    
+	1  10  10  10  ${empty}   ${empty}  Italia  Italia
+
+Empty To Zipcode
+	1  10  10  10  25010  ${empty}  Italia  Italia
+
+All Values Empty
+	${empty}   ${empty}   ${empty}   ${empty}   ${empty}   ${empty}  Italia  Italia

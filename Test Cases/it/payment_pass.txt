@@ -1,0 +1,16 @@
+*** Settings ***
+Library          Selenium2Library
+Test Setup		 Setup Browser
+Test Teardown    Close All Browsers
+Test Template    Submit Payment Should Pass When
+Resource         ../../Test Templates/payment_page_pass_test_template.txt
+
+*** Variables ***
+${COUNTRY}    it
+
+*** Test Cases ***   |priority|payMethod|from|to|from_country|to_country|service name
+Priority Option Selected PayPal
+	True  PayPal  25010  25010  Italia  Italia   KEAVO Domestic
+
+Priority Option Selected Global Collect
+	True  GlobalCollect  25010  25010  Italia  Italia   KEAVO Domestic

@@ -1,0 +1,15 @@
+*** Settings ***
+Library          Selenium2Library
+Test Setup		 Setup Browser
+Test Teardown    Close All Browsers
+Test Template    Personal Data Should Pass When
+Resource    ../../Test Templates/personal_data_pass_test_template.txt
+
+*** Variables ***
+${COUNTRY}    es
+
+*** Test Cases ***   |name|surname|email|description|value|insurrance|termAndConditions|from|to|from_country|to_country
+Valid Personal Data   
+	test  test  test@test.com  test  50  ${empty}  True  01001  05001  España - Peninsular  España - Peninsular
+
+

@@ -1,0 +1,13 @@
+*** Settings ***
+Library          Selenium2Library
+Test Setup		 Setup Browser
+Test Teardown    Close All Browsers
+Test Template    Collection Form Submit Should Pass When
+Resource    ../../Test Templates/collection_page_pass_test_template.txt
+
+*** Variables ***
+${COUNTRY}    it
+
+*** Test Cases ***    NAME|SURNAME|EMAIL|PHONE|ADDRESS|Company|From Zip|To Zip|From Country|To Country
+Required Data Is Present
+	test  test  test@test.com  659659659  Madrid,21  Bad Company  25010  25010  Italia  Italia  KEAVO Domestic

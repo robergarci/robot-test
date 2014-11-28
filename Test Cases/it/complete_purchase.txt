@@ -3,34 +3,117 @@ Library          Selenium2Library
 Test Setup		 Setup Browser
 Test Teardown    Close All Browsers
 Test Template    Complete Purchase With
-Resource    ../../Test Templates/complete_purchase_test_template.txt
+Resource         ../../Test Templates/complete_purchase_test_template.txt
 
 *** Variables ***
 ${COUNTRY}    it
 
-*** Test Cases ***    service|from zipcode|to zipcode|form country| to country|weight|length|width|height|contentValue|Insurance|priority|payMethod|
-#Global Collect
-KEAVO Domestic +GlobalCollect  KEAVO Domestic  25010  25010  Italia  Italia  1  10  10  10  50    ${empty}  False  GlobalCollect
+*** Test Cases ***  
+#service|from zipcode|to zipcode|form country|to country|weight|length|width|height|contentValue|Insurance|priority|payMethod|check labels|check address sheets
 
-KEAVO Domestic +Priority+GlobalCollect  KEAVO Domestic  25010  25010  Italia  Italia  1  10  10  10  50    ${empty}  True   GlobalCollect
+#-------------------------------------------- KEAVO ------------------------------------------------#
+KEAVO Domestic +GlobalCollect  
+	[Tags]   Sanity
+	KEAVO Domestic  25010  25010  Italia  Italia  1  10  10  10  50    ${empty}  False  GlobalCollect  False  False
 
-KEAVO Domestic +100+GlobalCollect  KEAVO Domestic  25010  25010  Italia  Italia  1  10  10  10  300   False     False  GlobalCollect
+KEAVO International Air +GlobalCollect  
+	[Tags]   Sanity
+	KEAVO International Air  25010  E1 0aa  Italia  Regno Unito  1  10  10  10  50    ${empty}  False  GlobalCollect  False  False
 
-KEAVO Domestic +100+Priority+GlobalCollect  KEAVO Domestic  25010  25010  Italia  Italia  1  10  10  10  300   False     True   GlobalCollect
+KEAVO International Road +GlobalCollect  
+	[Tags]   Sanity
+	KEAVO International Road  25010  E1 0aa  Italia  Regno Unito  1  10  10  10  50    ${empty}  False  GlobalCollect  False  False
 
-KEAVO Domestic +100+Insurrance+GlobalCollect  KEAVO Domestic  25010  25010  Italia  Italia  1  10  10  10  300   True      False  GlobalCollect
+KEAVO International Air Import +GlobalCollect  
+	[Tags]   Sanity
+	KEAVO International Air Import  210 51  25010  Grecia  Italia  1  10  10  10  50    ${empty}  False  GlobalCollect  False  False
 
-KEAVO Domestic +100+Priority+Insurrance+GlobalCollect  KEAVO Domestic  25010  25010  Italia  Italia  1  10  10  10  300   True      True   GlobalCollect
 
-#PAYPAL
-KEAVO Domestic +PayPal  KEAVO Domestic  25010  25010  Italia  Italia  1  10  10  10  50    ${empty}  False  PayPal
+#-------------------------------------------- BARTOLINI ------------------------------------------------#
+BARTOLINI Express +GlobalCollect  
+	[Tags]   Sanity
+	BARTOLINI Express  25010  25010  Italia  Italia  1  10  10  10  50    ${empty}  False  GlobalCollect  False  False
 
-KEAVO Domestic +Priority+PayPal  KEAVO Domestic  25010  25010  Italia  Italia  1  10  10  10  50    ${empty}  True   PayPal
+BARTOLINI Euroexpress +GlobalCollect  
+	[Tags]   Sanity
+	BARTOLINI Euroexpress  25010  25000  Italia  Francia  1  10  10  10  50    ${empty}  False  GlobalCollect  False  False
 
-KEAVO Domestic +100+PayPal  KEAVO Domestic  25010  25010  Italia  Italia  1  10  10  10  300   False     False  PayPal
+BARTOLINI DPD +GlobalCollect  
+	[Tags]   Sanity
+	BARTOLINI DPD  25010  25000  Italia  Francia  1  10  10  10  50    ${empty}  False  GlobalCollect  False  False
 
-KEAVO Domestic +100+Priority+PayPal  KEAVO Domestic  25010  25010  Italia  Italia  1  10  10  10  300   False     True   PayPal
 
-KEAVO Domestic +100+Insurrance+PayPal  KEAVO Domestic  25010  25010  Italia  Italia  1  10  10  10  300   True      False  PayPal
+#-------------------------------------------- UPS ------------------------------------------------#
+UPS Express Saver +GlobalCollect  
+	[Tags]   Sanity
+	UPS Express Saver  25010  25010  Italia  Italia  1  10  10  10  50    ${empty}  False  GlobalCollect  False  False
 
-KEAVO Domestic +100+Priority+Insurrance+PayPal  KEAVO Domestic  25010  25010  Italia  Italia  1  10  10  10  300   True      True   PayPal
+UPS Express Saver Import UE +GlobalCollect  
+	[Tags]   Sanity
+	UPS Express Saver  14000  25010  Francia  Italia  1  10  10  10  50    ${empty}  False  GlobalCollect  False  False
+
+UPS Express Saver Import International +GlobalCollect  
+	[Tags]   Sanity
+	UPS Express Saver  J3a 0a1  25010  Canada  Italia  1  10  10  10  50    ${empty}  False  GlobalCollect  False  False
+
+UPS Express Saver Export UE +GlobalCollect  
+	[Tags]   Sanity
+	UPS Express Saver  25010  480 60  Italia  Gracia  1  10  10  10  50    ${empty}  False  GlobalCollect  False  False
+
+UPS Express Saver Export International +GlobalCollect  
+	[Tags]   Sanity
+	UPS Express Saver  25010  36010-000  Italia  Brasile  1  10  10  10  50    ${empty}  False  GlobalCollect  False  False
+
+UPS Standard Export UE Monobulto +GlobalCollect  
+	[Tags]   Sanity
+	UPS Standard  25010  25010  Italia  Italia  1  10  10  10  50    ${empty}  False  GlobalCollect  False  False
+
+UPS Standard Import UE Monobulto +GlobalCollect  
+	[Tags]   Sanity
+	UPS Standard  21-002  25010  Polonia  Italia  1  10  10  10  50    ${empty}  False  GlobalCollect  False  False
+
+UPS Standard National Monobulto +GlobalCollect  
+	[Tags]   Sanity
+	UPS Standard  25010  25010  Italia  Italia  1  10  10  10  50    ${empty}  False  GlobalCollect  False  False
+
+UPS Express Import International +GlobalCollect  
+	[Tags]   Sanity
+	UPS Express  25000  25010  Pakistan  Italia  1  10  10  10  50    ${empty}  False  GlobalCollect  False  False
+
+UPS Express European Import +GlobalCollect  
+	[Tags]   Sanity
+	UPS Express  14050  25010  Germania  Italia  1  10  10  10  50    ${empty}  False  GlobalCollect  False  False
+
+UPS Express European Export +GlobalCollect  
+	[Tags]   Sanity
+	UPS Express  48010  15001  Italia  Spagna- Penisola  1  10  10  10  50    ${empty}  False  GlobalCollect  False  False
+
+UPS Express Export International +GlobalCollect  
+	[Tags]   Sanity
+	UPS Express  48010  2100000  Italia  Cile  1  10  10  10  50    ${empty}  False  GlobalCollect  False  False
+
+UPS Express European Export +GlobalCollect  
+	[Tags]   Sanity
+	UPS Express  48010  25010  Italia  Italia  1  10  10  10  50    ${empty}  False  GlobalCollect  False  False
+
+#-------------------------------------------- TNT ------------------------------------------------#
+TNT Express +GlobalCollect  
+	[Tags]   Sanity
+	TNT Express  25010  B6660  Italia  Argentina  1  10  10  10  50    ${empty}  False  GlobalCollect  False  False
+
+TNT Economy Express +GlobalCollect  
+	[Tags]   Sanity
+	TNT Economy Express  25010  B6660  Italia  Argentina  1  10  10  10  50    ${empty}  False  GlobalCollect  False  False
+
+#-------------------------------------------- GLS ------------------------------------------------#
+GLS Euro Parcel +GlobalCollect  
+	[Tags]   Sanity
+	GLS Euro Parcel  25010  E1 0aa  Italia  Regno Unito  1  10  10  10  50    ${empty}  False  GlobalCollect  False  False
+
+GLS Euro Parcel Import +GlobalCollect  
+	[Tags]   Sanity
+	GLS Euro Parcel Import  69001  25010  Francia  Italia  1  10  10  10  50    ${empty}  False  GlobalCollect  False  False
+
+GLS Domestic +GlobalCollect  
+	[Tags]   Sanity
+	GLS Domestic  25010  25010  Italia  Italia  1  10  10  10  50    ${empty}  False  GlobalCollect  False  False

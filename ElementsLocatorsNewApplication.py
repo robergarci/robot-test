@@ -1,4 +1,5 @@
 #COLLECTION PAGE
+ENV                    = "NEW"
 COLLECTIONDATEFIELD    ="id=DateTimeForm_date"
 FIRSTDATESTRIPBUTTON   ="id=DateTimeForm_strip_0"
 SUBMITDATA             ="id=btnSubmit "
@@ -83,8 +84,9 @@ VALIDATECOUPONBUTTON     ="id=btnValidateCoupon"
 DELETECOUPONBUTTON       ="id=btDelete"
 NEXTSTEPBUTTON           ="id=botonSiguiente"
 PERSONALDATAFORM         ="id=frmUserdata"
-INSURRANCEYES           ="id=InsuranceForm_check_0"
-INSURRANCENO           ="id=InsuranceForm_check_1"
+INSURRANCEYES            ="id=InsuranceForm_check_0"
+INSURRANCENO             ="id=InsuranceForm_check_1"
+PERSONALDATAERROR        ="//*[contains(@class=\"highlightFormError\")]"
 
 #RESULT PAGE
 FIRSTSERVICEBUTTON    ="xpath=//*[@id=\"contenedorDatos\"]//article/a[@data-index=\"0\"]"
