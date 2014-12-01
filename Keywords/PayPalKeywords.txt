@@ -3,4 +3,7 @@ Must Be On PayPal Page
 	Wait Until Page Contains Element    ${LOGINBUTTON}
 	Wait Until Element Is Visible    ${LOGINBUTTON}
 
+Pay With PayPal Default Data
+	Log  PayPal Pay!
+
 

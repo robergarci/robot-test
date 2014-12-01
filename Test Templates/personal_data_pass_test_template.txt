@@ -1,30 +1,19 @@
 *** Settings *** 
-Library          Selenium2Library
-Test Setup		 Setup Browser
-Test Teardown    Close All Browsers
-Test Template    Personal Data Should Pass When
+Variables        ../Config/${COUNTRY}.py 
+
 Resource         ../Keywords/SearchKeywords.txt
 Resource         ../Keywords/PersonalDataPageKeywords.txt
-Resource         ElementsLocators.txt
-
-
-*** Variables ***
-${COUNTRY}       ES
-${BROWSER}       firefox
-${HOMEPAGE}      http://francia:corcega@it.frontend.packitos.com/
-
-*** Test Cases ***    Name       Surname         Email           Description    Value    termAndConditions
-Valid Personal Data   Miguel  	 Test            test@test.com   test           50       True
-
+Resource         ../Keywords/CollectionPageKeywords.txt
 
 *** Keywords ***
-Personal Data Should Pass When    [Arguments]    ${name}    ${surname}    ${email}    ${description}    ${value}    ${termAndConditions}
-	Fill User Data Form With     ${name}    ${surname}    ${email}    ${description}    ${value}    ${termAndConditions}
+Personal Data Should Pass When    
+	[Arguments]    ${name}    ${surname}    ${email}    ${description}    ${value}   ${insurrance}   ${termAndConditions}  ${from}  ${to}  ${from_country}  ${to_country}  ${serviceName}
+	Search Shipments With    1   10   10   10   ${from}  ${to}  ${from_country}  ${to_country}
+	Select Service By Name    ${serviceName}
+	Fill User Data Form With     ${name}    ${surname}    ${email}    ${description}    ${value}   ${insurrance}   ${termAndConditions}
 	Click Next Step Button
-
+	Must Be On Collection Data Page
 
 Setup Browser
 	Open Browser    ${HOMEPAGE}    ${BROWSER}
 	Maximize Browser Window
-	Search Shipments With    1          10         10         10         25010      25010
-	Select First Service

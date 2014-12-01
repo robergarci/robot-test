@@ -1,0 +1,22 @@
+*** Settings ***
+Library          Selenium2Library
+Test Setup		 Setup Browser
+Test Teardown    Close All Browsers
+Test Template    Submit Payment Should Fail When
+Resource    ../../Test Templates/payment_page_fail_test_template.txt
+
+*** Variables ***
+${COUNTRY}    de
+
+*** Test Cases ***   |priority|payMethod|from|to|from_country|to_country
+No Priority Option Selected PayPal
+	${empty}   PayPal   25335  21027  Deutschland  Deutschland   UPS Standard
+
+No Priority Option Selected Global Collect
+	${empty}   GlobalCollect   25335  21027  Deutschland  Deutschland   UPS Standard
+
+No Payment Method Selected With Priority
+	True    ${empty}   25335  21027  Deutschland  Deutschland   UPS Standard    
+
+No Payment Method And Priority
+	${empty}    ${empty}   25335  21027  Deutschland  Deutschland   UPS Standard

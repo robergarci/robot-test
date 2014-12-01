@@ -2,9 +2,9 @@
 Select First Service
 	Must Be On Results Page
 	Click Element    ${FIRSTSERVICEBUTTON}
-	${orig timeout}=    Set Selenium Speed  0.5
-	Go To    ${PERSONALDATAPAGE}
-	Set Selenium Speed  ${orig timeout}
+	#${orig timeout}=    Set Selenium Speed  0.5
+	#Go To    ${PERSONALDATAPAGE}
+	#Set Selenium Speed  ${orig timeout}
 
 Must Be On Results Page
     Wait Until Page Contains Element    ${RESULTS}
@@ -14,9 +14,9 @@ Select Service By Name    [Arguments]    ${serviceName}
 	Must Be On Results Page
 	${thisServiceButton}=    Replace String    ${SERVICELOCATOR}    serviceName    ${serviceName}
 	Click Element    ${thisServiceButton}
-	${orig timeout}=    Set Selenium Speed  0.5
-	Go To    ${PERSONALDATAPAGE}
-	Set Selenium Speed  ${orig timeout}
+	#${orig timeout}=    Set Selenium Speed  0.5
+	#Go To    ${PERSONALDATAPAGE}
+	#Set Selenium Speed  ${orig timeout}
 
 
 	

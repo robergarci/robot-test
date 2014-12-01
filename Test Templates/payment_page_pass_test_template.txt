@@ -1,8 +1,5 @@
 *** Settings *** 
-Library          Selenium2Library
-Test Setup		 Setup Browser
-Test Teardown    Close All Browsers
-Test Template    Submit Payment Should Pass When
+Variables        ../Config/${COUNTRY}.py
 
 Resource         ./Keywords/SearchKeywords.txt
 Resource         ./Keywords/PersonalDataPageKeywords.txt
@@ -11,32 +8,33 @@ Resource         ./Keywords/CollectionPageKeywords.txt
 Resource         ./Keywords/PaymentPageKeywords.txt
 Resource         ./Keywords/GlobalCollectKeywords.txt
 Resource         ./Keywords/PayPalKeywords.txt
-
-*** Variables ***
-${BROWSER}    firefox
-${HOMEPAGE}      http://francia:corcega@it.frontend.packitos.com/
-
-*** Test Cases ***                        priority    payMethod
-Priority Option Selected PayPal           True        PayPal
-Priority Option Selected Global Collect   True        GlobalCollect
+Resource         ./Keywords/ConfirmationPageKeywords.txt
 
 *** Keywords ***
-Submit Payment Should Pass When    [Arguments]    ${priority}    ${payMethod}
+Submit Payment Should Pass When    
+	[Arguments]    ${priority}    ${payMethod}  ${from}  ${to}  ${from_country}  ${to_country}  ${serviceName}
+	Search Shipments With  1  10  10  10  ${from}  ${to}  ${from_country}  ${to_country}
+	Select Service By Name    ${serviceName}
+	Fill User Data Form With    Test    Test    test@test.com    test    5    ${empty}   True
+	Click Next Step Button
+	Must Be On Collection Data Page
+	Select Date And Hour
+	Fill Collection From Form With    test        test       test@test.com    659659659    Italy    Bad Company
+	Fill Collection Delivery Form With    test        test       test@test.com    659659659    Italy    Bad Company
+	Run Keyword If  '${COUNTRY}' == 'de'  Click Copy Data Button
+	Click Submit Button
+	Must Be On Payment Page
 	Select Payment Method And Priotiry    ${priority}    ${payMethod}
 	Click Pay Button
+	Run Keyword If   '${ENV}' == 'NEW'   Submit Successful   ${payMethod}
+	Run Keyword If   '${ENV}' == 'OLD'   Must Be On Confirmation Page
+	Run Keyword If   '${ENV}' == 'KOKUDO'   Submit Successful   ${payMethod}
+
+
+Submit Successful   [Arguments]   ${payMethod}
 	Run Keyword If    '${payMethod}' == 'PayPal'    Must Be On PayPal Page
 	Run Keyword If    '${payMethod}' == 'GlobalCollect'    Must Be On Global Collect Page
 
 Setup Browser
 	Open Browser    ${HOMEPAGE}    ${BROWSER}
 	Maximize Browser Window
-	Search Shipments With    1          10         10         10         25010      25010
-	Select First Service
-	Fill User Data Form With    Test    Test    test@test.com    test    5    True
-	Click Next Step Button
-	Must Be On Collection Data Page
-	Select Date And Hour
-	Fill Collection From Form With    test        test       test@test.com    659659659    Italy
-	Fill Collection Delivery Form With    test        test       test@test.com    659659659    Italy
-	Click Submit Button
-	Must Be On Payment Page

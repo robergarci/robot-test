@@ -8,10 +8,21 @@ Resource    ../../Test Templates/search_page_pass_test_template.txt
 *** Variables ***
 ${COUNTRY}    es
 
-*** Test Cases ***     		   Weight     Length     Width      Height     From       To       From Country    To Country     
-Search With Decimal Weight     1.5        10         10         10         28014      10115    España - Peninsular    Alemania
-Search With Decimal Length     1          10.5       10         10         28014      10115    España - Peninsular    Alemania
-Search With Decimal Width      1          10         10.4       10         28014      10115    España - Peninsular    Alemania
-Search With Decimal Height     1          10         10         10.8       28014      10115    España - Peninsular    Alemania
-Search With All Decimals       1.2        10.6       10.2       10.1       28014      10115    España - Peninsular    Alemania
-Search With Whole Numbers      1          10         10         10         28014      10115    España - Peninsular    Alemania
+*** Test Cases ***    |Weight|Length|Width|Height|From|To|From Country|To Country
+Search With Decimal Weight     
+	1.5  10  10  10  01001  05001  España - Peninsular  España - Peninsular
+
+Search With Decimal Length
+	1  10.5  10  10  01001  05001  España - Peninsular  España - Peninsular
+
+Search With Decimal Width
+	1  10  10.4  10  01001  05001  España - Peninsular  España - Peninsular
+
+Search With Decimal Height
+	1  10  10  10.8  01001  05001  España - Peninsular  España - Peninsular
+
+Search With All Decimals
+	1.2  10.6  10.2  10.1  01001  05001  España - Peninsular  España - Peninsular
+
+Search With Whole Numbers
+	1  10  10  10  01001  05001  España - Peninsular  España - Peninsular

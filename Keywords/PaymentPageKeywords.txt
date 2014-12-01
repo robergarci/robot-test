@@ -26,6 +26,9 @@ Select Global Collect
 Select Paypal 
 	Click Paypal Payment Method
 
+Submit Payment Form Unsuccessful
+	Wait Until Element Is Visible    ${PAYMENTERROR}
+
 Must Be On Payment Page
 	Wait Until Page Contains Element     ${CESTAFORM}
 	Wait Until Element Is VIsible    ${CESTAFORM}

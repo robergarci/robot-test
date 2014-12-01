@@ -1,44 +1,34 @@
 *** Settings *** 
-Library          Selenium2Library
-Test Setup		 Setup Browser
-Test Teardown    Close All Browsers
-Test Template    Submit Payment Should Fail When
+Variables        ../Config/${COUNTRY}.py
 
 Resource         ./Keywords/SearchKeywords.txt
 Resource         ./Keywords/PersonalDataPageKeywords.txt
 Resource         ./Keywords/ResultsPageKeywords.txt
 Resource         ./Keywords/CollectionPageKeywords.txt
 Resource         ./Keywords/PaymentPageKeywords.txt
-
-*** Variables ***
-${COUNTRY}       ES
-${BROWSER}       firefox
-${HOMEPAGE}      http://francia:corcega@it.frontend.packitos.com/
-
-*** Test Cases ***                           priority    payMethod
-No Priority Option Selected PayPal           ${empty}    PayPal
-No Priority Option Selected Global Collect   ${empty}    GlobalCollect
-No Payment Method Selected With Priority     True        ${empty}    
-No Payment Method And Priority               ${empty}    ${empty}
-
+Resource         ./Keywords/GlobalCollectKeywords.txt
+Resource         ./Keywords/PayPalKeywords.txt
 
 *** Keywords ***
-Submit Payment Should Fail When    [Arguments]    ${priority}    ${payMethod}
+Submit Payment Should Fail When    
+	[Arguments]    ${priority}    ${payMethod}   ${from}  ${to}  ${from_country}  ${to_country}  ${serviceName}
+	Search Shipments With  1  10  10  10  ${from}  ${to}  ${from_country}  ${to_country}   
+	Select Service By Name    ${serviceName}
+	Fill User Data Form With    Test    Test    test@test.com    test    5    ${empty}   True
+	Click Next Step Button
+	Must Be On Collection Data Page
+	Select Date And Hour
+	Fill Collection From Form With    test        test       test@test.com    659659659    Italy    Bad Company
+	Fill Collection Delivery Form With    test        test       test@test.com    659659659    Italy    Bad Company
+	Run Keyword If  '${COUNTRY}' == 'de'  Click Copy Data Button
+	Click Submit Button
+	Must Be On Payment Page
 	Select Payment Method And Priotiry    ${priority}    ${payMethod}
 	Click Pay Button
-
+	Submit Payment Form Unsuccessful
 
 Setup Browser
 	Open Browser    ${HOMEPAGE}    ${BROWSER}
 	Maximize Browser Window
-	Search Shipments With    1          10         10         10         25010      25010
-	Select First Service
-	Fill User Data Form With    Test    Test    test@test.com    test    5    True
-	Click Next Step Button
-	Must Be On Collection Data Page
-	Select Date And Hour
-	Fill Collection From Form With    test        test       test@test.com    659659659    Italy
-	Fill Collection Delivery Form With    test        test       test@test.com    659659659    Italy
-	Click Submit Button
-	Must Be On Payment Page
+	
 

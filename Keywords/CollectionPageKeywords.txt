@@ -61,6 +61,9 @@ Select Date And Hour
 	Select Available Date
 	Click First Strip
 
+Click Copy Data Button 
+	Click Element    ${BUTTONCOPYDATA} 
+
 Fill Collection From Form With    [Arguments]    ${name}    ${surname}    ${email}    ${phone}    ${address}    ${company}
 	Enter From Name    ${name}
 	Enter From Surname    ${surname}

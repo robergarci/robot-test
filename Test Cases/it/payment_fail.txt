@@ -1,0 +1,22 @@
+*** Settings ***
+Library          Selenium2Library
+Test Setup		 Setup Browser
+Test Teardown    Close All Browsers
+Test Template    Submit Payment Should Fail When
+Resource    ../../Test Templates/payment_page_fail_test_template.txt
+
+*** Variables ***
+${COUNTRY}    it
+
+*** Test Cases ***   |priority|payMethod|from|to|from_country|to_country
+No Priority Option Selected PayPal
+	${empty}   PayPal   25010  25010  Italia  Italia   KEAVO Domestic
+
+No Priority Option Selected Global Collect
+	${empty}   GlobalCollect   25010  25010  Italia  Italia   KEAVO Domestic
+
+No Payment Method Selected With Priority
+	True    ${empty}   25010  25010  Italia  Italia   KEAVO Domestic    
+
+No Payment Method And Priority
+	${empty}    ${empty}   25010  25010  Italia  Italia   KEAVO Domestic

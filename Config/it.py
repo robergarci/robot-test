@@ -1,9 +1,6 @@
-from ElementsLocatorsNewApplication import *
+from ElementsLocatorsKokudo import *
 
-BROWSER = "chrome"
-HOMEPAGE = "http://francia:corcega@it.frontend.packitos.com/"
-PERSONALDATAPAGE = "https://francia:corcega@it.frontend.packitos.com/dati-personali"
-SECUREHOMEPAGE = "https://it.frontend.packitos.com/"
-
-#CUSTOMS
-ERRORDIALOGCLOSEBUTTON = "xpath=//*[@class='ui-button-text' and contains(text(),'Chiudi')]"
+BROWSER = "firefox"
+HOMEPAGE = "http://francia:corcega@it.www.packitos.com/"
+PERSONALDATAPAGE = "https://francia:corcega@it.www.packitos.com/dati-personali"
+SECUREHOMEPAGE = "https://it.www.packitos.com/"
