@@ -6,8 +6,8 @@ Library    PackLinkUtils
 
 *** Keywords ***
 Click Print Customs
-	Click Element    ${PRINTCUSTOMS}
-	Wait Until Element Is Visible    ${ACEPTCUSTOMS}
+	Click Element    ${PRINTCUSTOMSBUTTON}
+	Wait Until Element Is Visible    ${ACEPTCUSTOMSBUTTON}
 
 Enter Customs Details
 	[Arguments]    ${taxType}    ${exportReason}    ${senderIdNumber}    ${description}    ${en_description}    ${origin}    ${quantity}    ${weight}    ${value}    ${itemTypeNumber}
@@ -35,7 +35,7 @@ Select Export Reason    [Arguments]    ${exportReason}
 	Select From List By Value    ${SELECTREASON}    ${exportReason}
 
 Select Origin Country    [Arguments]    ${origin}
-	Select From List By Value    ${PACKAGEORIGINFIELD}    ${origin}
+	Select From List By Value    ${SELECTPACKAGEORIGIN}    ${origin}
 
 Enter Sender ID Number    [Arguments]    ${senderIdNumber}
 	Input Text    ${SENDERIDFIELD}    ${senderIdNumber}

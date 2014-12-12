@@ -13,7 +13,7 @@ Resource         ./Keywords/ConfirmationPageKeywords.txt
 *** Keywords ***
 Submit Payment Should Pass When    
 	[Arguments]    ${priority}    ${payMethod}  ${from}  ${to}  ${from_country}  ${to_country}  ${serviceName}
-	Search Shipments With  1  10  10  10  ${from}  ${to}  ${from_country}  ${to_country}
+	Search Shipments With  1  1  10  10  10  ${from}  ${to}  ${from_country}  ${to_country}
 	Select Service By Name    ${serviceName}
 	Fill User Data Form With    Test    Test    test@test.com    test    5    ${empty}   True
 	Click Next Step Button

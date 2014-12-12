@@ -18,11 +18,21 @@ Enter parcel width    [Arguments]     ${width}
 	Run Keyword If    '${COUNTRY}' == 'de'    Input Text     id=ParcelForm_1_width     ${width}
 	Run Keyword If    '${COUNTRY}' == 'es'    Input Text     id=ancho1     ${width}
 
-
 Enter parcel height   [Arguments]     ${height}
 	Run Keyword If    '${COUNTRY}' == 'it'    Input Text     id=ParcelForm_1_height    ${height}
 	Run Keyword If    '${COUNTRY}' == 'de'    Input Text     id=ParcelForm_1_height    ${height}
 	Run Keyword If    '${COUNTRY}' == 'es'    Input Text     id=alto1     ${height}
+
+Add Packages   [Arguments]   ${number}
+	: FOR    ${INDEX}    IN RANGE    0    ${number}
+    \    Click Add Parcel Button
+    Click Copy Last Package
+	
+Click Copy Last Package
+	Click Element    ${COPYLASTPACKAGE}
+
+Click Add Parcel Button
+	Click Element    ${ADDPARCELBUTTON}
 
 Click Search Button
 	Click Element   ${SEARCHBUTTON}
@@ -34,6 +44,35 @@ Enter From Zipcode    [Arguments]    ${fromZipCode}
 	Wait Until Element Is Visible    ${resultLink}
 	Click Element    ${resultLink}
 
+Click Show Login Button
+	Click Element   id=headerLogin
+	Wait Until Element Is Visible    id=user-form
+
+Enter User Email   [Arguments]   ${email}
+	Input Text    ${LOGINEMAILFIELD}    ${email}
+
+Enter User Password   [Arguments]   ${password}
+	Input Text    ${LOGINPASSWORDFIELD}    ${password}
+
+Click Login Button
+	Click Element   ${USERLOGINBUTTON}
+
+Login Was Successful
+	Wait Until Page Contains Element    ${USERLOGOUTBUTTON}
+	Wait Until Element Is Visible    ${USERLOGOUTBUTTON}
+
+Login Was Unsuccessful
+	Wait Until Page Contains Element    ${USERLOGINERRORMESSAGE}
+	Wait Until Element Is Visible    ${USERLOGINERRORMESSAGE}
+
+
+Login With Email And Password   [Arguments]   ${email}    ${password}
+	Click Show Login Button
+	Enter User Email    ${email}
+	Enter User Password    ${password}
+	Click Login Button
+
+
 Enter To Zipcode    [Arguments]      ${toZipCode}
 	Input Text    ${TOZIPCODEFIELD}    ${toZipCode}
 	${resultLink}=    Replace String    ${ZIPCODETOSELECTOR}    zipcode    ${toZipCode}
@@ -44,7 +83,7 @@ Enter To Zipcode    [Arguments]      ${toZipCode}
 Search Error Message Is Visible
 	Wait Until Element Is Visible    ${ERRORDIALOGCLOSEBUTTON}	
 
-Search Shipments With    [Arguments]    ${weight}    ${length}    ${width}    ${height}    ${from}    ${to}   ${from_country}    ${to_country}
+Search Shipments With    [Arguments]    ${parcels}    ${weight}    ${length}    ${width}    ${height}    ${from}    ${to}   ${from_country}    ${to_country}
 	Select From List By Label    ${FROMCOUTRYFIELD}    ${from_country}
 	Select From List By Label    ${TOCOUTRYFIELD}    ${to_country}
 	Run Keyword Unless    '${from}' == '${empty}'   Enter From Zipcode     ${from}
@@ -53,6 +92,8 @@ Search Shipments With    [Arguments]    ${weight}    ${length}    ${width}    ${
 	Enter parcel length    ${length}
 	Enter parcel width     ${width}
 	Enter parcel height    ${height}
+	${parcels}=    Convert To Integer    ${parcels}
+	Run Keyword If    ${parcels} > 1   Add Packages   ${parcels}
 	Click Search Button
 
 

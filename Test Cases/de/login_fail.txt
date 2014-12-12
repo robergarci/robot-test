@@ -1,0 +1,26 @@
+*** Settings ***
+Library          Selenium2Library
+Test Setup		 Setup Browser
+Test Teardown    Close All Browsers
+Test Template    Login Should Fail When
+Resource    	 ../../Test Templates/login_fail_test_template.txt
+
+*** Variables ***
+${COUNTRY}    de
+
+*** Test Cases ***
+Registered User With Wrong Password
+	[Tags]   Sanity
+	robertogarcia@packlink.es    1234567
+
+Registered User With Wrong Email
+	[Tags]   Sanity
+	robertogacia@packlink.es    1234556
+
+Invalid Email
+	[Tags]   Sanity
+	robertogaciapacklink.es    1234556
+
+User Is Not Registered
+	[Tags]   Sanity
+	juanpruebas@packlink.es    puebas123

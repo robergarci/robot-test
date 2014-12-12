@@ -9,12 +9,12 @@ Resource         ../../Test Templates/complete_purchase_test_template.txt
 ${COUNTRY}    de
 
 *** Test Cases ***  
-#service|from zipcode|to zipcode|form country|to country|weight|length|width|height|contentValue|Insurance|priority|payMethod|check labels|check address sheets|
+#service|parcels|from zipcode|to zipcode|form country|to country|weight|length|width|height|contentValue|Insurance|priority|payMethod|check labels|check address sheets|
 
 #------------------------------------------------------ UPS -------------------------------------------------------#
 UPS Standard +GlobalCollect  
 	[Tags]   Sanity
-	UPS Standard  14050  16225  Deutschland  Deutschland  1  10  10  10  50  ${empty}  False  GlobalCollect  True  False
+	UPS Standard  1  14050  16225  Deutschland  Deutschland  1  10  10  10  50  ${empty}  False  GlobalCollect  True  False
 
 UPS Express Saver +GlobalCollect  
 	[Tags]   Sanity
@@ -74,7 +74,7 @@ TNT 09:00 Express +GlobalCollect
 
 TNT Express Export Europe +GlobalCollect  
 	[Tags]   Sanity
-	TNT Express Export Europe  14050  25010  Deutschland  Italien  1  10  10  10  50  ${empty}  False  GlobalCollect  True  False
+	TNT Express Export Europe  14050  25w010  Deutschland  Italien  1  10  10  10  50  ${empty}  False  GlobalCollect  True  False
 
 TNT Economy Export Europe +GlobalCollect  
 	[Tags]   Sanity
@@ -129,3 +129,11 @@ GLS Euro Business Parcel +GlobalCollect
 GLS Business Parcel +GlobalCollect  
 	[Tags]   Sanity
 	GLS Business Parcel  14050  14050  Deutschland  Deutschland  31.5  30  30  30  50  ${empty}  False  GlobalCollect  False  False
+
+
+#------------------------------------------------------  HERMES -------------------------------------------------------#
+HERMES ProfiPaketService +GlobalCollect
+	[Tags]   Sanity
+	Login With Email And Password    robertogarcia@packlink.es    123456
+	Login Was Unsuccessful
+	HERMES ProfiPaketService  14050  14050  Deutschland  Deutschland  31.5  30  30  30  50  ${empty}  False  GlobalCollect  True  False

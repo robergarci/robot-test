@@ -37,12 +37,12 @@ SELECTREASON        ="id=motivo"
 SELECTARTICLESTYPE  ="id=numtems"
 SENDERIDFIELD       ="id=dniremitente"
 
-PACKAGEDESCRIPTION_LOCAL  ="id=txtspa1"
-PACKAGEDESCRIPTION_EN     ="id=txteng1"
-SELECTPACKAGEORIGIN       ="id=country1"
-QUANTITYFIELD             ="id=cantidad1"
-WEIGHTFIELD               ="id=peso1"
-VALUEFIELD                ="id=valor1"
+PACKAGEDESCRIPTION_LOCAL  ="id=LineaFacturaAduanaForm_0_txtspa"
+PACKAGEDESCRIPTION_EN     ="id=LineaFacturaAduanaForm_0_txteng"
+SELECTPACKAGEORIGIN       ="id=LineaFacturaAduanaForm_0_country"
+QUANTITYFIELD             ="id=LineaFacturaAduanaForm_0_cantidad"
+WEIGHTFIELD               ="id=LineaFacturaAduanaForm_0_peso"
+VALUEFIELD                ="id=LineaFacturaAduanaForm_0_valor"
 
 
 #----------------------GLOBAL COLLECT-----------------------#
@@ -101,4 +101,6 @@ SEARCHBUTTON        ="id=btnSearch"
 ZIPCODESELECTOR     ="xpath=//*[contains(text(),\"zipcode\")]"
 ZIPCODETOSELECTOR   ="xpath=//*[@tabindex=\"0\" and not(contains(@style,\"none\"))]//*[contains(text(),\"zipcode\")]"
 ERRORDIALOGCLOSEBUTTON  ="xpath=//*[@class=\"jqiclose\"]"
+ADDPARCELBUTTON     ="id=mas1"
+COPYLASTPACKAGE     ="id=copyLastPacket_link"
 

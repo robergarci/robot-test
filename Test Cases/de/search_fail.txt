@@ -10,25 +10,25 @@ ${COUNTRY}    de
 
 *** Test Cases ***    |Weight|Length|Width|Height|From|To|From Country|To Country
 Empty Parcel Weight
-	${empty}  10  10  10  25335  21027  Deutschland  Deutschland
+	1  ${empty}  10  10  10  25335  21027  Deutschland  Deutschland
 
 Empty Parcel Length
-	1  ${empty}  10  10  25335  21027  Deutschland  Deutschland
+	1  1  ${empty}  10  10  25335  21027  Deutschland  Deutschland
 
 Empty Parcel Width
-	1  10  ${empty}  10  25335  21027  Deutschland  Deutschland
+	1  1  10  ${empty}  10  25335  21027  Deutschland  Deutschland
 
 Empty Parcel Height
-	1  10  10  ${empty}  25335  21027  Deutschland  Deutschland
+	1  1  10  10  ${empty}  25335  21027  Deutschland  Deutschland
 
 Empty From Zipcode
-	1  10  10  10  ${empty}  21027  Deutschland  Deutschland
+	1  1  10  10  10  ${empty}  21027  Deutschland  Deutschland
 
 Empty From and To Zipcode    
-	1  10  10  10  ${empty}   ${empty}  Deutschland  Deutschland
+	1  1  10  10  10  ${empty}   ${empty}  Deutschland  Deutschland
 
 Empty To Zipcode
-	1  10  10  10  25335  ${empty}  Deutschland  Deutschland
+	1  1  10  10  10  25335  ${empty}  Deutschland  Deutschland
 
 All Values Empty
-	${empty}   ${empty}   ${empty}   ${empty}   ${empty}   ${empty}  Deutschland  Deutschland
+	1  ${empty}   ${empty}   ${empty}   ${empty}   ${empty}   ${empty}  Deutschland  Deutschland

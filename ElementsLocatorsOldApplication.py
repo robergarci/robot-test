@@ -63,7 +63,7 @@ PERSONALDATAERROR       ="//*[contains(@class,\"highlightFormError\")]"
 #ResultsPageKeywords
 FIRSTSERVICEBUTTON      ="xpath=//div[@class=\"elegirServicio\"][1]"
 RESULTS                 ="id=contenedorDatos"
-PERSONALDATAPAGE        ="https://francia:corcega@pre.packlink.es/datos-personales"
+
 
 SERVICELOCATOR          ="xpath=//*[contains(@value,\"serviceName\")]//..//*[@class=\"elegirServicio\"]"
 

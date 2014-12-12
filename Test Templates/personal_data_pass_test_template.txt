@@ -8,7 +8,7 @@ Resource         ../Keywords/CollectionPageKeywords.txt
 *** Keywords ***
 Personal Data Should Pass When    
 	[Arguments]    ${name}    ${surname}    ${email}    ${description}    ${value}   ${insurrance}   ${termAndConditions}  ${from}  ${to}  ${from_country}  ${to_country}  ${serviceName}
-	Search Shipments With    1   10   10   10   ${from}  ${to}  ${from_country}  ${to_country}
+	Search Shipments With    1   1   10   10   10   ${from}  ${to}  ${from_country}  ${to_country}
 	Select Service By Name    ${serviceName}
 	Fill User Data Form With     ${name}    ${surname}    ${email}    ${description}    ${value}   ${insurrance}   ${termAndConditions}
 	Click Next Step Button

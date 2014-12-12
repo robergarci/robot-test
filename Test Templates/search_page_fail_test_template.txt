@@ -3,8 +3,8 @@ Variables        ../Config/${COUNTRY}.py
 Resource         ../Keywords/SearchKeywords.txt
 
 *** Keywords ***
-Search Should Fail When    [Arguments]    ${weight}    ${length}    ${width}    ${height}    ${from}    ${to}    ${from_country}    ${to_country}
-	Search Shipments With    ${weight}    ${length}    ${width}    ${height}    ${from}    ${to}    ${from_country}    ${to_country}
+Search Should Fail When    [Arguments]    ${parcels}   ${weight}    ${length}    ${width}    ${height}    ${from}    ${to}    ${from_country}    ${to_country}
+	Search Shipments With    ${parcels}   ${weight}    ${length}    ${width}    ${height}    ${from}    ${to}    ${from_country}    ${to_country}
 	Search Error Message Is Visible
 
 Setup Browser

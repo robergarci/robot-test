@@ -1,0 +1,14 @@
+*** Settings ***
+Library          Selenium2Library
+Test Setup		 Setup Browser
+Test Teardown    Close All Browsers
+Test Template    Login Should Pass When
+Resource    	 ../../Test Templates/login_pass_test_template.txt
+
+*** Variables ***
+${COUNTRY}    de
+
+*** Test Cases ***
+Registered User Wth Email And Password
+	[Tags]   Sanity
+	robertogarcia@packlink.es    123456

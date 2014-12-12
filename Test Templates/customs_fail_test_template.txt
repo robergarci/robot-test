@@ -1,8 +1,5 @@
-*** Settings *** 
-Library          Selenium2Library
-Test Setup		 Setup Browser
-Test Template    Create Customs Should Fail When
-
+*** Settings ***
+Variables        ../Config/${COUNTRY}.py
 Resource         ./Keywords/SearchKeywords.txt
 Resource         ./Keywords/PersonalDataPageKeywords.txt
 Resource         ./Keywords/ResultsPageKeywords.txt
@@ -11,26 +8,19 @@ Resource         ./Keywords/PaymentPageKeywords.txt
 Resource         ./Keywords/GlobalCollectKeywords.txt
 Resource         ./Keywords/ConfirmationPageKeywords.txt
 
-*** Variables ***
-${COUNTRY}       ES
-${BROWSER}       firefox
-
-
-*** Test Cases ***
-Create Customs Should Fail When    Italia    Argentina    25010    B6665    1    10    10    10    True    GlobalCollect
-
 
 *** Keywords ***    from country|to country|from|to|weight|length|width|height|priority|payMethod|
 Create Customs Should Fail When
 	[Arguments]    ${from_country}    ${to_country}    ${from}    ${to}    ${weight}    ${length}    ${width}    ${height}    ${priority}    ${payMethod}
-	Search Shipments With    ${weight}    ${length}    ${width}    ${height}    ${from}    ${to}    ${from_country}    ${to_country}
+	Search Shipments With    1    ${weight}    ${length}    ${width}    ${height}    ${from}    ${to}    ${from_country}    ${to_country}
 	Select First Service
-	Fill User Data Form With    Test    Test    test@test.com    test    5    True
+	Fill User Data Form With    test   test   test@test.com   test   50   ${empty}   True
 	Click Next Step Button
 	Must Be On Collection Data Page
 	Select Date And Hour
 	Fill Collection From Form With    test        test       test@test.com   659659659    Italy    Bad Company    
 	Fill Collection Delivery Form With    test        test       test@test.com    659659659    Italy    Bad Company
+	Run Keyword If  '${COUNTRY}' == 'de'  Click Copy Data Button
 	Click Submit Button
 	Must Be On Payment Page
 	${orig timeout}=    Set Selenium Speed  1
@@ -40,11 +30,13 @@ Create Customs Should Fail When
 	Must Be On Global Collect Page
 	Pay With Global Collect Default Data
 	Must Be On Confirmation Page
+	Click Print Customs
+	Enter Customs Details    0   Purchase or Sale-Purchase or Sale - Kauf oder Verkauf    11111111H   test   test  Albanien  1  10   100   1
+	Click Accept Customs Button    
 
 Setup Browser
 	Open Browser    ${HOMEPAGE}    ${BROWSER}
 	Maximize Browser Window
 
 	
-	
-	
+Albanien

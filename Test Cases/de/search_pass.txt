@@ -10,20 +10,22 @@ ${COUNTRY}    de
 
 *** Test Cases ***    |Weight|Length|Width|Height|From|To|From Country|To Country
 Search With Decimal Weight     
-	1.5  15  15  15  25335  21027  Deutschland  Deutschland
+	1  1.5  15  15  15  25335  21027  Deutschland  Deutschland
 
 Search With Decimal Length
-	1  10.5  10  10  25335  21027  Deutschland  Deutschland
+	1  1  10.5  10  10  25335  21027  Deutschland  Deutschland
 
 Search With Decimal Width
-	1  10  10.4  10  25335  21027  Deutschland  Deutschland
+	1  1  10  10.4  10  25335  21027  Deutschland  Deutschland
 
 Search With Decimal Height
-	1  10  10  10.8  25335  21027  Deutschland  Deutschland
+	1  1  10  10  10.8  25335  21027  Deutschland  Deutschland
 
 Search With All Decimals
-	1.2  10.6  10.2  10.1  25335  21027  Deutschland  Deutschland
+	1  1.2  10.6  10.2  10.1  25335  21027  Deutschland  Deutschland
 
 Search With Whole Numbers
-	1  10  10  10  25335  21027  Deutschland  Deutschland
+	1  1  10  10  10  25335  21027  Deutschland  Deutschland
 
+Search With Width 120
+	1  1  120  60  60  25335  21027  Deutschland  Deutschland

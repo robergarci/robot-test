@@ -1,0 +1,20 @@
+*** Settings *** 
+Variables        ../Config/${COUNTRY}.py
+
+Resource         ./Keywords/SearchKeywords.txt
+Resource         ./Keywords/PersonalDataPageKeywords.txt
+Resource         ./Keywords/ResultsPageKeywords.txt
+Resource         ./Keywords/CollectionPageKeywords.txt
+Resource         ./Keywords/PaymentPageKeywords.txt
+Resource         ./Keywords/GlobalCollectKeywords.txt
+Resource         ./Keywords/PayPalKeywords.txt
+
+
+*** Keywords ***
+Login Should Fail When    [Arguments]    ${email}    ${password}
+	Login With Email And Password    ${email}    ${password}
+	Login Was Unsuccessful
+	
+Setup Browser
+	Open Browser    ${HOMEPAGE}    ${BROWSER}
+	Maximize Browser Window
