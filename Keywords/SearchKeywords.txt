@@ -6,22 +6,26 @@ Library     String
 Enter parcel weight    [Arguments]    ${weight}
 	Run Keyword If    '${COUNTRY}' == 'it'    Input Text     id=ParcelForm_1_weight     ${weight}
 	Run Keyword If    '${COUNTRY}' == 'es'    Input Text     id=peso1     ${weight}
+	Run Keyword If    '${COUNTRY}' == 'fr'    Input Text     id=peso1     ${weight}
 	Run Keyword If    '${COUNTRY}' == 'de'    Input Text     id=ParcelForm_1_weight     ${weight}
 
 Enter parcel length    [Arguments]    ${length}
 	Run Keyword If    '${COUNTRY}' == 'it'    Input Text     id=ParcelForm_1_length     ${length}
 	Run Keyword If    '${COUNTRY}' == 'de'    Input Text     id=ParcelForm_1_length     ${length}
 	Run Keyword If    '${COUNTRY}' == 'es'    Input Text     id=largo1     ${length}
+	Run Keyword If    '${COUNTRY}' == 'fr'    Input Text     id=largo1     ${length}
 
 Enter parcel width    [Arguments]     ${width}
 	Run Keyword If    '${COUNTRY}' == 'it'    Input Text     id=ParcelForm_1_width     ${width}
 	Run Keyword If    '${COUNTRY}' == 'de'    Input Text     id=ParcelForm_1_width     ${width}
 	Run Keyword If    '${COUNTRY}' == 'es'    Input Text     id=ancho1     ${width}
+	Run Keyword If    '${COUNTRY}' == 'fr'    Input Text     id=ancho1     ${width}
 
 Enter parcel height   [Arguments]     ${height}
 	Run Keyword If    '${COUNTRY}' == 'it'    Input Text     id=ParcelForm_1_height    ${height}
 	Run Keyword If    '${COUNTRY}' == 'de'    Input Text     id=ParcelForm_1_height    ${height}
 	Run Keyword If    '${COUNTRY}' == 'es'    Input Text     id=alto1     ${height}
+	Run Keyword If    '${COUNTRY}' == 'fr'    Input Text     id=alto1     ${height}
 
 Add Packages   [Arguments]   ${number}
 	: FOR    ${INDEX}    IN RANGE    0    ${number}
@@ -45,8 +49,8 @@ Enter From Zipcode    [Arguments]    ${fromZipCode}
 	Click Element    ${resultLink}
 
 Click Show Login Button
-	Click Element   id=headerLogin
-	Wait Until Element Is Visible    id=user-form
+	Click Element   ${SHOWLOGINBUTTON}
+	Wait Until Element Is Visible    ${USERLOGINFORM}
 
 Enter User Email   [Arguments]   ${email}
 	Input Text    ${LOGINEMAILFIELD}    ${email}

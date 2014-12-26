@@ -30,7 +30,14 @@ CREATEINVOICELINK   ="id=need_factura"
 RECEIPT             ="xpath=//*[contains(@href,\"factura_to_pdf\")]"
 SHIPMENTREF         ="//*[contains(@class,\"envioTextoBlanco\")]"
 
-#GlobalCollectKeywords (Not migrated yet)
+#GLOBAL COLLECT
+GCREDITCARDNUMBERFIELD    ="name=CREDITCARDNUMBER"
+GCEXPMONTHFIELD           ="name=EXPIRYDATE_MM"
+GCEXPYEARFIELD            ="name=EXPIRYDATE_YY"
+GCCVVFIELD                ="name=CVV"
+GCSUBMITBUTTON            ="id=btnSubmit"
+
+ERRORMESSAGE              ="xpath=//*[@id=\"ERROR_F1010\" and not(contains(@style,\"none\"))]"
 
 #PayPalKeywords (Not migrated yet)
 
@@ -78,3 +85,12 @@ ZIPCODETOSELECTOR       ="xpath=//*[@tabindex=\"0\" and not(contains(@style,\"no
 ERRORDIALOGCLOSEBUTTON  ="xpath=//*[@class=\"jqiclose\"]"
 FROMCOUTRYFIELD         ="id=ol5_select"
 TOCOUTRYFIELD           ="id=dl5_select"
+
+#----------------------LOGIN--------------------------------------------#
+LOGINPASSWORDFIELD = "xpath=//input[@id=\"loginPasspop\"]"
+LOGINEMAILFIELD = "xpath=//input[@id=\"loginEmailpop\"]"
+USERLOGINBUTTON = "xpath=//*[contains(@class,\"button_login_pop\")]"
+USERLOGOUTBUTTON = "xpath=//a[contains(@href,\"logout\")]"
+USERLOGINERRORMESSAGE =  "xpath=//*[@id=\"frmuserpop\"]/*[@style=\"background-color: rgb(255, 170, 170);\"]"
+SHOWLOGINBUTTON  = "id=headerLogin"
+USERLOGINFORM  =  "id=frmuserpop"

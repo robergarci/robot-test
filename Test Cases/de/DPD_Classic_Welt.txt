@@ -1,0 +1,23 @@
+*** Settings ***
+Library          Selenium2Library
+Test Setup		 Setup Browser
+Test Teardown    Close All Browsers
+Resource         ../../Test Templates/complete_purchase_test_template.txt
+
+*** Variables ***
+${COUNTRY}    de
+
+*** Test Cases ***  
+#service|parcels|from zipcode|to zipcode|form country|to country|weight|length|width|height|contentValue|Insurance|priority|payMethod|check labels|check address sheets|
+DPD Classic Welt +GlobalCollect  
+	[Template]    Complete Purchase With
+	[Tags]   Sanity
+	DPD Classic Welt  1  14050  Ad100  Deutschland  Andorra  1  10  10  10  50  ${empty}  False  GlobalCollect  True  False
+	DPD Classic Welt  1  14050  B6660  Deutschland  Argentinien  1  10  10  10  50  ${empty}  False  GlobalCollect  True  False
+	DPD Classic Welt  1  14050  21001  Deutschland  Costa Rica  1  10  10  10  50  ${empty}  False  GlobalCollect  True  False
+	DPD Classic Welt  1  14050  07520  Deutschland  Mexiko  1  10  10  10  50  ${empty}  False  GlobalCollect  True  False
+	DPD Classic Welt  1  14050  G6a 0a1  Deutschland  Kanada  1  10  10  10  50  ${empty}  False  GlobalCollect  True  False
+	DPD Classic Welt  1  14050  25002  Deutschland  USA (Vereinigte Staaten)  1  10  10  10  50  ${empty}  False  GlobalCollect  True  False
+
+	DPD Classic Welt  1  14050  0711265  Deutschland  Japan  1  10  10  10  50  ${empty}  False  GlobalCollect  True  False
+	DPD Classic Welt  1  14050  25010  Deutschland  Türkei  1  10  10  10  50  ${empty}  False  GlobalCollect  True  False

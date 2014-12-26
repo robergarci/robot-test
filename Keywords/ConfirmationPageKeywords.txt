@@ -66,12 +66,9 @@ Must Be On Confirmation Page
 Download Receipt
 	${link}=    Get Element Attribute    ${RECEIPT}@href
 	${cookies}=    Get Cookies
-	Log    ${cookies}
 	${cookies}=    Cookies To Dict    ${cookies}
-	Log    ${cookies}
-	#${link}=    Replace String    ${link}    ${SECUREHOMEPAGE}    ${HOMEPAGE}
+	${link}=    Replace String    ${link}    ${SECUREHOMEPAGE}    ${HOMEPAGE}
 	Create Session    downloadReceipt    ${link}    ${empty}    cookies=${cookies}
-	Log   ${link}
 	${resp}=    Get    downloadReceipt    \
 	Should Be Equal As Strings    ${resp.status_code}    200
 	

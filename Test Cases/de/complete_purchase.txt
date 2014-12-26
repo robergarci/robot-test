@@ -131,9 +131,409 @@ GLS Business Parcel +GlobalCollect
 	GLS Business Parcel  14050  14050  Deutschland  Deutschland  31.5  30  30  30  50  ${empty}  False  GlobalCollect  False  False
 
 
-#------------------------------------------------------  HERMES -------------------------------------------------------#
-HERMES ProfiPaketService +GlobalCollect
-	[Tags]   Sanity
-	Login With Email And Password    robertogarcia@packlink.es    123456
-	Login Was Unsuccessful
-	HERMES ProfiPaketService  14050  14050  Deutschland  Deutschland  31.5  30  30  30  50  ${empty}  False  GlobalCollect  True  False
+#------------------------------------------------------  DPD -------------------------------------------------------#
+#DPD Classic
+DPD Classic +National+Mono-parcel+GlobalCollect  
+	[Tags]   DPD
+	DPD Classic  1  14050  14050  Deutschland  Deutschland  5  20  20  20  50  ${empty}  False  GlobalCollect  True  False
+
+DPD Classic +National+Multi-parcel+GlobalCollect
+	[Tags]   DPD
+	DPD Classic  2  14050  14050  Deutschland  Deutschland  5  20  20  20  50  ${empty}  False  GlobalCollect  True  False
+
+DPD Classic +Francia+Mono-parcel+GlobalCollect
+	[Tags]   DPD
+	DPD Classic  1  14050  14000  Deutschland  Frankreich  5  20  20  20  50  ${empty}  False  GlobalCollect  True  False
+
+DPD Classic +Francia+Multi-parcel+GlobalCollect
+	[Tags]   DPD
+	DPD Classic  2  14050  14000  Deutschland  Frankreich  5  20  20  20  50  ${empty}  False  GlobalCollect  True  False
+
+DPD Classic +España+Mono-parcel+GlobalCollect
+	[Tags]   DPD
+	DPD Classic  1  14050  28001  Deutschland  Spanien  5  20  20  20  50  ${empty}  False  GlobalCollect  True  False
+
+DPD Classic +España+Multi-parcel+GlobalCollect
+	[Tags]   DPD
+	DPD Classic  4  14050  28001  Deutschland  Spanien  5  20  20  20  50  ${empty}  False  GlobalCollect  True  False
+
+
+#DPD Classic Welt
+DPD Classic Welt +China+Mono-parcel+GlobalCollect
+	[Tags]   DPD
+	DPD Classic Welt  1  14050  100000  Deutschland  China  5  20  20  20  50  ${empty}  False  GlobalCollect  True  False
+
+DPD Classic Welt +China+Multi-parcel+GlobalCollect
+	[Tags]   DPD
+	DPD Classic Welt  3  14050  100000  Deutschland  China  5  20  20  20  50  ${empty}  False  GlobalCollect  True  False
+
+DPD Classic Welt +Argentinien+Mono-parcel+GlobalCollect
+	[Tags]   DPD
+	DPD Classic Welt  1  14050  B6660  Deutschland  Argentinien  5  20  20  20  50  ${empty}  False  GlobalCollect  True  False
+
+DPD Classic Welt +Argentinien+Multi-parcel+GlobalCollect
+	[Tags]   DPD
+	DPD Classic Welt  3  14050  B6660  Deutschland  Argentinien  5  20  20  20  50  ${empty}  False  GlobalCollect  True  False
+
+DPD Classic Welt +Andorra+Multi-parcel+GlobalCollect
+	[Tags]   DPD
+	DPD Classic Welt  3  14050  Ad100  Deutschland  Andorra  5  20  20  20  50  ${empty}  False  GlobalCollect  True  False
+
+DPD Classic Welt +Andorra+Mono-parcel+GlobalCollect
+	[Tags]   DPD
+	DPD Classic Welt  1  14050  Ad100  Deutschland  Andorra  5  20  20  20  50  ${empty}  False  GlobalCollect  True  False
+
+DPD Classic Welt +Costa Rica+Mono-parcel+GlobalCollect
+	[Tags]   DPD
+	DPD Classic Welt  1  14050  21001  Deutschland  Costa Rica  1  10  10  10  50  ${empty}  False  GlobalCollect  True  False
+
+DPD Classic Welt +Costa Rica+Multi-parcel+GlobalCollect
+	[Tags]   DPD
+	DPD Classic Welt  2  14050  21001  Deutschland  Costa Rica  1  10  10  10  50  ${empty}  False  GlobalCollect  True  False
+
+DPD Classic Welt +Mexiko+Mono-parcel+GlobalCollect
+	[Tags]   DPD
+	DPD Classic Welt  1  14050  07520  Deutschland  Mexiko  1  10  10  10  50  ${empty}  False  GlobalCollect  True  False
+
+DPD Classic Welt +Mexiko+Multi-parcel+GlobalCollect
+	[Tags]   DPD
+	DPD Classic Welt  3  14050  07520  Deutschland  Mexiko  1  10  10  10  50  ${empty}  False  GlobalCollect  True  False
+
+DPD Classic Welt +Kanada+Multi-parcel+GlobalCollect
+	[Tags]   DPD
+	DPD Classic Welt  3  14050  G6a 0a1  Deutschland  Kanada  1  10  10  10  50  ${empty}  False  GlobalCollect  True  False
+
+DPD Classic Welt +Kanada+Mono-parcel+GlobalCollect
+	[Tags]   DPD
+	DPD Classic Welt  1  14050  G6a 0a1  Deutschland  Kanada  1  10  10  10  50  ${empty}  False  GlobalCollect  True  False
+
+DPD Classic Welt +USA+Mono-parcel+GlobalCollect
+	[Tags]   DPD
+	DPD Classic Welt  1  14050  25002  Deutschland  USA (Vereinigte Staaten)  1  10  10  10  50  ${empty}  False  GlobalCollect  True  False
+
+DPD Classic Welt +USA+Multi-parcel+GlobalCollect
+	[Tags]   DPD
+	DPD Classic Welt  4  14050  25002  Deutschland  USA (Vereinigte Staaten)  1  10  10  10  50  ${empty}  False  GlobalCollect  True  False
+
+DPD Classic Welt +Japan+Multi-parcel+GlobalCollect
+	[Tags]   DPD
+	DPD Classic Welt  2  14050  0711265  Deutschland  Japan  1  10  10  10  50  ${empty}  False  GlobalCollect  True  False
+
+DPD Classic Welt +Japan+Mono-parcel+GlobalCollect
+	[Tags]   DPD
+	DPD Classic Welt  1  14050  0711265  Deutschland  Japan  1  10  10  10  50  ${empty}  False  GlobalCollect  True  False
+
+DPD Classic Welt +Türkei+Mono-parcel+GlobalCollect
+	[Tags]   DPD
+	DPD Classic Welt  1  14050  25010  Deutschland  Türkei  1  10  10  10  50  ${empty}  False  GlobalCollect  True  False
+
+DPD Classic Welt +Türkei+Multi-parcel+GlobalCollect
+	[Tags]   DPD
+	DPD Classic Welt  8  14050  25010  Deutschland  Türkei  1  10  10  10  50  ${empty}  False  GlobalCollect  True  False
+
+
+#DPD Express 08:30
+DPD Express 08:30 +Mono-parcel+GlobalCollect
+	[Tags]   DPD
+	DPD Express 08:30  1  14050  14050  Deutschland  Deutschland  5  20  20  20  50  ${empty}  False  GlobalCollect  True  False
+
+DPD Express 08:30 +Multi-parcel+GlobalCollect
+	[Tags]   DPD
+	DPD Express 08:30  3  14050  14050  Deutschland  Deutschland  5  20  20  20  50  ${empty}  False  GlobalCollect  True  False
+
+
+#DPD Express 10:00
+DPD Express 10:00 +National+Mono-parcel+GlobalCollect
+	[Tags]   DPD
+	DPD Express 10:00  1  14050  14050  Deutschland  Deutschland  30  30  30  30  50  ${empty}  False  GlobalCollect  True  False
+
+DPD Express 10:00 +Bélgica+Mono-parcel+GlobalCollect
+	[Tags]   DPD
+	DPD Express 10:00  1  14050  1400  Deutschland  Belgien  5  20  20  20  50  ${empty}  False  GlobalCollect  True  False
+
+DPD Express 10:00 +Países Bajos+Mono-parcel+GlobalCollect
+	[Tags]   DPD
+	DPD Express 10:00  1  14050  1401 Ab  Deutschland  Niederlande  5  20  20  20  50  ${empty}  False  GlobalCollect  True  False
+
+DPD Express 10:00 +Luxemburgo+Mono-parcel+GlobalCollect
+	[Tags]   DPD
+	DPD Express 10:00  1  14050  1409  Deutschland  Luxemburg  5  20  20  20  50  ${empty}  False  GlobalCollect  True  False
+
+DPD Express 10:00 +National+Multi-parcel+GlobalCollect
+	[Tags]   DPD
+	DPD Express 10:00  3  14050  14050  Deutschland  Deutschland  30  30  30  30  50  ${empty}  False  GlobalCollect  True  False
+
+DPD Express 10:00 +Bélgica+Multi-parcel+GlobalCollect
+	[Tags]   DPD
+	DPD Express 10:00  4  14050  1400  Deutschland  Belgien  5  20  20  20  50  ${empty}  False  GlobalCollect  True  False
+
+DPD Express 10:00 +Países Bajos+Multi-parcel+GlobalCollect
+	[Tags]   DPD
+	DPD Express 10:00  2  14050  1401 Ab  Deutschland  Niederlande  5  20  20  20  50  ${empty}  False  GlobalCollect  True  False
+
+DPD Express 10:00 +Luxemburgo+Multi-parcel+GlobalCollect
+	[Tags]   DPD
+	DPD Express 10:00  3  14050  1409  Deutschland  Luxemburg  5  20  20  20  50  ${empty}  False  GlobalCollect  True  False
+
+
+#DPD Express 12:00
+DPD Express 12:00 +National+Mono-parcel+GlobalCollect
+	[Tags]   DPD
+	DPD Express 12:00  1  14050  14050  Deutschland  Deutschland  30  30  30  30  50  ${empty}  False  GlobalCollect  True  False
+
+DPD Express 12:00 +Bélgica+Mono-parcel+GlobalCollect
+	[Tags]   DPD
+	DPD Express 12:00  1  14050  1400  Deutschland  Belgien  5  20  20  20  50  ${empty}  False  GlobalCollect  True  False
+
+DPD Express 12:00 +Países Bajos+Mono-parcel+GlobalCollect
+	[Tags]   DPD
+	DPD Express 12:00  1  14050  1401 Ab  Deutschland  Niederlande  5  20  20  20  50  ${empty}  False  GlobalCollect  True  False
+
+DPD Express 12:00 +Luxemburgo+Mono-parcel+GlobalCollect
+	[Tags]   DPD
+	DPD Express 12:00  1  14050  1409  Deutschland  Luxemburg  5  20  20  20  50  ${empty}  False  GlobalCollect  True  False
+
+DPD Express 12:00 +Schweiz+Mono-parcel+GlobalCollect
+	[Tags]   DPD
+	DPD Express 12:00  1  14050  1400  Deutschland  Schweiz  5  20  20  20  50  ${empty}  False  GlobalCollect  True  False
+
+DPD Express 12:00 +National+Multi-parcel+GlobalCollect
+	[Tags]   DPD
+	DPD Express 12:00  3  14050  14050  Deutschland  Deutschland  30  30  30  30  50  ${empty}  False  GlobalCollect  True  False
+
+DPD Express 12:00 +Bélgica+Multi-parcel+GlobalCollect
+	[Tags]   DPD
+	DPD Express 12:00  4  14050  1400  Deutschland  Belgien  5  20  20  20  50  ${empty}  False  GlobalCollect  True  False
+
+DPD Express 12:00 +Países Bajos+Multi-parcel+GlobalCollect
+	[Tags]   DPD
+	DPD Express 12:00  2  14050  1401 Ab  Deutschland  Niederlande  5  20  20  20  50  ${empty}  False  GlobalCollect  True  False
+
+DPD Express 12:00 +Luxemburgo+Multi-parcel+GlobalCollect
+	[Tags]   DPD
+	DPD Express 12:00  3  14050  1409  Deutschland  Luxemburg  5  20  20  20  50  ${empty}  False  GlobalCollect  True  False
+
+DPD Express 12:00 +Schweiz+Multi-parcel+GlobalCollect
+	[Tags]   DPD
+	DPD Express 12:00  2  14050  1400  Deutschland  Schweiz  5  20  20  20  50  ${empty}  False  GlobalCollect  True  False
+
+
+#DPD Express 18:00
+DPD Express 18:00 +National+Mono-parcel+GlobalCollect
+	[Tags]   DPD
+	DPD Express 18:00  1  14050  14050  Deutschland  Deutschland  30  30  30  30  50  ${empty}  False  GlobalCollect  True  False
+
+DPD Express 18:00 +Bélgica+Mono-parcel+GlobalCollect
+	[Tags]   DPD
+	DPD Express 18:00  1  14050  1400  Deutschland  Belgien  5  20  20  20  50  ${empty}  False  GlobalCollect  True  False
+
+DPD Express 18:00 +Países Bajos+Mono-parcel+GlobalCollect
+	[Tags]   DPD
+	DPD Express 18:00  1  14050  1401 Ab  Deutschland  Niederlande  5  20  20  20  50  ${empty}  False  GlobalCollect  True  False
+
+DPD Express 18:00 +Luxemburgo+Mono-parcel+GlobalCollect
+	[Tags]   DPD
+	DPD Express 18:00  1  14050  1409  Deutschland  Luxemburg  5  20  20  20  50  ${empty}  False  GlobalCollect  True  False
+
+DPD Express 18:00 +Schweiz+Mono-parcel+GlobalCollect
+	[Tags]   DPD
+	DPD Express 18:00  1  14050  1400  Deutschland  Schweiz  5  20  20  20  50  ${empty}  False  GlobalCollect  True  False
+
+DPD Express 18:00 +Österreich+Mono-parcel+GlobalCollect
+	[Tags]   DPD
+	DPD Express 18:00  1  14050  1010  Deutschland  Österreich  5  20  20  20  50  ${empty}  False  GlobalCollect  True  False
+
+DPD Express 18:00 +National+Multi-parcel+GlobalCollect
+	[Tags]   DPD
+	DPD Express 18:00  3  14050  14050  Deutschland  Deutschland  30  30  30  30  50  ${empty}  False  GlobalCollect  True  False
+
+DPD Express 18:00 +Bélgica+Multi-parcel+GlobalCollect
+	[Tags]   DPD
+	DPD Express 18:00  4  14050  1400  Deutschland  Belgien  5  20  20  20  50  ${empty}  False  GlobalCollect  True  False
+
+DPD Express 18:00 +Países Bajos+Multi-parcel+GlobalCollect
+	[Tags]   DPD
+	DPD Express 18:00  2  14050  1401 Ab  Deutschland  Niederlande  5  20  20  20  50  ${empty}  False  GlobalCollect  True  False
+
+DPD Express 18:00 +Luxemburgo+Multi-parcel+GlobalCollect
+	[Tags]   DPD
+	DPD Express 10:00  3  14050  1409  Deutschland  Luxemburg  5  20  20  20  50  ${empty}  False  GlobalCollect  True  False
+
+DPD Express 18:00 +Schweiz+Multi-parcel+GlobalCollect
+	[Tags]   DPD
+	DPD Express 18:00  2  14050  1400  Deutschland  Schweiz  5  20  20  20  50  ${empty}  False  GlobalCollect  True  False
+
+DPD Express 18:00 +Österreich+Multi-parcel+GlobalCollect
+	[Tags]   DPD
+	DPD Express 18:00  3  14050  1010  Deutschland  Österreich  5  20  20  20  50  ${empty}  False  GlobalCollect  True  False
+
+#DPD Guarantee 18:00
+DPD Guarantee 18:00 +Dänemark+Mono-parcel+GlobalCollect
+	[Tags]   DPD
+	DPD Guarantee 18:00  1  14050  1400  Deutschland  Dänemark  30  30  30  30  50  ${empty}  False  GlobalCollect  True  False
+
+DPD Guarantee 18:00 +Estland+Mono-parcel+GlobalCollect
+	[Tags]   DPD
+	DPD Guarantee 18:00  1  14050  15006  Deutschland  Estland  5  20  20  20  50  ${empty}  False  GlobalCollect  True  False
+
+DPD Guarantee 18:00 +Finnland+Mono-parcel+GlobalCollect
+	[Tags]   DPD
+	DPD Guarantee 18:00  1  14050  36100  Deutschland  Finnland  30  30  30  30  50  ${empty}  False  GlobalCollect  True  False
+
+DPD Guarantee 18:00 +Frankreich+Mono-parcel+GlobalCollect
+	[Tags]   DPD
+	DPD Guarantee 18:00  1  14050  14000  Deutschland  Frankreich  30  30  30  30  50  ${empty}  False  GlobalCollect  True  False
+
+DPD Guarantee 18:00 +Großbritannien+Mono-parcel+GlobalCollect
+	[Tags]   DPD
+	DPD Guarantee 18:00  1  14050  Da3 7aa  Deutschland  Großbritannien  30  30  30  30  50  ${empty}  False  GlobalCollect  True  False
+
+DPD Guarantee 18:00 +Lettland+Mono-parcel+GlobalCollect
+	[Tags]   DPD
+	DPD Guarantee 18:00  1  14050  Lv-1001  Deutschland  Lettland  30  30  30  30  50  ${empty}  False  GlobalCollect  True  False
+
+DPD Guarantee 18:00 +Litauen+Mono-parcel+GlobalCollect
+	[Tags]   DPD
+	DPD Guarantee 18:00  1  14050  75101  Deutschland  Litauen  30  30  30  30  50  ${empty}  False  GlobalCollect  True  False
+
+DPD Guarantee 18:00 +Polen+Mono-parcel+GlobalCollect
+	[Tags]   DPD
+	DPD Guarantee 18:00  1  14050  14-100  Deutschland  Polen  30  30  30  30  50  ${empty}  False  GlobalCollect  True  False
+
+DPD Guarantee 18:00 +Slowakei+Mono-parcel+GlobalCollect
+	[Tags]   DPD
+	DPD Guarantee 18:00  1  14050  050 01  Deutschland  Slowakei  30  30  30  30  50  ${empty}  False  GlobalCollect  True  False
+
+DPD Guarantee 18:00 +Tschechische Republik+Mono-parcel+GlobalCollect
+	[Tags]   DPD
+	DPD Guarantee 18:00  1  14050  140 00  Deutschland  Tschechische Republik  30  30  30  30  50  ${empty}  False  GlobalCollect  True  False
+
+DPD Guarantee 18:00 +Dänemark+Multi-parcel+GlobalCollect
+	[Tags]   DPD
+	DPD Guarantee 18:00  2  14050  1400  Deutschland  Dänemark  30  30  30  30  50  ${empty}  False  GlobalCollect  True  False
+
+DPD Guarantee 18:00 +Estland+Multi-parcel+GlobalCollect
+	[Tags]   DPD
+	DPD Guarantee 18:00  3  14050  15006  Deutschland  Estland  5  20  20  20  50  ${empty}  False  GlobalCollect  True  False
+
+DPD Guarantee 18:00 +Finnland+Multi-parcel+GlobalCollect
+	[Tags]   DPD
+	DPD Guarantee 18:00  4  14050  36100  Deutschland  Finnland  30  30  30  30  50  ${empty}  False  GlobalCollect  True  False
+
+DPD Guarantee 18:00 +Frankreich+Multi-parcel+GlobalCollect
+	[Tags]   DPD
+	DPD Guarantee 18:00  7  14050  14000  Deutschland  Frankreich  30  30  30  30  50  ${empty}  False  GlobalCollect  True  False
+
+DPD Guarantee 18:00 +Großbritannien+Multi-parcel+GlobalCollect
+	[Tags]   DPD
+	DPD Guarantee 18:00  5  14050  Da3 7aa  Deutschland  Großbritannien  30  30  30  30  50  ${empty}  False  GlobalCollect  True  False
+	
+DPD Guarantee 18:00 +Lettland+Multi-parcel+GlobalCollect
+	[Tags]   DPD
+	DPD Guarantee 18:00  2  14050  Lv-1001  Deutschland  Lettland  30  30  30  30  50  ${empty}  False  GlobalCollect  True  False
+
+DPD Guarantee 18:00 +Litauen+Multi-parcel+GlobalCollect
+	[Tags]   DPD
+	DPD Guarantee 18:00  6  14050  75101  Deutschland  Litauen  30  30  30  30  50  ${empty}  False  GlobalCollect  True  False
+
+DPD Guarantee 18:00 +Polen+Multi-parcel+GlobalCollect
+	[Tags]   DPD
+	DPD Guarantee 18:00  8  14050  14-100  Deutschland  Polen  30  30  30  30  50  ${empty}  False  GlobalCollect  True  False
+
+DPD Guarantee 18:00 +Slowakei+Multi-parcel+GlobalCollect
+	[Tags]   DPD
+	DPD Guarantee 18:00  9  14050  050 01  Deutschland  Slowakei  30  30  30  30  50  ${empty}  False  GlobalCollect  True  False
+
+DPD Guarantee 18:00 +Tschechische Republik+Multi-parcel+GlobalCollect
+	[Tags]   DPD
+	DPD Guarantee 18:00  10  14050  140 00  Deutschland  Tschechische Republik  30  30  30  30  50  ${empty}  False  GlobalCollect  True  False
+
+
+#DPD Classic Kleinpaket
+DPD Classic Kleinpaket +National+Multi-parcel+GlobalCollect
+	[Tags]   DPD
+	DPD Classic Kleinpaket  12  14050  56068  Deutschland  Deutschland  1  10  10  10  50  ${empty}  False  GlobalCollect  True  False
+
+DPD Classic Kleinpaket +Belgien+Multi-parcel+GlobalCollect
+	[Tags]   DPD
+	DPD Classic Kleinpaket  11  14050  2520  Deutschland  Belgien  1  10  10  10  50  ${empty}  False  GlobalCollect  True  False
+
+DPD Classic Kleinpaket +Frankreich+Multi-parcel+GlobalCollect
+	[Tags]   DPD
+	DPD Classic Kleinpaket  10  14050  78000  Deutschland  Frankreich  1  10  10  10  50  ${empty}  False  GlobalCollect  True  False
+
+DPD Classic Kleinpaket +Italien+Multi-parcel+GlobalCollect
+	[Tags]   DPD
+	DPD Classic Kleinpaket  9  14050  00118  Deutschland  Italien  1  10  10  10  50  ${empty}  False  GlobalCollect  True  False
+
+DPD Classic Kleinpaket +Luxemburg+Multi-parcel+GlobalCollect
+	[Tags]   DPD
+	DPD Classic Kleinpaket  8  14050  2510  Deutschland  Luxemburg  1  10  10  10  50  ${empty}  False  GlobalCollect  True  False
+
+DPD Classic Kleinpaket +Portugal+Multi-parcel+GlobalCollect
+	[Tags]   DPD
+	DPD Classic Kleinpaket  7  14050  2100-001  Deutschland  Portugal  1  10  10  10  50  ${empty}  False  GlobalCollect  True  False
+
+DPD Classic Kleinpaket +Schweden+Multi-parcel+GlobalCollect
+	[Tags]   DPD
+	DPD Classic Kleinpaket  6  14050  250 02  Deutschland  Schweden  1  10  10  10  50  ${empty}  False  GlobalCollect  True  False
+
+DPD Classic Kleinpaket +Spanien+Multi-parcel+GlobalCollect
+	[Tags]   DPD
+	DPD Classic Kleinpaket  5  14050  25001  Deutschland  Spanien  1  10  10  10  50  ${empty}  False  GlobalCollect  True  False
+
+DPD Classic Kleinpaket +Ungarn+Multi-parcel+GlobalCollect
+	[Tags]   DPD
+	DPD Classic Kleinpaket  4  14050  3600  Deutschland  Ungarn  1  10  10  10  50  ${empty}  False  GlobalCollect  True  False
+
+DPD Classic Kleinpaket +Schweiz+Multi-parcel+GlobalCollect
+	[Tags]   DPD
+	DPD Classic Kleinpaket  3  14050  4000  Deutschland  Schweiz  1  10  10  10  50  ${empty}  False  GlobalCollect  True  False
+
+DPD Classic Kleinpaket +Serbien+Multi-parcel+GlobalCollect
+	[Tags]   DPD
+	DPD Classic Kleinpaket  2  14050  17501  Deutschland  Serbien  1  10  10  10  50  ${empty}  False  GlobalCollect  True  False
+
+DPD Classic Kleinpaket +National+Mono-parcel+GlobalCollect
+	[Tags]   DPD
+	DPD Classic Kleinpaket  1  14050  56068  Deutschland  Deutschland  1  10  10  10  50  ${empty}  False  GlobalCollect  True  False
+
+DPD Classic Kleinpaket +Belgien+Mono-parcel+GlobalCollect
+	[Tags]   DPD
+	DPD Classic Kleinpaket  1  14050  2520  Deutschland  Belgien  1  10  10  10  50  ${empty}  False  GlobalCollect  True  False
+
+DPD Classic Kleinpaket +Frankreich+Mono-parcel+GlobalCollect
+	[Tags]   DPD
+	DPD Classic Kleinpaket  1  14050  78000  Deutschland  Frankreich  1  10  10  10  50  ${empty}  False  GlobalCollect  True  False
+
+DPD Classic Kleinpaket +Italien+Mono-parcel+GlobalCollect
+	[Tags]   DPD
+	DPD Classic Kleinpaket  1  14050  00118  Deutschland  Italien  1  10  10  10  50  ${empty}  False  GlobalCollect  True  False
+
+DPD Classic Kleinpaket +Luxemburg+Mono-parcel+GlobalCollect
+	[Tags]   DPD
+	DPD Classic Kleinpaket  1  14050  2510  Deutschland  Luxemburg  1  10  10  10  50  ${empty}  False  GlobalCollect  True  False
+
+DPD Classic Kleinpaket +Portugal+Mono-parcel+GlobalCollect
+	[Tags]   DPD
+	DPD Classic Kleinpaket  1  14050  2100-001  Deutschland  Portugal  1  10  10  10  50  ${empty}  False  GlobalCollect  True  False
+
+DPD Classic Kleinpaket +Schweden+Mono-parcel+GlobalCollect
+	[Tags]   DPD
+	DPD Classic Kleinpaket  1  14050  250 02  Deutschland  Schweden  1  10  10  10  50  ${empty}  False  GlobalCollect  True  False
+
+DPD Classic Kleinpaket +Spanien+Mono-parcel+GlobalCollect
+	[Tags]   DPD
+	DPD Classic Kleinpaket  1  14050  25001  Deutschland  Spanien  1  10  10  10  50  ${empty}  False  GlobalCollect  True  False
+
+DPD Classic Kleinpaket +Ungarn+Mono-parcel+GlobalCollect
+	[Tags]   DPD
+	DPD Classic Kleinpaket  1  14050  3600  Deutschland  Ungarn  1  10  10  10  50  ${empty}  False  GlobalCollect  True  False
+
+DPD Classic Kleinpaket +Schweiz+Mono-parcel+GlobalCollect
+	[Tags]   DPD
+	DPD Classic Kleinpaket  1  14050  4000  Deutschland  Schweiz  1  10  10  10  50  ${empty}  False  GlobalCollect  True  False
+
+DPD Classic Kleinpaket +Serbien+Mono-parcel+GlobalCollect
+	[Tags]   DPD
+	DPD Classic Kleinpaket  1  14050  17501  Deutschland  Serbien  1  10  10  10  50  ${empty}  False  GlobalCollect  True  False

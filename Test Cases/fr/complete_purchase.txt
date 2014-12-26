@@ -8,9 +8,48 @@ Resource         ../../Test Templates/complete_purchase_test_template.txt
 ${COUNTRY}    fr
 
 *** Test Cases ***  
-#service|from zipcode|to zipcode|form country|to country|weight|length|width|height|contentValue|Insurance|priority|payMethod|check labels
-HERMES ProfiPaketService National XS +GlobalCollect
+#service|from zipcode|to zipcode|form country|to country|weight|length|width|height|contentValue|Insurance|priority|payMethod|check labels|check address sheets|
+CHRONOPOST Chrono 13 Premium +GlobalCollect+France
 	[Tags]   Sanity
 	Login With Email And Password    robertogarcia@packlink.es    123456
 	Login Was Successful
-	Complete Purchase With Logged User    UPS Standard Domestic  25000  26000  France Métropolitaine  France Métropolitaine  1  1  10  10  10  50  ${empty}  False  GlobalCollect  True  False
+	Complete Purchase With Logged User    CHRONOPOST Chrono 13 Premium  1  25000  26000  France Métropolitaine  France Métropolitaine  1  10  10  10  50  ${empty}  False  GlobalCollect  True  True
+
+CHRONOPOST Chrono 13 Premium +GlobalCollect+France+Insurance
+	[Tags]   Sanity
+	Login With Email And Password    robertogarcia@packlink.es    123456
+	Login Was Successful
+	Complete Purchase With Logged User    CHRONOPOST Chrono 13 Premium  1  25000  26000  France Métropolitaine  France Métropolitaine  1  10  10  10  300  True  False  GlobalCollect  True  True
+
+CHRONOPOST Chrono 13 Premium +GlobalCollect+France+NoInsurance
+	[Tags]   Sanity
+	Login With Email And Password    robertogarcia@packlink.es    123456
+	Login Was Successful
+	Complete Purchase With Logged User    CHRONOPOST Chrono 13 Premium  1  25000  26000  France Métropolitaine  France Métropolitaine  1  10  10  10  300  False  False  GlobalCollect  True  True
+
+CHRONOPOST Chrono 13 Premium +GlobalCollect+France+Insurance+Priority
+	[Tags]   Sanity
+	Login With Email And Password    robertogarcia@packlink.es    123456
+	Login Was Successful
+	Complete Purchase With Logged User    CHRONOPOST Chrono 13 Premium  1  25000  26000  France Métropolitaine  France Métropolitaine  1  10  10  10  300  True  True  GlobalCollect  True  True
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

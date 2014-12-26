@@ -104,3 +104,11 @@ ERRORDIALOGCLOSEBUTTON  ="xpath=//*[@class=\"jqiclose\"]"
 ADDPARCELBUTTON     ="id=mas1"
 COPYLASTPACKAGE     ="id=copyLastPacket_link"
 
+#----------------------LOGIN--------------------------------------------#
+LOGINPASSWORDFIELD = "xpath=//input[@id=\"LoginForm_password\"]"
+LOGINEMAILFIELD = "xpath=//input[@id=\"loginEmail\"]"
+USERLOGINBUTTON = "id=requestLogin"
+USERLOGOUTBUTTON = "xpath=//a[contains(@href,\"logout\")]"
+USERLOGINERRORMESSAGE =  "xpath=//*[@id=\"user-form\"]/*[contains(@class,\"errorMessage\")]"
+SHOWLOGINBUTTON  = "id=headerLogin"
+USERLOGINFORM  =  "id=user-form"
