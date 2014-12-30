@@ -13,122 +13,122 @@ ${COUNTRY}    de
 
 #------------------------------------------------------ UPS -------------------------------------------------------#
 UPS Standard +GlobalCollect  
-	[Tags]   Sanity
+	[Tags]   UPS
 	UPS Standard  1  14050  16225  Deutschland  Deutschland  1  10  10  10  50  ${empty}  False  GlobalCollect  True  False
 
 UPS Express Saver +GlobalCollect  
-	[Tags]   Sanity
-	UPS Express Saver  14050  16225  Deutschland  Deutschland  1  10  10  10  50  ${empty}  False  GlobalCollect  True  False
+	[Tags]   UPS
+	UPS Express Saver  1  14050  16225  Deutschland  Deutschland  1  10  10  10  50  ${empty}  False  GlobalCollect  True  False
 
 UPS Standard Import +GlobalCollect  
-	[Tags]   Sanity
-	UPS Standard Import  28001  16225  Spanien  Deutschland  1  10  10  10  50  ${empty}  False  GlobalCollect  True  False
+	[Tags]   UPS
+	UPS Standard Import  1  28001  16225  Spanien  Deutschland  1  10  10  10  50  ${empty}  False  GlobalCollect  True  False
 
 UPS Express Saver Import +GlobalCollect  
-	[Tags]   Sanity
-	UPS Express Saver  28001  16225  Spanien  Deutschland  1  10  10  10  50  ${empty}  False  GlobalCollect  True  False
+	[Tags]   UPS
+	UPS Express Saver  1  28001  16225  Spanien  Deutschland  1  10  10  10  50  ${empty}  False  GlobalCollect  True  False
 
 #------------------------------------------------------ KEAVO -------------------------------------------------------#
 
 KEAVO National Express 24 Stunden +GlobalCollect  
-	[Tags]   Sanity
-	KEAVO National Express 24 Stunden  14050  16225  Deutschland  Deutschland  1  10  10  10  50  ${empty}  False  GlobalCollect  False  False
+	[Tags]   KEAVO
+	KEAVO National Express 24 Stunden  1  14050  16225  Deutschland  Deutschland  1  10  10  10  50  ${empty}  False  GlobalCollect  False  False
 
 KEAVO National Express 12:00 +GlobalCollect  
-	[Tags]   Sanity
-	KEAVO National Express 12:00  14050  16225  Deutschland  Deutschland  1  10  10  10  50  ${empty}  False  GlobalCollect  False  False
+	[Tags]   KEAVO
+	KEAVO National Express 12:00  1  14050  16225  Deutschland  Deutschland  1  10  10  10  50  ${empty}  False  GlobalCollect  False  False
 
 KEAVO National Express 10:00 +GlobalCollect  
-	[Tags]   Sanity
-	KEAVO National Express 10:00  14050  16225  Deutschland  Deutschland  1  10  10  10  50  ${empty}  False  GlobalCollect  False  False
+	[Tags]   KEAVO
+	KEAVO National Express 10:00  1  14050  16225  Deutschland  Deutschland  1  10  10  10  50  ${empty}  False  GlobalCollect  False  False
 
 KEAVO National Express Palette +GlobalCollect  
-	[Tags]   Sanity
-	KEAVO National Express Palette  14050  16225  Deutschland  Deutschland  1  10  10  10  50  ${empty}  False  GlobalCollect  False  False
+	[Tags]   KEAVO
+	KEAVO National Express Palette  1  14050  16225  Deutschland  Deutschland  1  10  10  10  50  ${empty}  False  GlobalCollect  False  False
 
 KEAVO Europa Express +GlobalCollect  
-	[Tags]   Sanity
-	KEAVO Europa Express  25010  16225  Italien  Deutschland  1  10  10  10  50  ${empty}  False  GlobalCollect  False  False
+	[Tags]   KEAVO
+	KEAVO Europa Express  1  25010  16225  Italien  Deutschland  1  10  10  10  50  ${empty}  False  GlobalCollect  False  False
 
 KEAVO Welt +GlobalCollect  
-	[Tags]   Sanity
-	KEAVO Welt  14050  B6660  Deutschland  Argentinien  1  10  10  10  50  ${empty}  False  GlobalCollect  True  False
+	[Tags]   KEAVO
+	KEAVO Welt  1  14050  B6660  Deutschland  Argentinien  1  10  10  10  50  ${empty}  False  GlobalCollect  True  False
 
 
 #------------------------------------------------------ TNT -------------------------------------------------------#
 TNT Express +GlobalCollect  
-	[Tags]   Sanity
-	TNT Express  14050  16225  Deutschland  Deutschland  1  10  10  10  50  ${empty}  False  GlobalCollect  True  False
+	[Tags]   TNT
+	TNT Express  1  14050  16225  Deutschland  Deutschland  1  10  10  10  50  ${empty}  False  GlobalCollect  True  False
 
 TNT 12:00 Express +GlobalCollect  
-	[Tags]   Sanity
-	TNT 12:00 Express  14050  16225  Deutschland  Deutschland  1  10  10  10  50  ${empty}  False  GlobalCollect  True  False
+	[Tags]   TNT
+	TNT 12:00 Express  1  14050  16225  Deutschland  Deutschland  1  10  10  10  50  ${empty}  False  GlobalCollect  True  False
 
 TNT 10:00 Express +GlobalCollect  
-	[Tags]   Sanity
-	TNT 10:00 Express  14050  16225  Deutschland  Deutschland  1  10  10  10  50  ${empty}  False  GlobalCollect  True  False
+	[Tags]   TNT
+	TNT 10:00 Express  1  14050  16225  Deutschland  Deutschland  1  10  10  10  50  ${empty}  False  GlobalCollect  True  False
 
 TNT 09:00 Express +GlobalCollect  
-	[Tags]   Sanity
-	TNT 09:00 Express  14050  16225  Deutschland  Deutschland  1  10  10  10  50  ${empty}  False  GlobalCollect  True  False
+	[Tags]   TNT
+	TNT 09:00 Express  1  14050  16225  Deutschland  Deutschland  1  10  10  10  50  ${empty}  False  GlobalCollect  True  False
 
 TNT Express Export Europe +GlobalCollect  
-	[Tags]   Sanity
-	TNT Express Export Europe  14050  25w010  Deutschland  Italien  1  10  10  10  50  ${empty}  False  GlobalCollect  True  False
+	[Tags]   TNT
+	TNT Express Export Europe  1  14050  25w010  Deutschland  Italien  1  10  10  10  50  ${empty}  False  GlobalCollect  True  False
 
 TNT Economy Export Europe +GlobalCollect  
-	[Tags]   Sanity
-	TNT Economy Export Europe  14050  25010  Deutschland  Italien  1  10  10  10  50  ${empty}  False  GlobalCollect  True  False
+	[Tags]   TNT
+	TNT Economy Export Europe  1  14050  25010  Deutschland  Italien  1  10  10  10  50  ${empty}  False  GlobalCollect  True  False
 
 TNT Express Import Europe +GlobalCollect  
-	[Tags]   Sanity
-	TNT Express Import Europe  25010  14050  Italien  Deutschland  1  10  10  10  50  ${empty}  False  GlobalCollect  True  False
+	[Tags]   TNT
+	TNT Express Import Europe  1  25010  14050  Italien  Deutschland  1  10  10  10  50  ${empty}  False  GlobalCollect  True  False
 
 TNT Economy Import Europe +GlobalCollect  
-	[Tags]   Sanity
-	TNT Economy Import Europe  25010  14050  Italien  Deutschland  1  10  10  10  50  ${empty}  False  GlobalCollect  True  False
+	[Tags]   TNT
+	TNT Economy Import Europe  1  25010  14050  Italien  Deutschland  1  10  10  10  50  ${empty}  False  GlobalCollect  True  False
 
 TNT Express Export World +GlobalCollect  
-	[Tags]   Sanity
-	TNT Express Export World  14050  B6660  Deutschland  Argentinien  1  10  10  10  50  ${empty}  False  GlobalCollect  True  False
+	[Tags]   TNT
+	TNT Express Export World  1  14050  B6660  Deutschland  Argentinien  1  10  10  10  50  ${empty}  False  GlobalCollect  True  False
 
 TNT Economy Export World +GlobalCollect  
-	[Tags]   Sanity
-	TNT Economy Export World  14050  B6660  Deutschland  Argentinien  1  10  10  10  50  ${empty}  False  GlobalCollect  True  False
+	[Tags]   TNT
+	TNT Economy Export World  1  14050  B6660  Deutschland  Argentinien  1  10  10  10  50  ${empty}  False  GlobalCollect  True  False
 
 TNT Express Import World +GlobalCollect  
-	[Tags]   Sanity
-	TNT Express Import World  2100  14050  Australien  Deutschland  1  10  10  10  50  ${empty}  False  GlobalCollect  True  False
+	[Tags]   TNT
+	TNT Express Import World  1  2100  14050  Australien  Deutschland  1  10  10  10  50  ${empty}  False  GlobalCollect  True  False
 
 TNT Economy Import World +GlobalCollect  
-	[Tags]   Sanity
-	TNT Express Import World  2100  14050  Australien  Deutschland  1  10  10  10  50  ${empty}  False  GlobalCollect  True  False
+	[Tags]   TNT
+	TNT Express Import World  1  2100  14050  Australien  Deutschland  1  10  10  10  50  ${empty}  False  GlobalCollect  True  False
 
 #------------------------------------------------------  CC-Logistic -------------------------------------------------------#
 CC-LOGISTIC National Economy +GlobalCollect  
-	[Tags]   Sanity
-	CC-LOGISTIC National Economy  14050  16225  Deutschland  Deutschland  1  10  10  10  50  ${empty}  False  GlobalCollect  False  False
+	[Tags]   CC-Logistic
+	CC-LOGISTIC National Economy  1  14050  16225  Deutschland  Deutschland  1  10  10  10  50  ${empty}  False  GlobalCollect  False  False
 
 CC-LOGISTIC National 10:00 Priority +GlobalCollect  
-	[Tags]   Sanity
-	CC-LOGISTIC National 10:00 Priority  14050  16225  Deutschland  Deutschland  1  10  10  10  50  ${empty}  False  GlobalCollect  False  False
+	[Tags]   CC-Logistic
+	CC-LOGISTIC National 10:00 Priority  1  14050  16225  Deutschland  Deutschland  1  10  10  10  50  ${empty}  False  GlobalCollect  False  False
 
 CC-LOGISTIC Standard +GlobalCollect  
-	[Tags]   Sanity
-	CC-LOGISTIC Standard  14050  2103  Deutschland  Schweiz  1  10  10  10  50  ${empty}  False  GlobalCollect  False  False
+	[Tags]   CC-Logistic
+	CC-LOGISTIC Standard  1  14050  2103  Deutschland  Schweiz  1  10  10  10  50  ${empty}  False  GlobalCollect  False  False
 
 CC-LOGISTIC Express +GlobalCollect
-	[Tags]   Sanity
-	CC-LOGISTIC Express  14050  3100  Deutschland  Österreich  1  10  10  10  50  ${empty}  False  GlobalCollect  False  False
+	[Tags]   CC-Logistic
+	CC-LOGISTIC Express  1  14050  3100  Deutschland  Österreich  1  10  10  10  50  ${empty}  False  GlobalCollect  False  False
 
 #------------------------------------------------------  GLS -------------------------------------------------------#
 GLS Euro Business Parcel +GlobalCollect  
-	[Tags]   Sanity
-	GLS Euro Business Parcel  14050  2100  Deutschland  Belgien  1  10  10  10  50  ${empty}  False  GlobalCollect  False  False
+	[Tags]   GLS
+	GLS Euro Business Parcel  1  14050  2100  Deutschland  Belgien  1  10  10  10  50  ${empty}  False  GlobalCollect  False  False
 
 GLS Business Parcel +GlobalCollect  
-	[Tags]   Sanity
-	GLS Business Parcel  14050  14050  Deutschland  Deutschland  31.5  30  30  30  50  ${empty}  False  GlobalCollect  False  False
+	[Tags]   GLS
+	GLS Business Parcel  1  14050  14050  Deutschland  Deutschland  31.5  30  30  30  50  ${empty}  False  GlobalCollect  False  False
 
 
 #------------------------------------------------------  DPD -------------------------------------------------------#
@@ -357,7 +357,7 @@ DPD Express 18:00 +Países Bajos+Multi-parcel+GlobalCollect
 
 DPD Express 18:00 +Luxemburgo+Multi-parcel+GlobalCollect
 	[Tags]   DPD
-	DPD Express 10:00  3  14050  1409  Deutschland  Luxemburg  5  20  20  20  50  ${empty}  False  GlobalCollect  True  False
+	DPD Express 18:00  3  14050  1409  Deutschland  Luxemburg  5  20  20  20  50  ${empty}  False  GlobalCollect  True  False
 
 DPD Express 18:00 +Schweiz+Multi-parcel+GlobalCollect
 	[Tags]   DPD
