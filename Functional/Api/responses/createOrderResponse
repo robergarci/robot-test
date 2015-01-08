@@ -1,0 +1,13 @@
+{
+  "order_reference": "EE111111111",
+  "receipt": "http://url/to/receipt",
+  "shipments": [
+    {
+      "insurance_coverage_amount": 750,
+      "shipment_custom_reference": "eBay_11993382332",
+      "shipment_reference": "RR1111111111",
+      "total_price": 4.9
+    }
+  ],
+  "total_amount": 50
+}

@@ -1,0 +1,45 @@
+{
+            "order_custom_reference":"DE115165454",
+            "shipments": [
+            {
+                    "shipment_custom_reference": "eBay_11993382332589",
+                    "from": {
+                        "surname": "Werner",
+                        "company": "Werner corp",
+                        "street1": "Alleestr 29",
+                        "zip_code": "24103",
+                        "city": "Oldenburg",
+                        "country": "DE",
+                        "state": "Deutschland",
+                        "phone": "01516113123",
+                        "email": "test@testing.com"
+                    },
+                    "to": {
+                        "name": "Helena",
+                        "surname": "Zimmermann",
+                        "street1": "Schlowiesenstrae 7",
+                        "zip_code": "24103",
+                        "city": "Essen",
+                        "country": "DE",
+                        "state": "Deutschland",
+                        "phone": "+491601139291",
+                        "email": "test@testing.com"
+                    },
+
+                    "packages": [
+                        {
+                            "width": 15,
+                            "height": 15,
+                            "length": 15,
+                            "weight": 2
+                        }
+                    ],
+                    "service_id": 5000,
+                    "content": "Leggins, Schuhe",
+                    "contentvalue": 50,
+					"collection_date":"2014/12/04",
+                    "collection_time": "10:00-14:00"
+                }
+
+            ]
+}

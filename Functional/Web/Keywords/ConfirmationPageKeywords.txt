@@ -1,0 +1,104 @@
+*** Settings ***
+Library    RequestsLibrary
+Library    String
+Library    Collections
+Library    PackLinkUtils
+
+*** Keywords ***
+Click Print Customs
+	Click Element    ${PRINTCUSTOMSBUTTON}
+	Wait Until Element Is Visible    ${ACEPTCUSTOMSBUTTON}
+
+Enter Customs Details
+	[Arguments]    ${taxType}    ${exportReason}    ${senderIdNumber}    ${description}    ${en_description}    ${origin}    ${quantity}    ${weight}    ${value}    ${itemTypeNumber}
+	Select Tax Type    ${taxType}
+	Select Export Reason    ${exportReason}
+	Select Origin Country    ${origin}
+	Select Number Of Item Type    ${itemTypeNumber}
+	Enter Sender ID Number    ${senderIdNumber}
+	Enter Description Local    ${description}
+	Enter Description English    ${en_description}
+	Enter Quantity    ${quantity}
+	Enter Weight    ${weight}
+	Enter Value    ${value}
+
+Click Accept Customs Button
+	Click Element  ${ACEPTCUSTOMSBUTTON}
+
+Select Number Of Item Type    [Arguments]    ${taxType}
+	Select From List By Value    ${SELECTAXTYPE}    ${taxType}
+
+Select Tax Type    [Arguments]    ${taxType}
+	Select From List By Value    ${SELECTAXTYPE}    ${taxType}
+
+Select Export Reason    [Arguments]    ${exportReason}
+	Select From List By Value    ${SELECTREASON}    ${exportReason}
+
+Select Origin Country    [Arguments]    ${origin}
+	Select From List By Value    ${SELECTPACKAGEORIGIN}    ${origin}
+
+Enter Sender ID Number    [Arguments]    ${senderIdNumber}
+	Input Text    ${SENDERIDFIELD}    ${senderIdNumber}
+
+Enter Description Local     [Arguments]    ${description}
+	Input Text    ${PACKAGEDESCRIPTION_LOCAL}    ${description}
+
+Enter Description English     [Arguments]    ${description}
+	Input Text    ${PACKAGEDESCRIPTION_EN}    ${description}
+
+Enter Quantity    [Arguments]    ${quantity}
+	Input Text    ${QUANTITYFIELD}    ${quantity}
+
+Enter Weight    [Arguments]    ${weight}
+	Input Text    ${WEIGHTFIELD}    ${weight}
+
+Enter Value    [Arguments]    ${value}
+	Input Text    ${VALUEFIELD}    ${value}
+
+
+Click Create Invoice Button
+	Click Element    ${CREATEINVOICELINK}
+
+Must Be On Confirmation Page
+	Wait Until Page Contains Element    ${RECEIPT}
+	Wait Until Element Is Visible    ${RECEIPT}
+
+Download Receipt
+	${link}=    Get Element Attribute    ${RECEIPT}@href
+	${cookies}=    Get Cookies
+	${cookies}=    Cookies To Dict    ${cookies}
+	${link}=    Replace String    ${link}    ${SECUREHOMEPAGE}    ${HOMEPAGE}
+	Create Session    downloadReceipt    ${link}    ${empty}    cookies=${cookies}
+	${resp}=    Get    downloadReceipt    \
+	Should Be Equal As Strings    ${resp.status_code}    200
+	
+Download Labels
+	${link}=    Get Element Attribute    ${SHIPMENTLABELS}@href
+	${cookies}=    Get Cookies
+	${cookies}=    Cookies To Dict    ${cookies}  
+	${link}=    Replace String    ${link}    ${SECUREHOMEPAGE}    ${HOMEPAGE}
+	Create Session    downloadLabels    ${link}    ${empty}    cookies=${cookies}
+	${resp}=    Get    downloadLabels    \ 	
+	Should Be Equal As Strings    ${resp.status_code}    200
+
+Download Address Sheets
+	${link}=    Get Element Attribute    ${ADDRESSSHEET}@href
+	${cookies}=    Get Cookies
+	${cookies}=    Cookies To Dict    ${cookies}  
+	${link}=    Replace String    ${link}    ${SECUREHOMEPAGE}    ${HOMEPAGE}
+	Create Session    downloadLabels    ${link}    ${empty}    cookies=${cookies}
+	${resp}=    Get    downloadLabels    \ 	
+	Should Be Equal As Strings    ${resp.status_code}    200
+	
+Destination Is Not Empty
+	${dest}=    Get Text    ${DELIVERYADDRESS}
+	Log    ${dest}
+	Should Not Be Empty    ${dest}
+
+Parcel Reference Is Not Empty
+	${dest}=    Get Text    ${SHIPMENTREF}
+	Log    ${dest}
+	Should Not Be Empty    ${dest}
+
+
+

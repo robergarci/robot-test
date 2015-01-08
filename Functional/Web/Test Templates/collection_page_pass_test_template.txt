@@ -1,0 +1,28 @@
+*** Settings ***
+Variables        ../Config/${COUNTRY}.py 
+
+Resource         ../Keywords/SearchKeywords.txt
+Resource         ../Keywords/PersonalDataPageKeywords.txt
+Resource         ../Keywords/ResultsPageKeywords.txt
+Resource         ../Keywords/CollectionPageKeywords.txt
+Resource         ../Keywords/PaymentPageKeywords.txt
+
+
+*** Keywords ***
+Collection Form Submit Should Pass When
+	[Arguments]    ${name}  ${surname}  ${email}  ${phone}  ${address}  ${company}  ${from}  ${to}  ${from_country}  ${to_country}   ${serviceName}
+	Search Shipments With    1    1    10    10    10    ${from}    ${to}    ${from_country}    ${to_country}
+	Select Service By Name    ${serviceName}
+	Fill User Data Form With    Test    Test    test@test.com    test    5    ${empty}    True
+	Click Next Step Button
+	Must Be On Collection Data Page
+	Select Date And Hour
+	Fill Collection From Form With    ${name}    ${surname}    ${email}    ${phone}    ${address}    ${company}
+	Fill Collection Delivery Form With    ${name}    ${surname}    ${email}    ${phone}    ${address}    ${company}
+	Run Keyword If  '${COUNTRY}' == 'de'  Click Copy Data Button
+	Click Submit Button
+	Must Be On Payment Page
+	
+Setup Browser
+	Open Browser    ${HOMEPAGE}    ${BROWSER}
+	Maximize Browser Window

@@ -1,0 +1,12 @@
+*** Settings ***
+Library          Selenium2Library
+Test Setup		 Setup Browser
+#Test Teardown    Close All Browsers
+Test Template    Create Customs Should Fail When
+Resource         ../../Test Templates/customs_fail_test_template.txt
+
+*** Variables ***
+${COUNTRY}    de
+
+*** Test Cases ***      from country|to country|from|to|weight|length|width|height|priority|payMethod|
+Test 1    Deutschland    USA (Vereinigte Staaten)    14050    02108    1    10    10    10    False    GlobalCollect

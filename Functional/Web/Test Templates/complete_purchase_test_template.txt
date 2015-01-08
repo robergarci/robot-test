@@ -1,0 +1,91 @@
+*** Settings ***
+Variables        ../Config/${COUNTRY}.py
+Resource         ./Keywords/SearchKeywords.txt
+Resource         ./Keywords/PersonalDataPageKeywords.txt
+Resource         ./Keywords/ResultsPageKeywords.txt
+Resource         ./Keywords/CollectionPageKeywords.txt
+Resource         ./Keywords/PaymentPageKeywords.txt
+Resource         ./Keywords/GlobalCollectKeywords.txt
+Resource         ./Keywords/ConfirmationPageKeywords.txt
+
+*** Keywords ***    service|from|to|weight|length|width|height|contentValue|Insurance|priority|payMethod|check labels|check address sheets|
+Complete Purchase With    
+	[Arguments]    ${service}  ${parcels}    ${from}  ${to}  ${from_country}  ${to_country}  ${weight}  ${length}  ${width}  ${height}  ${contentValue}  ${insurance}  ${priority}  ${payMethod}  ${checkLabels}  ${checkAddressSheet}
+	Go To    ${HOMEPAGE}
+	Search Shipments With   ${parcels}  ${weight}    ${length}    ${width}    ${height}    ${from}    ${to}    ${from_country}    ${to_country}
+	Select Service By Name    ${service}
+	Fill User Data Form With    Test    Test    test@test.com    test    ${contentValue}    ${insurance}    True
+	Click Next Step Button
+	Must Be On Collection Data Page
+	Select Date And Hour
+	Fill Collection From Form With    test        test       pruebas@packlink.es    659659659    ${from_country}  Packlink
+	Fill Collection Delivery Form With    test        test       pruebas@packlink.es    659659659    ${to_country}  Packlink
+	Run Keyword If  '${COUNTRY}' == 'de'  Click Copy Data Button
+	Click Submit Button
+	Must Be On Payment Page
+	Select Payment Method And Priotiry     ${priority}    ${payMethod}
+	${orig timeout}=    Set Selenium Speed  3  
+	Click Pay Button
+	Set Selenium Speed  ${orig timeout}
+	Run Keyword If  '${ENV}' == 'NEW'  Pay With  ${payMethod}
+	Run Keyword If  '${ENV}' == 'KOKUDO'  Pay With  ${payMethod}
+	Run Keyword If  '${COUNTRY}' == 'fr'  Pay With  ${payMethod}
+	${org_wait}=    Set Selenium Implicit Wait   60
+	Must Be On Confirmation Page
+	Set Selenium Implicit Wait   ${org_wait}
+	Download Receipt
+	Run Keyword If  '${checkLabels}' == 'True'  Download Labels
+	Run Keyword If  '${checkAddressSheet}' == 'True'  Download Address Sheets
+	Destination Is Not Empty
+	Parcel Reference Is Not Empty
+
+Complete Purchase With Logged User    
+	[Arguments]    ${service}  ${parcels}  ${from}  ${to}  ${from_country}  ${to_country}  ${weight}  ${length}  ${width}  ${height}  ${contentValue}  ${insurrance}  ${priority}  ${payMethod}  ${checkLabels}  ${checkAddressSheet}
+	Go To    ${HOMEPAGE}
+	Search Shipments With    ${parcels}  ${weight}  ${length}  ${width}  ${height}  ${from}  ${to}  ${from_country}  ${to_country}
+	Select Service By Name    ${service}
+	Must Be Personal Data Page
+	Enter Content Description    test
+	Enter Content Value    ${contentValue}
+	Run Keyword If   '${insurrance}' == 'True'    Click Insurrance Yes
+	Run Keyword If   '${insurrance}' == 'False'    Click Insurrance No
+	Click Term And Conditions Check
+	Click Next Step Button
+	Must Be On Collection Data Page
+	Select Date And Hour
+	Fill Collection From Form With    test        test       pruebas@packlink.es    659659659    ${from_country}  Packlink
+	Fill Collection Delivery Form With    test        test       pruebas@packlink.es    659659659    ${to_country}  Packlink
+	Run Keyword If  '${COUNTRY}' == 'de'  Click Copy Data Button
+	Click Submit Button
+	Must Be On Payment Page
+	Select Payment Method And Priotiry     ${priority}    ${payMethod}
+	${orig timeout}=    Set Selenium Speed  3  
+	Click Pay Button
+	Set Selenium Speed  ${orig timeout}
+	Run Keyword If  '${ENV}' == 'NEW'  Pay With  ${payMethod}
+	Run Keyword If  '${ENV}' == 'KOKUDO'  Pay With  ${payMethod}
+	Run Keyword If  '${COUNTRY}' == 'fr'  Pay With  ${payMethod}
+	${org_wait}=    Set Selenium Implicit Wait   60
+	Must Be On Confirmation Page
+	Set Selenium Implicit Wait   ${org_wait}
+	Download Receipt
+	Run Keyword If  '${checkLabels}' == 'True'  Download Labels
+	Run Keyword If  '${checkAddressSheet}' == 'True'  Download Address Sheets
+	Destination Is Not Empty
+	Parcel Reference Is Not Empty
+
+
+Pay With    [Arguments]    ${payMethod}
+	Run Keyword If    '${payMethod}' == 'GlobalCollect'    Must Be On Global Collect Page
+	Run Keyword If    '${payMethod}' == 'GlobalCollect'    Pay With Global Collect Default Data
+	Run Keyword If    '${payMethod}' == 'PayPal'    Must Be On PayPal Page
+	Run Keyword If    '${payMethod}' == 'PayPal'    Pay With PayPal Default Data
+
+
+Setup Browser
+	Open Browser    ${HOMEPAGE}    ${BROWSER}
+	Maximize Browser Window
+
+	
+	
+	

@@ -1,0 +1,14 @@
+*** Settings ***
+Variables        ../Config/${COUNTRY}.py 
+Library          Selenium2Library
+Test Setup		 Setup Browser
+Test Teardown    Close All Browsers
+Resource         ../../Keywords/
+Resource         ../../Keywords/SearchKeywords.txt
+
+*** Variables ***
+${COUNTRY}    fr
+
+*** Test Cases ***  
+
+

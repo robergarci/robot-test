@@ -1,0 +1,75 @@
+*** Settings ***
+Library          Selenium2Library
+Test Setup		 Setup Browser
+Test Teardown    Close All Browsers
+Resource         ../../Test Templates/complete_purchase_test_template.txt
+
+*** Variables ***
+${COUNTRY}    de
+
+*** Test Cases ***  
+#service|from zipcode|to zipcode|form country|to country|weight|length|width|height|contentValue|Insurance|priority|payMethod|check labels|check address sheets|
+
+#------------------------------------------------------  HERMES -------------------------------------------------------#
+HERMES ProfiPaketService National XS +GlobalCollect
+	[Tags]   HERMES
+	Login With Email And Password    robertogarcia@packlink.es    123456
+	Login Was Successful
+	Complete Purchase With Logged User    HERMES ProfiPaketService  1  14050  14050  Deutschland  Deutschland  1  1  10  10  10  50  ${empty}  False  GlobalCollect  True  False
+
+HERMES ProfiPaketService National S +GlobalCollect
+	[Tags]   HERMES
+	Login With Email And Password    robertogarcia@packlink.es    123456
+	Login Was Successful
+	Complete Purchase With Logged User    HERMES ProfiPaketService  1  14050  14050  Deutschland  Deutschland  1  1  10  10  25  50  ${empty}  False  GlobalCollect  True  False
+
+HERMES ProfiPaketService National M +GlobalCollect
+	[Tags]   HERMES
+	Login With Email And Password    robertogarcia@packlink.es    123456
+	Login Was Successful
+	Complete Purchase With Logged User    HERMES ProfiPaketService  1  14050  14050  Deutschland  Deutschland  1  1  30  25  25  50  ${empty}  False  GlobalCollect  True  False
+
+HERMES ProfiPaketService National L +GlobalCollect
+	[Tags]   HERMES
+	Login With Email And Password    robertogarcia@packlink.es    123456
+	Login Was Successful
+	Complete Purchase With Logged User    HERMES ProfiPaketService  1  14050  14050  Deutschland  Deutschland  1  1  50  50  50  50  ${empty}  False  GlobalCollect  True  False
+
+HERMES ProfiPaketService National XL +GlobalCollect
+	[Tags]   HERMES
+	Login With Email And Password    robertogarcia@packlink.es    123456
+	Login Was Successful
+	Complete Purchase With Logged User   HERMES ProfiPaketService  1  14050  14050  Deutschland  Deutschland  1  1  120  60  60  50  ${empty}  False  GlobalCollect  True  False
+
+
+HERMES ProfiPaketService Export Europe XS +GlobalCollect
+	[Tags]   HERMES
+	Login With Email And Password    robertogarcia@packlink.es    123456
+	Login Was Successful
+	Complete Purchase With Logged User   HERMES ProfiPaketService  1  14050  21001  Deutschland  Spanien  1  1  10  10  10  50  ${empty}  False  GlobalCollect  True  False
+
+
+HERMES ProfiPaketService Export Europe S +GlobalCollect
+	[Tags]   HERMES
+	Login With Email And Password    robertogarcia@packlink.es    123456
+	Login Was Successful
+	Complete Purchase With Logged User   HERMES ProfiPaketService  1  14050  26010  Deutschland  Italien  1  1  10  10  25  50  ${empty}  False  GlobalCollect  True  False
+
+
+HERMES ProfiPaketService Export Europe M +GlobalCollect
+	[Tags]   HERMES
+	Login With Email And Password    robertogarcia@packlink.es    123456
+	Login Was Successful
+	Complete Purchase With Logged User    HERMES ProfiPaketService  1  14050  75001  Deutschland  Frankreich  1  1  30  25  25  50  ${empty}  False  GlobalCollect  True  False
+
+HERMES ProfiPaketService Export Europe L +GlobalCollect
+	[Tags]   HERMES
+	Login With Email And Password    robertogarcia@packlink.es    123456
+	Login Was Successful
+	Complete Purchase With Logged User    HERMES ProfiPaketService  1  14050  2500  Deutschland  Belgien  1  1  50  50  50  50  ${empty}  False  GlobalCollect  True  False
+
+HERMES ProfiPaketService Export Europe XL +GlobalCollect
+	[Tags]   HERMES
+	Login With Email And Password    robertogarcia@packlink.es    123456
+	Login Was Successful
+	Complete Purchase With Logged User   HERMES ProfiPaketService  1  14050  2500  Deutschland  Belgien  1  1  120  60  60  50  ${empty}  False  GlobalCollect  True  False

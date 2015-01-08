@@ -1,0 +1,34 @@
+*** Settings *** 
+Variables        ../Config/${COUNTRY}.py
+
+Resource         ./Keywords/SearchKeywords.txt
+Resource         ./Keywords/PersonalDataPageKeywords.txt
+Resource         ./Keywords/ResultsPageKeywords.txt
+Resource         ./Keywords/CollectionPageKeywords.txt
+Resource         ./Keywords/PaymentPageKeywords.txt
+Resource         ./Keywords/GlobalCollectKeywords.txt
+Resource         ./Keywords/PayPalKeywords.txt
+
+*** Keywords ***
+Submit Payment Should Fail When    
+	[Arguments]    ${priority}    ${payMethod}   ${from}  ${to}  ${from_country}  ${to_country}  ${serviceName}
+	Search Shipments With  1  1  10  10  10  ${from}  ${to}  ${from_country}  ${to_country}   
+	Select Service By Name    ${serviceName}
+	Fill User Data Form With    Test    Test    test@test.com    test    5    ${empty}   True
+	Click Next Step Button
+	Must Be On Collection Data Page
+	Select Date And Hour
+	Fill Collection From Form With    test        test       test@test.com    659659659    Italy    Bad Company
+	Fill Collection Delivery Form With    test        test       test@test.com    659659659    Italy    Bad Company
+	Run Keyword If  '${COUNTRY}' == 'de'  Click Copy Data Button
+	Click Submit Button
+	Must Be On Payment Page
+	Select Payment Method And Priotiry    ${priority}    ${payMethod}
+	Click Pay Button
+	Submit Payment Form Unsuccessful
+
+Setup Browser
+	Open Browser    ${HOMEPAGE}    ${BROWSER}
+	Maximize Browser Window
+	
+

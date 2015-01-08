@@ -1,0 +1,6 @@
+/v1/services?from[country]=DE&from[zip]=24103&to[country]=DE&to[zip]=24103&packages[0][width]=15&packages[0][height]=15&packages[0][length]=15&packages[0][weight]=2
+/v1/services?from[country]=DE&from[zip]=10115&to[country]=FR&to[zip]=75001&packages[0][width]=12&packages[0][height]=12&packages[0][length]=12&packages[0][weight]=1
+/v1/services?from[country]=FR&from[zip]=75001&to[country]=DE&to[zip]=10115&packages[0][width]=12&packages[0][height]=12&packages[0][length]=12&packages[0][weight]=1
+/v1/services?from[country]=DE&from[zip]=10115&to[country]=AR&to[zip]=A4400&packages[0][width]=12&packages[0][height]=12&packages[0][length]=12&packages[0][weight]=1
+/v1/services?from[country]=DE&from[zip]=10115&to[country]=DE&to[zip]=10115&packages[0][width]=60&packages[0][height]=60&packages[0][length]=60&packages[0][weight]=17
+/v1/services?from[country]=DE&from[zip]=10115&to[country]=DE&to[zip]=10115&packages[0][width]=30&packages[0][height]=30&packages[0][length]=30&packages[0][weight]=31.5
