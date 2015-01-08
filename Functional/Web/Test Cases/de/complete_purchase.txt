@@ -168,15 +168,15 @@ DPD Classic Welt +China+Multi-parcel+GlobalCollect
 	DPD Classic Welt  3  14050  100000  Deutschland  China  5  20  20  20  50  ${empty}  False  GlobalCollect  True  False
 
 DPD Classic Welt +Argentinien+Mono-parcel+GlobalCollect
-	[Tags]   DPD
+	[Tags]   DPD  DPD-SPECIAL
 	DPD Classic Welt  1  14050  B6660  Deutschland  Argentinien  5  20  20  20  50  ${empty}  False  GlobalCollect  True  False
 
 DPD Classic Welt +Argentinien+Multi-parcel+GlobalCollect
-	[Tags]   DPD
+	[Tags]   DPD  DPD-SPECIAL
 	DPD Classic Welt  3  14050  B6660  Deutschland  Argentinien  5  20  20  20  50  ${empty}  False  GlobalCollect  True  False
 
 DPD Classic Welt +Andorra+Multi-parcel+GlobalCollect
-	[Tags]   DPD
+	[Tags]   DPD  DPD-SPECIAL
 	DPD Classic Welt  3  14050  Ad100  Deutschland  Andorra  5  20  20  20  50  ${empty}  False  GlobalCollect  True  False
 
 DPD Classic Welt +Andorra+Mono-parcel+GlobalCollect
@@ -200,15 +200,15 @@ DPD Classic Welt +Mexiko+Multi-parcel+GlobalCollect
 	DPD Classic Welt  3  14050  07520  Deutschland  Mexiko  1  10  10  10  50  ${empty}  False  GlobalCollect  True  False
 
 DPD Classic Welt +Kanada+Multi-parcel+GlobalCollect
-	[Tags]   DPD
+	[Tags]   DPD  DPD-SPECIAL
 	DPD Classic Welt  3  14050  G6a 0a1  Deutschland  Kanada  1  10  10  10  50  ${empty}  False  GlobalCollect  True  False
 
 DPD Classic Welt +Kanada+Mono-parcel+GlobalCollect
-	[Tags]   DPD
+	[Tags]   DPD  DPD-SPECIAL
 	DPD Classic Welt  1  14050  G6a 0a1  Deutschland  Kanada  1  10  10  10  50  ${empty}  False  GlobalCollect  True  False
 
 DPD Classic Welt +USA+Mono-parcel+GlobalCollect
-	[Tags]   DPD
+	[Tags]   DPD  DPD-SPECIAL
 	DPD Classic Welt  1  14050  25002  Deutschland  USA (Vereinigte Staaten)  1  10  10  10  50  ${empty}  False  GlobalCollect  True  False
 
 DPD Classic Welt +USA+Multi-parcel+GlobalCollect
@@ -252,7 +252,7 @@ DPD Express 10:00 +Bélgica+Mono-parcel+GlobalCollect
 	DPD Express 10:00  1  14050  1400  Deutschland  Belgien  5  20  20  20  50  ${empty}  False  GlobalCollect  True  False
 
 DPD Express 10:00 +Países Bajos+Mono-parcel+GlobalCollect
-	[Tags]   DPD
+	[Tags]   DPD  DPD-SPECIAL
 	DPD Express 10:00  1  14050  1401 Ab  Deutschland  Niederlande  5  20  20  20  50  ${empty}  False  GlobalCollect  True  False
 
 DPD Express 10:00 +Luxemburgo+Mono-parcel+GlobalCollect
@@ -268,7 +268,7 @@ DPD Express 10:00 +Bélgica+Multi-parcel+GlobalCollect
 	DPD Express 10:00  4  14050  1400  Deutschland  Belgien  5  20  20  20  50  ${empty}  False  GlobalCollect  True  False
 
 DPD Express 10:00 +Países Bajos+Multi-parcel+GlobalCollect
-	[Tags]   DPD
+	[Tags]   DPD  DPD-SPECIAL
 	DPD Express 10:00  2  14050  1401 Ab  Deutschland  Niederlande  5  20  20  20  50  ${empty}  False  GlobalCollect  True  False
 
 DPD Express 10:00 +Luxemburgo+Multi-parcel+GlobalCollect
@@ -286,7 +286,7 @@ DPD Express 12:00 +Bélgica+Mono-parcel+GlobalCollect
 	DPD Express 12:00  1  14050  1400  Deutschland  Belgien  5  20  20  20  50  ${empty}  False  GlobalCollect  True  False
 
 DPD Express 12:00 +Países Bajos+Mono-parcel+GlobalCollect
-	[Tags]   DPD
+	[Tags]   DPD  DPD-SPECIAL
 	DPD Express 12:00  1  14050  1401 Ab  Deutschland  Niederlande  5  20  20  20  50  ${empty}  False  GlobalCollect  True  False
 
 DPD Express 12:00 +Luxemburgo+Mono-parcel+GlobalCollect
@@ -306,7 +306,7 @@ DPD Express 12:00 +Bélgica+Multi-parcel+GlobalCollect
 	DPD Express 12:00  4  14050  1400  Deutschland  Belgien  5  20  20  20  50  ${empty}  False  GlobalCollect  True  False
 
 DPD Express 12:00 +Países Bajos+Multi-parcel+GlobalCollect
-	[Tags]   DPD
+	[Tags]   DPD  DPD-SPECIAL
 	DPD Express 12:00  2  14050  1401 Ab  Deutschland  Niederlande  5  20  20  20  50  ${empty}  False  GlobalCollect  True  False
 
 DPD Express 12:00 +Luxemburgo+Multi-parcel+GlobalCollect
@@ -328,7 +328,7 @@ DPD Express 18:00 +Bélgica+Mono-parcel+GlobalCollect
 	DPD Express 18:00  1  14050  1400  Deutschland  Belgien  5  20  20  20  50  ${empty}  False  GlobalCollect  True  False
 
 DPD Express 18:00 +Países Bajos+Mono-parcel+GlobalCollect
-	[Tags]   DPD
+	[Tags]   DPD  DPD-SPECIAL
 	DPD Express 18:00  1  14050  1401 Ab  Deutschland  Niederlande  5  20  20  20  50  ${empty}  False  GlobalCollect  True  False
 
 DPD Express 18:00 +Luxemburgo+Mono-parcel+GlobalCollect
@@ -352,7 +352,7 @@ DPD Express 18:00 +Bélgica+Multi-parcel+GlobalCollect
 	DPD Express 18:00  4  14050  1400  Deutschland  Belgien  5  20  20  20  50  ${empty}  False  GlobalCollect  True  False
 
 DPD Express 18:00 +Países Bajos+Multi-parcel+GlobalCollect
-	[Tags]   DPD
+	[Tags]   DPD  DPD-SPECIAL
 	DPD Express 18:00  2  14050  1401 Ab  Deutschland  Niederlande  5  20  20  20  50  ${empty}  False  GlobalCollect  True  False
 
 DPD Express 18:00 +Luxemburgo+Multi-parcel+GlobalCollect
@@ -385,11 +385,11 @@ DPD Guarantee 18:00 +Frankreich+Mono-parcel+GlobalCollect
 	DPD Guarantee 18:00  1  14050  14000  Deutschland  Frankreich  30  30  30  30  50  ${empty}  False  GlobalCollect  True  False
 
 DPD Guarantee 18:00 +Großbritannien+Mono-parcel+GlobalCollect
-	[Tags]   DPD
+	[Tags]   DPD  DPD-SPECIAL
 	DPD Guarantee 18:00  1  14050  Da3 7aa  Deutschland  Großbritannien  30  30  30  30  50  ${empty}  False  GlobalCollect  True  False
 
 DPD Guarantee 18:00 +Lettland+Mono-parcel+GlobalCollect
-	[Tags]   DPD
+	[Tags]   DPD  DPD-SPECIAL
 	DPD Guarantee 18:00  1  14050  Lv-1001  Deutschland  Lettland  30  30  30  30  50  ${empty}  False  GlobalCollect  True  False
 
 DPD Guarantee 18:00 +Litauen+Mono-parcel+GlobalCollect
@@ -397,7 +397,7 @@ DPD Guarantee 18:00 +Litauen+Mono-parcel+GlobalCollect
 	DPD Guarantee 18:00  1  14050  75101  Deutschland  Litauen  30  30  30  30  50  ${empty}  False  GlobalCollect  True  False
 
 DPD Guarantee 18:00 +Polen+Mono-parcel+GlobalCollect
-	[Tags]   DPD
+	[Tags]   DPD  DPD-SPECIAL
 	DPD Guarantee 18:00  1  14050  14-100  Deutschland  Polen  30  30  30  30  50  ${empty}  False  GlobalCollect  True  False
 
 DPD Guarantee 18:00 +Slowakei+Mono-parcel+GlobalCollect
@@ -405,7 +405,7 @@ DPD Guarantee 18:00 +Slowakei+Mono-parcel+GlobalCollect
 	DPD Guarantee 18:00  1  14050  050 01  Deutschland  Slowakei  30  30  30  30  50  ${empty}  False  GlobalCollect  True  False
 
 DPD Guarantee 18:00 +Tschechische Republik+Mono-parcel+GlobalCollect
-	[Tags]   DPD
+	[Tags]   DPD  DPD-SPECIAL
 	DPD Guarantee 18:00  1  14050  140 00  Deutschland  Tschechische Republik  30  30  30  30  50  ${empty}  False  GlobalCollect  True  False
 
 DPD Guarantee 18:00 +Dänemark+Multi-parcel+GlobalCollect
@@ -425,11 +425,11 @@ DPD Guarantee 18:00 +Frankreich+Multi-parcel+GlobalCollect
 	DPD Guarantee 18:00  7  14050  14000  Deutschland  Frankreich  30  30  30  30  50  ${empty}  False  GlobalCollect  True  False
 
 DPD Guarantee 18:00 +Großbritannien+Multi-parcel+GlobalCollect
-	[Tags]   DPD
+	[Tags]   DPD  DPD-SPECIAL
 	DPD Guarantee 18:00  5  14050  Da3 7aa  Deutschland  Großbritannien  30  30  30  30  50  ${empty}  False  GlobalCollect  True  False
 	
 DPD Guarantee 18:00 +Lettland+Multi-parcel+GlobalCollect
-	[Tags]   DPD
+	[Tags]   DPD  DPD-SPECIAL
 	DPD Guarantee 18:00  2  14050  Lv-1001  Deutschland  Lettland  30  30  30  30  50  ${empty}  False  GlobalCollect  True  False
 
 DPD Guarantee 18:00 +Litauen+Multi-parcel+GlobalCollect
@@ -437,15 +437,15 @@ DPD Guarantee 18:00 +Litauen+Multi-parcel+GlobalCollect
 	DPD Guarantee 18:00  6  14050  75101  Deutschland  Litauen  30  30  30  30  50  ${empty}  False  GlobalCollect  True  False
 
 DPD Guarantee 18:00 +Polen+Multi-parcel+GlobalCollect
-	[Tags]   DPD
+	[Tags]   DPD  DPD-SPECIAL
 	DPD Guarantee 18:00  8  14050  14-100  Deutschland  Polen  30  30  30  30  50  ${empty}  False  GlobalCollect  True  False
 
 DPD Guarantee 18:00 +Slowakei+Multi-parcel+GlobalCollect
-	[Tags]   DPD
+	[Tags]   DPD  DPD-SPECIAL
 	DPD Guarantee 18:00  9  14050  050 01  Deutschland  Slowakei  30  30  30  30  50  ${empty}  False  GlobalCollect  True  False
 
 DPD Guarantee 18:00 +Tschechische Republik+Multi-parcel+GlobalCollect
-	[Tags]   DPD
+	[Tags]   DPD  DPD-SPECIAL
 	DPD Guarantee 18:00  10  14050  140 00  Deutschland  Tschechische Republik  30  30  30  30  50  ${empty}  False  GlobalCollect  True  False
 
 
@@ -471,11 +471,11 @@ DPD Classic Kleinpaket +Luxemburg+Multi-parcel+GlobalCollect
 	DPD Classic Kleinpaket  8  14050  2510  Deutschland  Luxemburg  1  10  10  10  50  ${empty}  False  GlobalCollect  True  False
 
 DPD Classic Kleinpaket +Portugal+Multi-parcel+GlobalCollect
-	[Tags]   DPD
+	[Tags]   DPD  DPD-SPECIAL
 	DPD Classic Kleinpaket  7  14050  2100-001  Deutschland  Portugal  1  10  10  10  50  ${empty}  False  GlobalCollect  True  False
 
 DPD Classic Kleinpaket +Schweden+Multi-parcel+GlobalCollect
-	[Tags]   DPD
+	[Tags]   DPD  DPD-SPECIAL
 	DPD Classic Kleinpaket  6  14050  250 02  Deutschland  Schweden  1  10  10  10  50  ${empty}  False  GlobalCollect  True  False
 
 DPD Classic Kleinpaket +Spanien+Multi-parcel+GlobalCollect
@@ -515,11 +515,11 @@ DPD Classic Kleinpaket +Luxemburg+Mono-parcel+GlobalCollect
 	DPD Classic Kleinpaket  1  14050  2510  Deutschland  Luxemburg  1  10  10  10  50  ${empty}  False  GlobalCollect  True  False
 
 DPD Classic Kleinpaket +Portugal+Mono-parcel+GlobalCollect
-	[Tags]   DPD
+	[Tags]   DPD  DPD-SPECIAL
 	DPD Classic Kleinpaket  1  14050  2100-001  Deutschland  Portugal  1  10  10  10  50  ${empty}  False  GlobalCollect  True  False
 
 DPD Classic Kleinpaket +Schweden+Mono-parcel+GlobalCollect
-	[Tags]   DPD
+	[Tags]   DPD  DPD-SPECIAL
 	DPD Classic Kleinpaket  1  14050  250 02  Deutschland  Schweden  1  10  10  10  50  ${empty}  False  GlobalCollect  True  False
 
 DPD Classic Kleinpaket +Spanien+Mono-parcel+GlobalCollect

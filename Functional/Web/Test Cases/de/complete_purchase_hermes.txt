@@ -73,5 +73,3 @@ HERMES ProfiPaketService Export Europe XL +GlobalCollect
 	Login With Email And Password    robertogarcia@packlink.es    123456
 	Login Was Successful
 	Complete Purchase With Logged User   HERMES ProfiPaketService  1  14050  2500  Deutschland  Belgien  1  1  120  60  60  50  ${empty}  False  GlobalCollect  True  False
-
-
