@@ -1,0 +1,19 @@
+{
+  "history": [
+    {
+      "city": "Frankfurt", 
+      "description": "Arrived to depot", 
+      "timestamp": "12345678"
+    }, 
+    {
+      "city": "Frankfurt", 
+      "description": "Arrived to depot", 
+      "timestamp": "12345678"
+    }, 
+    {
+      "city": "Frankfurt", 
+      "description": "Left origin", 
+      "timestamp": "12345678"
+    }
+  ]
+}

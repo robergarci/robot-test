@@ -1,0 +1,14 @@
+{
+  "order_reference": "f436493a826c39294d3d20bf7797e9e1015cbb9e",
+  "shipments": [
+    {
+      "insurance_coverage_amount": "25.00",
+      "receipt": "http://packlink.dev/purchase/postVenta/getPdf?factura=&recibo=&ref=6396ea9314944a45476286bfc372abad207494ee",
+      "shipment_custom_reference": "eBay_11993382332589",
+      "shipment_reference": "EE006Q45T8314AA",
+      "status": true,
+      "total_price": 4.641
+    }
+  ],
+  "total_amount": 4.641
+}

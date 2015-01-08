@@ -1,0 +1,1 @@
+/v1/services?from[country]=FR&from[zip]=09000&to[country]=FR&to[zip]=75002&packages[0][width]=10&packages[0][height]=10&packages[0][length]=10&packages[0][weight]=1
